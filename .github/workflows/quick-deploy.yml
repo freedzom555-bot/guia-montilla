@@ -65,15 +65,32 @@ jobs:
               echo "No existe: $file"
               exit 1
             fi
-            local remote
-            remote=$(basename "$file")
-            echo "Subiendo $file -> ${REMOTE_DIR}${remote}"
-            lftp -u "$SFTP_USER,$SFTP_PASS" "sftp://$SFTP_HOST:22" -e "
-              set sftp:auto-confirm yes;
-              cd ${REMOTE_DIR};
-              put -O . ${file} -o ${remote};
-              bye
-            "
+            local rel="$file"
+            case "$rel" in
+              public/*) rel="${rel#public/}" ;;
+              dist/*) rel="${rel#dist/}" ;;
+            esac
+            local remote_subdir
+            remote_subdir=$(dirname "$rel")
+            local remote_name
+            remote_name=$(basename "$rel")
+            echo "Subiendo $file -> ${REMOTE_DIR}${rel}"
+            if [ "$remote_subdir" = "." ]; then
+              lftp -u "$SFTP_USER,$SFTP_PASS" "sftp://$SFTP_HOST:22" -e "
+                set sftp:auto-confirm yes;
+                cd ${REMOTE_DIR};
+                put -O . ${file} -o ${remote_name};
+                bye
+              "
+            else
+              lftp -u "$SFTP_USER,$SFTP_PASS" "sftp://$SFTP_HOST:22" -e "
+                set sftp:auto-confirm yes;
+                cd ${REMOTE_DIR};
+                mkdir -p ${remote_subdir};
+                put -O ${remote_subdir} ${file} -o ${remote_name};
+                bye
+              "
+            fi
           }
 
           if [ "${DELETE_HTACCESS}" = "true" ]; then
