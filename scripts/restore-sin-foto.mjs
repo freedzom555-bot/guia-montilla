@@ -76,7 +76,7 @@ function build(entry, place) {
     image: null,
   };
   b.description = richDescription(b);
-  b.tagline = richTagline(b.description);
+  b.tagline = richTagline(b);
   return b;
 }
 

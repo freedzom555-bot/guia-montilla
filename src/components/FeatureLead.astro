@@ -1,4 +1,6 @@
 ---
+import { displayTagline } from "../lib/business";
+
 interface Business {
   slug: string;
   name: string;
@@ -16,6 +18,7 @@ const { business } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const thumbSrc = business.gallery?.[0]?.src ?? business.image;
 const img = thumbSrc ? `${base}${thumbSrc.replace(/^\//, "")}` : null;
+const tagline = displayTagline(business);
 ---
 
 <article class="feature-lead fade-in">
@@ -28,12 +31,12 @@ const img = thumbSrc ? `${base}${thumbSrc.replace(/^\//, "")}` : null;
     <div class="feature-lead__main">
       <span class="feature-lead__kicker">Selección</span>
       <h3><a href={`${base}negocio/${business.slug}/`}>{business.name}</a></h3>
-      <p>{business.tagline}</p>
+      <p>{tagline}</p>
       {business.description.split("\n\n").slice(1, 3).map((para) => <p class="feature-lead__excerpt">{para}</p>)}
       <a href={`${base}negocio/${business.slug}/`} class="feature-lead__link">Ver ficha →</a>
     </div>
     <aside class="feature-lead__aside">
-      <p>«{business.tagline}»</p>
+      <p>«{tagline}»</p>
     </aside>
   </div>
 </article>

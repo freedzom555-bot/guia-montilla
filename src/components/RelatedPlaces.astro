@@ -1,5 +1,6 @@
 ---
 import categories from "../../data/categories.json";
+import { displayTagline } from "../lib/business";
 
 interface Business {
   slug: string;
@@ -33,7 +34,7 @@ if (related.length === 0) return null;
       <li>
         <a href={`${base}negocio/${b.slug}/`}>
           <strong>{b.name}</strong>
-          <span>{b.tagline}</span>
+          <span>{displayTagline(b)}</span>
         </a>
       </li>
     ))}

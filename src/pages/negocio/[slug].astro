@@ -12,6 +12,7 @@ import {
   buildBusinessSchemas,
   seoGalleryImages,
 } from "../../lib/seo";
+import { displayTagline } from "../../lib/business";
 
 export function getStaticPaths() {
   return businesses.map((business) => ({
@@ -42,6 +43,8 @@ const metaTitle = businessTitle(business.name, categoryName);
 const metaDescription = businessDescription(business, categoryName);
 const metaKeywords = businessKeywords(business, categoryName);
 const ogImage = gallery[0]?.src ?? "/images/og-default.jpg";
+
+const tagline = displayTagline(business);
 
 const schemas = buildBusinessSchemas({
   business,
@@ -93,7 +96,7 @@ const schemas = buildBusinessSchemas({
           {business.name}
           <span class="h1-location"> en Montilla, Córdoba</span>
         </h1>
-        <p class="page-head__sub">{business.tagline}</p>
+        <p class="page-head__sub">{tagline}</p>
         <p class="page-head__local">
           {categoryName} · Montilla (14550) · Campiña Sur
         </p>

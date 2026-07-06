@@ -1029,7 +1029,7 @@
     {
       "slug": "amparo-gomez-de-tejada-munoz-farmacia-y-ortopedia-",
       "name": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO)",
-      "tagline": "undefined está en Montilla, en el corazón de la comarca del vino Montilla-Moriles.",
+      "tagline": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO) ofrece ortopedia técnica y material sanitario en Montilla.",
       "category": "salud",
       "categoryLabel": "Salud",
       "categoryUrl": "/salud/",
@@ -1043,14 +1043,11 @@
         "ortopedia",
         "ipagro)",
         "salud",
-        "undefined",
-        "esta",
+        "ofrece",
+        "tecnica",
+        "material",
+        "sanitario",
         "montilla",
-        "corazon",
-        "comarca",
-        "del",
-        "vino",
-        "moriles",
         "llano",
         "las",
         "coronadas",
@@ -1061,7 +1058,7 @@
         "health",
         "medicamentos"
       ],
-      "searchBlob": "amparo gomez de tejada munoz (farmacia y ortopedia ipagro) salud undefined esta en montilla, en el corazon de la comarca del vino montilla-moriles. farmacia tienda health amparo gomez tejada munoz (farmacia ortopedia ipagro) salud undefined esta montilla corazon comarca del vino moriles llano las coronadas aguilar frontera farmacia tienda health medicamentos"
+      "searchBlob": "amparo gomez de tejada munoz (farmacia y ortopedia ipagro) salud amparo gomez de tejada munoz (farmacia y ortopedia ipagro) ofrece ortopedia tecnica y material sanitario en montilla. farmacia tienda health amparo gomez tejada munoz (farmacia ortopedia ipagro) salud ofrece tecnica material sanitario montilla llano las coronadas aguilar frontera farmacia tienda health medicamentos"
     },
     {
       "slug": "ana-portero-estilismo-y-peluqueria",
@@ -11104,7 +11101,7 @@
     {
       "slug": "ortopedia-tecnica-el-santo",
       "name": "ORTOPEDIA TECNICA EL SANTO | MONTILLA",
-      "tagline": "undefined está en Montilla, en el corazón de la comarca del vino Montilla-Moriles.",
+      "tagline": "ORTOPEDIA TECNICA EL SANTO | MONTILLA ofrece ortopedia técnica y material sanitario en Montilla.",
       "category": "salud",
       "categoryLabel": "Salud",
       "categoryUrl": "/salud/",
@@ -11115,13 +11112,9 @@
         "santo",
         "montilla",
         "salud",
-        "undefined",
-        "esta",
-        "corazon",
-        "comarca",
-        "del",
-        "vino",
-        "moriles",
+        "ofrece",
+        "material",
+        "sanitario",
         "san",
         "francisco",
         "solano",
@@ -11135,12 +11128,12 @@
         "association",
         "organization"
       ],
-      "searchBlob": "ortopedia tecnica el santo | montilla salud undefined esta en montilla, en el corazon de la comarca del vino montilla-moriles. shoe store tienda medical clinic health service association or organization ortopedia tecnica santo montilla salud undefined esta corazon comarca del vino moriles san francisco solano shoe store tienda medical clinic health service association organization"
+      "searchBlob": "ortopedia tecnica el santo | montilla salud ortopedia tecnica el santo | montilla ofrece ortopedia tecnica y material sanitario en montilla. shoe store tienda medical clinic health service association or organization ortopedia tecnica santo montilla salud ofrece material sanitario san francisco solano shoe store tienda medical clinic health service association organization"
     },
     {
       "slug": "ortopedia-tecnica-manuel-baena",
       "name": "Ortopedia Técnica Manuel Baena",
-      "tagline": "undefined está en Montilla, en el corazón de la comarca del vino Montilla-Moriles.",
+      "tagline": "Ortopedia Técnica Manuel Baena ofrece ortopedia técnica y material sanitario en Montilla.",
       "category": "salud",
       "categoryLabel": "Salud",
       "categoryUrl": "/salud/",
@@ -11151,14 +11144,10 @@
         "manuel",
         "baena",
         "salud",
-        "undefined",
-        "esta",
+        "ofrece",
+        "material",
+        "sanitario",
         "montilla",
-        "corazon",
-        "comarca",
-        "del",
-        "vino",
-        "moriles",
         "antonio",
         "miguel",
         "navarro",
@@ -11169,7 +11158,7 @@
         "clinic",
         "health"
       ],
-      "searchBlob": "ortopedia tecnica manuel baena salud undefined esta en montilla, en el corazon de la comarca del vino montilla-moriles. shoe store tienda medical clinic health ortopedia tecnica manuel baena salud undefined esta montilla corazon comarca del vino moriles antonio miguel navarro shoe store tienda medical clinic health"
+      "searchBlob": "ortopedia tecnica manuel baena salud ortopedia tecnica manuel baena ofrece ortopedia tecnica y material sanitario en montilla. shoe store tienda medical clinic health ortopedia tecnica manuel baena salud ofrece material sanitario montilla antonio miguel navarro shoe store tienda medical clinic health"
     },
     {
       "slug": "pajareria-y-flores-banos",

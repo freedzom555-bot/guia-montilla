@@ -118,7 +118,7 @@ function buildBiz(entry, place) {
     turismoUrl: null,
   };
   biz.description = richDescription(biz);
-  biz.tagline = richTagline(biz.description);
+  biz.tagline = richTagline(biz);
   biz.highlights = [
     biz.shortAddress ?? "Montilla",
     /farmacia/i.test(name) ? "Farmacia y ortopedia" : "Ortopedia técnica",

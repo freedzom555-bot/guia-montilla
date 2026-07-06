@@ -64,7 +64,7 @@ for (const b of raw) {
 
   const category = decision.category;
   const description = richDescription({ ...b, category });
-  const tagline = richTagline(description);
+  const tagline = richTagline({ ...b, category });
 
   organized.push({
     ...b,

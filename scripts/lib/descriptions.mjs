@@ -187,6 +187,7 @@ function inferKind(b) {
   if (/taberna|restaurante|asador|marisquer|pizzer|kebab|cervec|mesón|meson/.test(n) || /restaurant/.test(types)) return "restaurant";
   if (/bar |café|cafe|cafeter|churrer|helader/.test(n) || /bar|cafe/.test(types)) return "bar";
   if (/hotel|hostal|alojamiento|casa rural|apartamento/.test(n) || /lodging/.test(types)) return "lodging";
+  if (/ortopedia/.test(n) || /ortopedia/.test(types)) return "orthopedics";
   if (/farmacia/.test(n) || /pharmacy/.test(types)) return "pharmacy";
   if (/dentista|dental|odontolog|clínica dental|clinica dental/.test(n)) return "dental";
   if (/peluquer|barber|estética|estetica|uñas|unas/.test(n) || /hair|beauty/.test(types)) return "beauty";
@@ -242,6 +243,7 @@ const OPENERS = {
   lodging: (b) =>
     `${b.name} permite usar Montilla como base de escapada: bodegas, patrimonio y tapeo a poca distancia.`,
   pharmacy: (b) => `${b.name} integra la red de farmacias de Montilla (14550).`,
+  orthopedics: (b) => `${b.name} ofrece ortopedia técnica y material sanitario en Montilla.`,
   dental: (b) => `${b.name} ofrece atención odontológica en Montilla.`,
   beauty: (b) => `${b.name} presta servicios de peluquería, estética o barbería en el pueblo.`,
   motor: (b) => `${b.name} atiende motoristas y conductores en Montilla y la comarca.`,
@@ -303,6 +305,9 @@ export function richDescription(b) {
 }
 
 export function richTagline(b) {
+  if (!b || typeof b !== "object" || !b.name) {
+    return "";
+  }
   const lead = buildLead(b);
   if (lead.length <= 140) return lead;
   const cut = lead.slice(0, 137).replace(/\s+\S*$/, "");

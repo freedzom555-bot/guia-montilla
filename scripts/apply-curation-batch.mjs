@@ -156,7 +156,7 @@ if (!businesses.some((b) => b.slug === zafiroSlug)) {
     turismoUrl: null,
   };
   zafiro.description = richDescription(zafiro);
-  zafiro.tagline = richTagline(zafiro.description);
+  zafiro.tagline = richTagline(zafiro);
   const gallery = await downloadPhotos(zafiroSlug, name, place?.photos);
   if (gallery.length) {
     zafiro.gallery = gallery;

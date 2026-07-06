@@ -1,5 +1,6 @@
 ---
 import categories from "../../data/categories.json";
+import { displayTagline } from "../lib/business";
 
 interface Business {
   slug: string;
@@ -33,7 +34,7 @@ const img = thumbSrc ? `${base}${thumbSrc.replace(/^\//, "")}` : null;
       {business.featured && <span class="pill">Destacado</span>}
       <a href={`${base}negocio/${business.slug}/`}>{business.name}</a>
     </h3>
-    <p class="index-row__sub">{business.tagline}</p>
+    <p class="index-row__sub">{displayTagline(business)}</p>
   </div>
   <span class="index-row__cat">{catLabels[business.category] ?? business.category}</span>
 </li>
