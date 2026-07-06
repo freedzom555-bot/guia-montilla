@@ -7,3 +7,4 @@ dist/
 .DS_Store
 rebuild-full.log
 rebuild-log.txt
+.ftp-deploy-sync-state
