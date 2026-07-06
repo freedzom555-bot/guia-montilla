@@ -19,7 +19,7 @@ function Require-Gh {
     Write-Host ""
     Write-Host "Inicia sesion en GitHub (se abrira el navegador)..." -ForegroundColor Yellow
     Write-Host ""
-    gh auth login -h github.com -p https -w -s repo,workflow,admin:repo
+    gh auth login -h github.com -p https -w -s repo,workflow
     if ($LASTEXITCODE -ne 0) { throw "No se pudo autenticar en GitHub." }
   }
 }
@@ -58,8 +58,8 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "Permisos de escritura para Actions ..." -ForegroundColor Green
-gh api -X PUT "/repos/$owner/$RepoName/actions/permissions" -f enabled=true -f allowed_actions=all | Out-Null
-gh api -X PUT "/repos/$owner/$RepoName/actions/permissions/workflow" -f default_workflow_permissions=write -f can_approve_pull_request_reviews=false | Out-Null
+gh api -X PUT "/repos/$owner/$RepoName/actions/permissions" -F enabled=true -F allowed_actions=all | Out-Null
+gh api -X PUT "/repos/$owner/$RepoName/actions/permissions/workflow" -F default_workflow_permissions=write -F can_approve_pull_request_reviews=false | Out-Null
 
 gh secret set SITE_URL --body "https://guiamontilla.es" 2>$null
 
