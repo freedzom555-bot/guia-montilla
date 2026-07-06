@@ -13,13 +13,18 @@ on:
       - "scripts/**"
       - "package.json"
       - "astro.config.mjs"
-      - ".github/workflows/**"
+      - ".github/workflows/daily.yml"
 
 permissions:
   contents: write
 
+concurrency:
+  group: ionos-deploy
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[quick-only]') }}
     runs-on: ubuntu-latest
     env:
       BASE_PATH: /
@@ -47,13 +52,21 @@ jobs:
           git diff --staged --quiet || git commit -m "Actualización automática $(date +%Y-%m-%d) [skip ci]"
           git push || true
 
-      - name: Subir a IONOS (SFTP)
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
-        with:
-          server: ${{ secrets.IONOS_FTP_SERVER }}
-          username: ${{ secrets.IONOS_FTP_USERNAME }}
-          password: ${{ secrets.IONOS_FTP_PASSWORD }}
-          port: 22
-          local_path: "./dist/*"
-          remote_path: ${{ secrets.IONOS_FTP_SERVER_DIR || '/Guiamontilla/' }}
-          sftp_only: true
+      - name: Subir a IONOS (SFTP solo cambios)
+        env:
+          SFTP_HOST: ${{ secrets.IONOS_FTP_SERVER }}
+          SFTP_USER: ${{ secrets.IONOS_FTP_USERNAME }}
+          SFTP_PASS: ${{ secrets.IONOS_FTP_PASSWORD }}
+          SFTP_DIR: ${{ secrets.IONOS_FTP_SERVER_DIR || '/Guiamontilla/' }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          REMOTE_DIR="${SFTP_DIR%/}/"
+          lftp -u "$SFTP_USER,$SFTP_PASS" "sftp://$SFTP_HOST:22" <<EOF
+          set sftp:auto-confirm yes
+          set net:max-retries 3
+          set net:reconnect-interval-base 5
+          lcd dist
+          cd ${REMOTE_DIR}
+          mirror --reverse --only-newer --parallel=4 --verbose
+          bye
+          EOF

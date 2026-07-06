@@ -1,7 +1,0 @@
-# IONOS + Cloudflare Flexible: no forzar HTTPS en el origen
-# Cloudflare sirve HTTPS al visitante; IONOS recibe HTTP en puerto 80
-<IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-</IfModule>
-
-DirectoryIndex index.html

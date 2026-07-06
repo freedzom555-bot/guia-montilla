@@ -1,0 +1,78 @@
+name: Subida rapida IONOS
+
+on:
+  workflow_dispatch:
+    inputs:
+      files:
+        description: "Archivos a subir (uno por linea, rutas desde la raiz del repo)"
+        required: false
+        default: ""
+      delete_htaccess:
+        description: "Borrar .htaccess en el servidor (util con Cloudflare Flexible)"
+        type: boolean
+        default: true
+  push:
+    branches: [main]
+    paths:
+      - "public/.htaccess"
+      - ".github/workflows/quick-deploy.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  quick-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Subir solo los archivos indicados
+        env:
+          SFTP_HOST: ${{ secrets.IONOS_FTP_SERVER }}
+          SFTP_USER: ${{ secrets.IONOS_FTP_USERNAME }}
+          SFTP_PASS: ${{ secrets.IONOS_FTP_PASSWORD }}
+          SFTP_DIR: ${{ secrets.IONOS_FTP_SERVER_DIR || '/Guiamontilla/' }}
+          FILES: ${{ github.event.inputs.files }}
+          DELETE_HTACCESS: ${{ github.event.inputs.delete_htaccess != false && 'true' || 'true' }}
+        run: |
+          set -euo pipefail
+          REMOTE_DIR="${SFTP_DIR%/}/"
+
+          upload_file() {
+            local file="$1"
+            if [ ! -f "$file" ]; then
+              echo "No existe: $file"
+              return 0
+            fi
+            local remote
+            remote=$(basename "$file")
+            echo "Subiendo $file -> ${REMOTE_DIR}${remote}"
+            lftp -u "$SFTP_USER,$SFTP_PASS" "sftp://$SFTP_HOST:22" -e "
+              set sftp:auto-confirm yes;
+              cd ${REMOTE_DIR};
+              put -O . ${file} -o ${remote};
+              bye
+            "
+          }
+
+          if [ "${DELETE_HTACCESS}" = "true" ]; then
+            echo "Borrando .htaccess remoto si existe..."
+            lftp -u "$SFTP_USER,$SFTP_PASS" "sftp://$SFTP_HOST:22" -e "
+              set sftp:auto-confirm yes;
+              cd ${REMOTE_DIR};
+              rm -f .htaccess;
+              bye
+            " || true
+          fi
+
+          if [ -n "${FILES}" ]; then
+            while IFS= read -r file; do
+              [ -z "$file" ] && continue
+              upload_file "$file"
+            done <<< "$FILES"
+          fi
+
+          echo "Subida rapida terminada."
