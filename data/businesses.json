@@ -1322,68 +1322,6 @@
     "tips": "Pide cita previa en peluquerías y centros de estética."
   },
   {
-    "id": "amparo-gomez-de-tejada-munoz-farmacia-y-ortopedia-",
-    "slug": "amparo-gomez-de-tejada-munoz-farmacia-y-ortopedia-",
-    "name": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO)",
-    "category": "salud",
-    "address": "Pl. Llano de las Coronadas, 19, 14920 Aguilar de la Frontera, Córdoba, España",
-    "shortAddress": "Pl. Llano de las Coronadas, 19, Aguilar de la Frontera",
-    "phone": "+34 957 66 01 50",
-    "email": null,
-    "web": "https://www.facebook.com/ortopediaipagro/",
-    "googleMapsUrl": "https://maps.google.com/?cid=4730049426961200559&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
-    "placeId": "ChIJecrzCm9rbQ0Rr_UPmOSCpEE",
-    "lat": 37.5180375,
-    "lng": -4.6569195,
-    "hours": "lunes: 9:00–14:00, 17:00–20:00 · martes: 9:00–14:00, 17:00–20:00 · miércoles: 9:00–14:00, 17:00–20:00 · jueves: 9:00–14:00, 17:00–20:00 · viernes: 9:00–14:00, 17:00–20:00 · sábado: Cerrado · domingo: Cerrado",
-    "hoursList": [
-      "lunes: 9:00–14:00, 17:00–20:00",
-      "martes: 9:00–14:00, 17:00–20:00",
-      "miércoles: 9:00–14:00, 17:00–20:00",
-      "jueves: 9:00–14:00, 17:00–20:00",
-      "viernes: 9:00–14:00, 17:00–20:00",
-      "sábado: Cerrado",
-      "domingo: Cerrado"
-    ],
-    "currentHours": [
-      "lunes: 9:00–14:00, 17:00–20:00",
-      "martes: 9:00–14:00, 17:00–20:00",
-      "miércoles: 9:00–14:00, 17:00–20:00",
-      "jueves: 9:00–14:00, 17:00–20:00",
-      "viernes: 9:00–14:00, 17:00–20:00",
-      "sábado: Cerrado",
-      "domingo: Cerrado"
-    ],
-    "rating": 4.3,
-    "reviewCount": 8,
-    "priceRange": null,
-    "social": [],
-    "featured": false,
-    "tags": [
-      "salud",
-      "montilla",
-      "ortopedia"
-    ],
-    "placeTypes": [
-      "Farmacia",
-      "Tienda",
-      "health"
-    ],
-    "primaryType": "Farmacia",
-    "accessibility": "Entrada accesible en silla de ruedas",
-    "payment": "Tarjeta de crédito · Tarjeta de débito · Pago móvil (NFC)",
-    "businessStatus": "OPERATIONAL",
-    "businessStatusLabel": "Abierto",
-    "turismoUrl": null,
-    "description": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO) integra la red de farmacias de Montilla (14550).\n\nEstá en Pl. Llano de las Coronadas, 19, Aguilar de la Frontera, Montilla (14550).\n\nRed de salud de referencia para vecinos y visitantes que pasan varios días en Montilla.",
-    "tagline": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO) ofrece ortopedia técnica y material sanitario en Montilla.",
-    "highlights": [
-      "Pl. Llano de las Coronadas, 19, Aguilar de la Frontera",
-      "Farmacia y ortopedia"
-    ],
-    "tips": "Llama antes si necesitas material a medida o adaptación de calzado ortopédico."
-  },
-  {
     "id": "ana-portero-estilismo-y-peluqueria",
     "slug": "ana-portero-estilismo-y-peluqueria",
     "name": "Ana Portero Estilismo y Peluquería",

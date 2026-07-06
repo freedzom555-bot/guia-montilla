@@ -30,12 +30,6 @@ const ORTOPEDIAS = [
     googleQuery: "Ortopedia Técnica Manuel Baena, Montilla",
     category: "salud",
   },
-  {
-    slug: "amparo-gomez-de-tejada-munoz-farmacia-y-ortopedia-",
-    placeId: "ChIJecrzCm9rbQ0Rr_UPmOSCpEE",
-    googleQuery: "Farmacia y Ortopedia IPAGRO, Montilla",
-    category: "salud",
-  },
 ];
 
 function loadEnv() {

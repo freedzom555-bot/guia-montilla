@@ -3741,15 +3741,6 @@
     }
   },
   {
-    "slug": "amparo-gomez-de-tejada-munoz-farmacia-y-ortopedia-",
-    "placeId": "ChIJecrzCm9rbQ0Rr_UPmOSCpEE",
-    "category": "salud",
-    "googleQuery": "Farmacia y Ortopedia IPAGRO, Montilla",
-    "fallback": {
-      "name": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO)"
-    }
-  },
-  {
     "slug": "ana-portero-estilismo-y-peluqueria",
     "placeId": "ChIJlzO5wuETbQ0RTUKREqEdMcc",
     "category": "belleza",

@@ -240,14 +240,5 @@
     "fallback": {
       "name": "Ortopedia Técnica Manuel Baena"
     }
-  },
-  {
-    "slug": "amparo-gomez-de-tejada-munoz-farmacia-y-ortopedia-",
-    "placeId": "ChIJecrzCm9rbQ0Rr_UPmOSCpEE",
-    "googleQuery": "Farmacia y Ortopedia IPAGRO, Montilla",
-    "category": "salud",
-    "fallback": {
-      "name": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO)"
-    }
   }
 ]

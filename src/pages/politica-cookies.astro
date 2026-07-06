@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { LEGAL } from "../data/site";
+
+const base = import.meta.env.BASE_URL;
+const updated = "6 de julio de 2026";
+---
+
+<Layout
+  title="Política de cookies"
+  description="Información sobre el uso de cookies en Guía Montilla y cómo gestionarlas."
+>
+  <section class="page-head">
+    <div class="wrap">
+      <a href={base} class="back">← Inicio</a>
+      <h1>Política de cookies</h1>
+      <p class="page-head__sub">Uso de cookies y tecnologías similares en {LEGAL.url}</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap legal-prose">
+      <p class="legal-updated">Última actualización: {updated}</p>
+
+      <h2>1. ¿Qué son las cookies?</h2>
+      <p>
+        Las cookies son pequeños archivos que se almacenan en tu dispositivo cuando visitas una web. Permiten recordar
+        preferencias, mantener la sesión o analizar el uso del sitio.
+      </p>
+
+      <h2>2. ¿Qué cookies usamos?</h2>
+
+      <h3>Cookies técnicas (necesarias)</h3>
+      <p>Son imprescindibles para el funcionamiento básico del sitio. No requieren consentimiento.</p>
+      <table class="legal-table">
+        <thead>
+          <tr><th>Nombre</th><th>Finalidad</th><th>Duración</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>guia-montilla-cookie-consent</code></td>
+            <td>Guarda si has aceptado o rechazado cookies no esenciales</td>
+            <td>12 meses</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Cookies de terceros</h3>
+      <p>Algunos servicios externos pueden instalar cookies cuando interactúas con ellos:</p>
+      <table class="legal-table">
+        <thead>
+          <tr><th>Proveedor</th><th>Finalidad</th><th>Más información</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google Fonts</td>
+            <td>Carga de tipografías del sitio</td>
+            <td><a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy</a></td>
+          </tr>
+          <tr>
+            <td>Google Maps</td>
+            <td>Enlaces a mapas y fichas de negocios</td>
+            <td><a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy</a></td>
+          </tr>
+          <tr>
+            <td>Web3Forms</td>
+            <td>Envío de formularios de contacto</td>
+            <td><a href="https://web3forms.com/privacy" rel="noopener noreferrer" target="_blank">Web3Forms</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Actualmente <strong>no utilizamos cookies de analítica ni publicidad</strong> propias (Google Analytics, Meta Pixel, etc.).
+      </p>
+
+      <h2>3. Cómo gestionar las cookies</h2>
+      <p>
+        Puedes eliminar o bloquear cookies desde la configuración de tu navegador. Ten en cuenta que bloquear cookies
+        técnicas puede afectar al funcionamiento del sitio.
+      </p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" rel="noopener noreferrer" target="_blank">Chrome</a></li>
+        <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" rel="noopener noreferrer" target="_blank">Firefox</a></li>
+        <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" rel="noopener noreferrer" target="_blank">Safari</a></li>
+        <li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" rel="noopener noreferrer" target="_blank">Edge</a></li>
+      </ul>
+
+      <h2>4. Retirar el consentimiento</h2>
+      <p>
+        Si deseas cambiar tu elección, borra las cookies del sitio en tu navegador o pulsa el botón siguiente:
+      </p>
+      <p>
+        <button type="button" class="btn btn--small" id="reset-cookie-consent">Restablecer preferencias de cookies</button>
+      </p>
+
+      <h2>5. Más información</h2>
+      <p>
+        Consulta también nuestra <a href={`${base}politica-privacidad/`}>política de privacidad</a> o escríbenos a{" "}
+        <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a>.
+      </p>
+
+      <nav class="legal-nav" aria-label="Otras páginas legales">
+        <a href={`${base}aviso-legal/`}>Aviso legal</a>
+        <a href={`${base}politica-privacidad/`}>Política de privacidad</a>
+      </nav>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.getElementById("reset-cookie-consent")?.addEventListener("click", () => {
+    try {
+      localStorage.removeItem("guia-montilla-cookie-consent");
+    } catch { /* */ }
+    window.location.reload();
+  });
+</script>

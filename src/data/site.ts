@@ -9,6 +9,16 @@ export const SITE = {
   twitter: "@guiamontilla",
 };
 
+export const LEGAL = {
+  owner: "Guía Montilla",
+  url: "https://guiamontilla.es",
+  email: "hola@guiamontilla.es",
+  privacyEmail: "hola@guiamontilla.es",
+  country: "España",
+  developer: "Kyvera Digital",
+  developerUrl: "https://kyveradigital.es",
+};
+
 export const SEO = {
   defaultTitle: "Guía Montilla — Todo Montilla: bodegas, comercios, parques y monumentos",
   defaultDescription:

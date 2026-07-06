@@ -1,0 +1,50 @@
+---
+import { LEGAL } from "../data/site";
+
+const base = import.meta.env.BASE_URL;
+const storageKey = "guia-montilla-cookie-consent";
+---
+
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-live="polite" hidden>
+  <div class="cookie-banner__inner wrap">
+    <div class="cookie-banner__text">
+      <p id="cookie-banner-title" class="cookie-banner__title">Cookies en Guía Montilla</p>
+      <p>
+        Usamos cookies técnicas para recordar tu elección y servicios de terceros (tipografías, mapas, formularios).
+        No usamos cookies de publicidad. Más info en nuestra{" "}
+        <a href={`${base}politica-cookies/`}>política de cookies</a>.
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button type="button" class="btn btn--ghost" id="cookie-reject">Solo necesarias</button>
+      <button type="button" class="btn" id="cookie-accept">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ storageKey }}>
+  const banner = document.getElementById("cookie-banner");
+  const accept = document.getElementById("cookie-accept");
+  const reject = document.getElementById("cookie-reject");
+
+  function saveChoice(value) {
+    try {
+      localStorage.setItem(storageKey, value);
+    } catch { /* */ }
+    banner?.setAttribute("hidden", "");
+  }
+
+  function init() {
+    try {
+      if (localStorage.getItem(storageKey)) {
+        banner?.setAttribute("hidden", "");
+        return;
+      }
+    } catch { /* */ }
+    banner?.removeAttribute("hidden");
+  }
+
+  accept?.addEventListener("click", () => saveChoice("accepted"));
+  reject?.addEventListener("click", () => saveChoice("essential"));
+  init();
+</script>

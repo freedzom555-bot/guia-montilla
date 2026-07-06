@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { LEGAL, SITE } from "../data/site";
+
+const base = import.meta.env.BASE_URL;
+const updated = "6 de julio de 2026";
+---
+
+<Layout
+  title="Aviso legal"
+  description="Aviso legal y condiciones de uso de Guía Montilla, directorio local de Montilla (Córdoba)."
+>
+  <section class="page-head">
+    <div class="wrap">
+      <a href={base} class="back">← Inicio</a>
+      <h1>Aviso legal</h1>
+      <p class="page-head__sub">Condiciones de acceso y uso de {LEGAL.url}</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap legal-prose">
+      <p class="legal-updated">Última actualización: {updated}</p>
+
+      <h2>1. Titular del sitio web</h2>
+      <p>
+        En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio
+        Electrónico (LSSI-CE), se informa que el titular de este sitio web es <strong>{LEGAL.owner}</strong>, con
+        domicilio a efectos de comunicaciones en Montilla (Córdoba), España, y correo electrónico de contacto:{" "}
+        <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a>.
+      </p>
+
+      <h2>2. Objeto</h2>
+      <p>
+        {SITE.name} es un directorio informativo y guía local sobre negocios, servicios, patrimonio, rutas, agenda y
+        noticias de Montilla y su comarca. El acceso al sitio implica la aceptación de las presentes condiciones.
+      </p>
+
+      <h2>3. Condiciones de uso</h2>
+      <p>
+        El usuario se compromete a hacer un uso lícito del sitio, sin dañar sistemas, introducir malware ni utilizar los
+        contenidos con fines ilícitos. Queda prohibida la reproducción masiva o reutilización comercial de los contenidos
+        sin autorización expresa del titular, salvo en los supuestos legalmente permitidos.
+      </p>
+
+      <h2>4. Contenidos y fuentes</h2>
+      <p>
+        Parte de la información procede de fuentes públicas (Google Maps, webs oficiales, medios locales con enlace a la
+        fuente original). Aunque se procura mantener datos actualizados, no se garantiza la exactitud absoluta de horarios,
+        precios o disponibilidad de terceros. Se recomienda confirmar con el establecimiento antes de visitarlo.
+      </p>
+
+      <h2>5. Enlaces externos</h2>
+      <p>
+        El sitio puede incluir enlaces a páginas de terceros. {LEGAL.owner} no se responsabiliza del contenido ni de las
+        políticas de privacidad de sitios ajenos.
+      </p>
+
+      <h2>6. Propiedad intelectual</h2>
+      <p>
+        El diseño, textos editoriales propios, logotipos y estructura del sitio están protegidos por la normativa de
+        propiedad intelectual. Las marcas y nombres comerciales de los negocios listados pertenecen a sus respectivos
+        titulares.
+      </p>
+
+      <h2>7. Limitación de responsabilidad</h2>
+      <p>
+        {LEGAL.owner} no será responsable de daños derivados del uso del sitio, de interrupciones del servicio, errores en
+        los contenidos o de decisiones tomadas por el usuario basándose únicamente en la información publicada.
+      </p>
+
+      <h2>8. Desarrollo técnico</h2>
+      <p>
+        El desarrollo y mantenimiento técnico del sitio web ha sido realizado por{" "}
+        <a href={LEGAL.developerUrl} rel="noopener noreferrer" target="_blank">{LEGAL.developer}</a>.
+      </p>
+
+      <h2>9. Legislación aplicable</h2>
+      <p>
+        Las presentes condiciones se rigen por la legislación española. Para cualquier controversia, las partes se someten a
+        los juzgados y tribunales que correspondan según la normativa de consumidores y usuarios.
+      </p>
+
+      <nav class="legal-nav" aria-label="Otras páginas legales">
+        <a href={`${base}politica-privacidad/`}>Política de privacidad</a>
+        <a href={`${base}politica-cookies/`}>Política de cookies</a>
+      </nav>
+    </div>
+  </section>
+</Layout>

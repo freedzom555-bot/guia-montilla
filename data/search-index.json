@@ -1,7 +1,7 @@
 {
   "version": 1,
   "locale": "es",
-  "total": 464,
+  "total": 463,
   "categoryKeywords": {
     "bodegas": [
       "bodega",
@@ -1025,40 +1025,6 @@
         "estética"
       ],
       "searchBlob": "amalay -mari carmen aguilar peluqueria, estetica & spa belleza amalay -mari carmen aguilar peluqueria, estetica & spa presta servicios de peluqueria, estetica o barberia en el pueblo. centro de belleza spa service amalay mari carmen aguilar peluqueria estetica spa belleza presta servicios barberia pueblo san fernando montilla centro service peluqueria corte estetica"
-    },
-    {
-      "slug": "amparo-gomez-de-tejada-munoz-farmacia-y-ortopedia-",
-      "name": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO)",
-      "tagline": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO) ofrece ortopedia técnica y material sanitario en Montilla.",
-      "category": "salud",
-      "categoryLabel": "Salud",
-      "categoryUrl": "/salud/",
-      "featured": false,
-      "keywords": [
-        "amparo",
-        "gomez",
-        "tejada",
-        "munoz",
-        "(farmacia",
-        "ortopedia",
-        "ipagro)",
-        "salud",
-        "ofrece",
-        "tecnica",
-        "material",
-        "sanitario",
-        "montilla",
-        "llano",
-        "las",
-        "coronadas",
-        "aguilar",
-        "frontera",
-        "farmacia",
-        "tienda",
-        "health",
-        "medicamentos"
-      ],
-      "searchBlob": "amparo gomez de tejada munoz (farmacia y ortopedia ipagro) salud amparo gomez de tejada munoz (farmacia y ortopedia ipagro) ofrece ortopedia tecnica y material sanitario en montilla. farmacia tienda health amparo gomez tejada munoz (farmacia ortopedia ipagro) salud ofrece tecnica material sanitario montilla llano las coronadas aguilar frontera farmacia tienda health medicamentos"
     },
     {
       "slug": "ana-portero-estilismo-y-peluqueria",
