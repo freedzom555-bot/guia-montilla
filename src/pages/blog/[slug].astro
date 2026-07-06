@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import businesses from "../../../data/businesses.json";
+import {
+  articleTitle,
+  articleKeywords,
+  topicLabel,
+  buildArticleSchemas,
+  trimMeta,
+} from "../../lib/blog-seo";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const base = import.meta.env.BASE_URL;
+const siteUrl = (Astro.site ?? new URL("http://localhost:4321")).href.replace(/\/$/, "");
+
+const related = post.data.relatedSlugs
+  .map((slug) => businesses.find((b) => b.slug === slug))
+  .filter(Boolean)
+  .slice(0, 6);
+
+const wordCount = post.body?.split(/\s+/).length ?? 0;
+const readingMin = Math.max(3, Math.round(wordCount / 200));
+
+const schemas = buildArticleSchemas({
+  title: post.data.title,
+  description: post.data.description,
+  slug: post.id,
+  pubDate: post.data.pubDate,
+  updatedDate: post.data.updatedDate,
+  siteUrl,
+  base,
+  faq: post.data.faq,
+});
+---
+
+<Layout
+  title={articleTitle(post.data.title)}
+  description={trimMeta(post.data.description)}
+  keywords={articleKeywords(post.data.keywords)}
+  image="/images/hero/hero.jpg"
+  ogType="article"
+  jsonLd={schemas}
+>
+  <article class="blog-article">
+    <header class="blog-article__head">
+      <div class="wrap blog-article__head-inner">
+        <nav class="blog-article__crumb" aria-label="Miga de pan">
+          <a href={base}>Inicio</a>
+          <span aria-hidden="true">/</span>
+          <a href={`${base}blog/`}>Blog</a>
+        </nav>
+        <p class="blog-article__topic">{topicLabel(post.data.topic)}</p>
+        <h1>{post.data.title}</h1>
+        <p class="blog-article__deck">{post.data.description}</p>
+        <p class="blog-article__meta">
+          <time datetime={post.data.pubDate.toISOString()}>
+            {post.data.pubDate.toLocaleDateString("es-ES", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </time>
+          · {readingMin} min de lectura
+        </p>
+      </div>
+    </header>
+
+    <div class="wrap blog-article__layout">
+      <div class="blog-prose">
+        <Content />
+      </div>
+
+      <aside class="blog-aside">
+        {related.length > 0 && (
+          <section class="blog-aside__block">
+            <h2>Lugares citados</h2>
+            <ul>
+              {related.map((b) => (
+                <li>
+                  <a href={`${base}negocio/${b.slug}/`}>{b.name}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {post.data.faq && post.data.faq.length > 0 && (
+          <section class="blog-aside__block blog-faq">
+            <h2>Preguntas frecuentes</h2>
+            {post.data.faq.map((item) => (
+              <details>
+                <summary>{item.q}</summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
+          </section>
+        )}
+
+        <section class="blog-aside__block blog-aside__cta">
+          <h2>Busca en el directorio</h2>
+          <p>Bodegas, restaurantes, monumentos y más — con teléfono y horario.</p>
+          <a class="btn" href={`${base}buscar/`}>Ir al buscador</a>
+        </section>
+      </aside>
+    </div>
+  </article>
+</Layout>

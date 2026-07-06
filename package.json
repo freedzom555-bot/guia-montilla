@@ -1,0 +1,36 @@
+{
+  "name": "guia-montilla",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "La guía automatizada de Montilla y Montilla-Moriles",
+  "scripts": {
+    "dev": "astro dev --base /",
+    "build": "node scripts/build-search-index.mjs && node scripts/generate-blog.mjs && astro build",
+    "blog": "node scripts/generate-blog.mjs",
+    "preview": "astro preview",
+    "pipeline": "node scripts/pipeline.mjs",
+    "download-images": "node scripts/download-montilla-images.mjs",
+    "fetch-images": "node scripts/fetch-business-images.mjs",
+    "enrich": "node scripts/enrich-businesses.mjs",
+    "prepare-data": "node scripts/discover-montilla.mjs && node scripts/rebuild-businesses.mjs",
+    "discover": "node scripts/discover-montilla.mjs",
+    "filter-registry": "node scripts/filter-registry.mjs",
+    "dedupe": "node scripts/dedupe-businesses.mjs",
+    "restore-all": "node scripts/restore-all-businesses.mjs",
+    "organize": "node scripts/filter-montilla-only.mjs && node scripts/dedupe-businesses.mjs && node scripts/curate-businesses.mjs && node scripts/enrich-businesses.mjs && node scripts/normalize-photos.mjs && node scripts/build-search-index.mjs && node scripts/audit-photos.mjs",
+    "audit-photos": "node scripts/audit-photos.mjs && node scripts/audit-placeids.mjs",
+    "filter-montilla": "node scripts/filter-montilla-only.mjs",
+    "fetch-missing-photos": "node scripts/fetch-missing-photos.mjs",
+    "refresh-photos": "node scripts/refresh-all-photos-google.mjs",
+    "curate": "node scripts/curate-businesses.mjs",
+    "fix-categories": "node scripts/fix-categories.mjs",
+    "refresh-details": "node scripts/refresh-details.mjs",
+    "rebuild": "node scripts/rebuild-businesses.mjs",
+    "patch-names": "node scripts/patch-names.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^5.7.0",
+    "rss-parser": "^3.13.0"
+  }
+}

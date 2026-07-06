@@ -1,0 +1,39 @@
+---
+interface Business {
+  slug: string;
+  name: string;
+  tagline: string;
+  description: string;
+  image?: string;
+  gallery?: { src: string; alt: string }[];
+}
+
+interface Props {
+  business: Business;
+}
+
+const { business } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const thumbSrc = business.gallery?.[0]?.src ?? business.image;
+const img = thumbSrc ? `${base}${thumbSrc.replace(/^\//, "")}` : null;
+---
+
+<article class="feature-lead fade-in">
+  {img && (
+    <div class="feature-lead__photo">
+      <img src={img} alt={business.name} width="800" height="500" loading="eager" />
+    </div>
+  )}
+  <div class="feature-lead__content">
+    <div class="feature-lead__main">
+      <span class="feature-lead__kicker">Selección</span>
+      <h3><a href={`${base}negocio/${business.slug}/`}>{business.name}</a></h3>
+      <p>{business.tagline}</p>
+      {business.description.split("\n\n").slice(1, 3).map((para) => <p class="feature-lead__excerpt">{para}</p>)}
+      <a href={`${base}negocio/${business.slug}/`} class="feature-lead__link">Ver ficha →</a>
+    </div>
+    <aside class="feature-lead__aside">
+      <p>«{business.tagline}»</p>
+    </aside>
+  </div>
+</article>

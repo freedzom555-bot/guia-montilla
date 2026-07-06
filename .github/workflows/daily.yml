@@ -1,0 +1,59 @@
+name: Actualizar y publicar
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "src/**"
+      - "public/**"
+      - "scripts/**"
+      - "package.json"
+      - "astro.config.mjs"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      BASE_PATH: /
+      PUBLIC_WEB3FORMS_KEY: ${{ secrets.PUBLIC_WEB3FORMS_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run pipeline
+      - run: npm run build
+        env:
+          SITE_URL: ${{ secrets.SITE_URL || 'https://guiamontilla.es' }}
+          BASE_PATH: /
+      - run: |
+          git config user.name "Guía Montilla Bot"
+          git config user.email "bot@guia-montilla.local"
+          git add data/events.json data/news.json
+          git diff --staged --quiet || git commit -m "Actualización automática $(date +%Y-%m-%d) [skip ci]"
+          git push || true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

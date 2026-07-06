@@ -1,0 +1,4518 @@
+[
+  {
+    "slug": "alojamiento-casa-rural-cordon",
+    "name": "Alojamiento Casa Rural Cordón",
+    "category": "alojamiento",
+    "types": [
+      "Hotel",
+      "Alojamiento",
+      "service"
+    ]
+  },
+  {
+    "slug": "alojamiento-hermanos-garnelo",
+    "name": "Alojamiento Hermanos Garnelo",
+    "category": "alojamiento",
+    "types": [
+      "Alojamiento"
+    ]
+  },
+  {
+    "slug": "apartamento-la-encarnacion",
+    "name": "Apartamento La Encarnacion",
+    "category": "alojamiento",
+    "types": [
+      "Hotel",
+      "Alojamiento"
+    ]
+  },
+  {
+    "slug": "area-el-coto",
+    "name": "Área El Coto",
+    "category": "alojamiento",
+    "types": [
+      "mobile home park",
+      "rv park",
+      "Alojamiento",
+      "service"
+    ]
+  },
+  {
+    "slug": "boutique-house-lujo-pobre",
+    "name": "Boutique House Lujo Pobre",
+    "category": "alojamiento",
+    "types": [
+      "Pensión",
+      "Alojamiento"
+    ]
+  },
+  {
+    "slug": "casa-boutique-navarro-estudios-para-alquilar-carac",
+    "name": "Casa Boutique Navarro - Estudios para alquilar. Características de un Hotel con las comodidades de una casa moderna privada.",
+    "category": "alojamiento",
+    "types": [
+      "Hotel",
+      "Alojamiento"
+    ]
+  },
+  {
+    "slug": "casa-rural-cuesta-blanca",
+    "name": "Casa Rural Cuesta Blanca",
+    "category": "alojamiento",
+    "types": [
+      "cottage",
+      "Alojamiento"
+    ]
+  },
+  {
+    "slug": "casa-rural-tela-y-vino",
+    "name": "Casa Rural Tela y Vino",
+    "category": "alojamiento",
+    "types": [
+      "Hotel",
+      "Alojamiento",
+      "service"
+    ]
+  },
+  {
+    "slug": "cortijo-el-pinar",
+    "name": "Cortijo el Pinar",
+    "category": "alojamiento",
+    "types": [
+      "Hotel",
+      "Alojamiento",
+      "service"
+    ]
+  },
+  {
+    "slug": "hostal-bellido",
+    "name": "Hostal Bellido",
+    "category": "alojamiento",
+    "types": [
+      "Hotel",
+      "Alojamiento"
+    ]
+  },
+  {
+    "slug": "hotel-alfar",
+    "name": "Hotel Alfar",
+    "category": "alojamiento",
+    "types": [
+      "Hotel",
+      "Alojamiento"
+    ]
+  },
+  {
+    "slug": "la-casa-del-gallo-alojamientos",
+    "name": "La Casa del Gallo Alojamientos",
+    "category": "alojamiento",
+    "types": [
+      "Hotel",
+      "Alojamiento"
+    ]
+  },
+  {
+    "slug": "bodega-boutique-finca-buytron",
+    "name": "Bodega Boutique Finca Buytron",
+    "category": "bodegas",
+    "types": [
+      "bed and breakfast",
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "Alojamiento",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodega-rockera-cabrinana",
+    "name": "Bodega Rockera Cabriñana",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "Vinoteca",
+      "farm",
+      "manufacturer",
+      "service",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "bodega-y-vinedos-lagar-de-la-salud",
+    "name": "Bodega y viñedos Lagar de la Salud",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-caballero",
+    "name": "Bodegas Caballero",
+    "category": "bodegas",
+    "types": [
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "bodegas-cruz-conde",
+    "name": "Bodegas Cruz Conde",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "Atracción turística",
+      "Vinoteca",
+      "farm",
+      "Tienda",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-galan-portero",
+    "name": "Bodegas Galan Portero",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-galan-portero-lagar-el-puntal",
+    "name": "Bodegas Galán Portero - Lagar El Puntal",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-la-aurora",
+    "name": "Bodegas La Aurora",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "Vinoteca",
+      "farm",
+      "Tienda",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-lagar-blanco",
+    "name": "Bodegas Lagar Blanco",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "Atracción turística",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-navarro",
+    "name": "Bodegas Navarro",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-navisa",
+    "name": "Bodegas Navisa",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-alvear",
+    "name": "Bodegas Alvear",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "Vinoteca",
+      "farm",
+      "Tienda",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-canada-navarro",
+    "name": "Bodegas Cañada Navarro",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-gracia",
+    "name": "Bodegas Gracia Hermanos",
+    "category": "bodegas",
+    "types": []
+  },
+  {
+    "slug": "bodegas-los-raigones",
+    "name": "Bodega Los Raigones",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-perez-barquero",
+    "name": "Bodegas Pérez Barquero",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "vineyard",
+      "Atracción turística",
+      "Vinoteca",
+      "farm",
+      "Tienda",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "bodegas-robles",
+    "name": "Bodegas Robles",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "vineyard",
+      "Vinoteca",
+      "farm",
+      "manufacturer",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "cooperativa-san-isidro",
+    "name": "Cooperativa San Isidro (Bodegas San Acacio)",
+    "category": "bodegas",
+    "types": []
+  },
+  {
+    "slug": "lagar-de-las-puentes",
+    "name": "Lagar de Las Puentes",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "lagar-la-primilla",
+    "name": "Lagar La Primilla",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "marenas-vinedo-y-bodega-vinos-naturales",
+    "name": "Marenas Viñedo y Bodega / Vinos Naturales",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "farm",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "miguel-cruz-tienda-de-vinos",
+    "name": "Miguel Cruz Tienda de Vinos",
+    "category": "bodegas",
+    "types": [
+      "Vinoteca",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "toneleria-j-l-rodriguez-s-l",
+    "name": "Toneleria J.L. Rodriguez S.L.",
+    "category": "bodegas",
+    "types": [
+      "Vinoteca",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "vinos-de-anora",
+    "name": "Vinos de Anora",
+    "category": "bodegas",
+    "types": [
+      "Bodega",
+      "Bar de vinos",
+      "Vinoteca",
+      "farm",
+      "Tienda",
+      "pub",
+      "Bar",
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "arco-de-san-lorenzo-antiguo-convento-de-san-lorenz",
+    "name": "Arco de San Lorenzo - Antiguo convento de San Lorenzo",
+    "category": "monumentos",
+    "types": [
+      "historical landmark",
+      "historical place"
+    ]
+  },
+  {
+    "slug": "arco-de-santa-clara",
+    "name": "Arco de Santa Clara",
+    "category": "monumentos",
+    "types": [
+      "historical landmark",
+      "historical place"
+    ]
+  },
+  {
+    "slug": "basilica-pontificia-de-san-juan-de-avila",
+    "name": "Basílica Pontificia de San Juan de Ávila",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "capilla-del-sagrado-descendimiento",
+    "name": "Capilla del Sagrado Descendimiento",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "casa-de-la-camacha",
+    "name": "Casa de La Camacha",
+    "category": "museos",
+    "types": [
+      "Museo"
+    ]
+  },
+  {
+    "slug": "casa-del-inca",
+    "name": "Casa del Inca Garcilaso de la Vega",
+    "category": "museos",
+    "types": [
+      "Museo",
+      "Atracción turística"
+    ]
+  },
+  {
+    "slug": "castillo-montilla",
+    "name": "Castillo de Montilla",
+    "category": "monumentos",
+    "types": [
+      "historical landmark",
+      "historical place"
+    ]
+  },
+  {
+    "slug": "cerro-macho",
+    "name": "Cerro Macho",
+    "category": "monumentos",
+    "types": [
+      "historical landmark",
+      "historical place"
+    ]
+  },
+  {
+    "slug": "claustro-del-pretorio",
+    "name": "Claustro del Pretorio",
+    "category": "monumentos",
+    "types": [
+      "historical landmark",
+      "historical place"
+    ]
+  },
+  {
+    "slug": "comunidad-de-amor-cristiano",
+    "name": "Comunidad de Amor Cristiano",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "convento-de-santa-ana",
+    "name": "Convento de Santa Ana",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "convento-santa-clara",
+    "name": "Convento de Santa Clara",
+    "category": "monumentos",
+    "types": [
+      "Convento",
+      "Iglesia",
+      "Patrimonio religioso"
+    ]
+  },
+  {
+    "slug": "ermita-de-belen",
+    "name": "Ermita de Belén",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "ermita-de-la-merced",
+    "name": "Ermita de la Merced",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "ermita-de-la-paz-casa-de-san-juan-de-avila",
+    "name": "Ermita de la Paz - Casa de San Juan de Ávila",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "ermita-de-la-rosa",
+    "name": "Ermita de la Rosa",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "ermita-de-la-sagrada-familia",
+    "name": "Ermita de la Sagrada Familia",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "exposicion-permanente-de-el-gran-capitan",
+    "name": "Exposición permanente de El Gran Capitán",
+    "category": "museos",
+    "types": [
+      "Museo"
+    ]
+  },
+  {
+    "slug": "iglesia-de-san-agustin",
+    "name": "Iglesia de San Agustín",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "la-casa-de-los-reyes-magos",
+    "name": "La Casa de los Reyes Magos",
+    "category": "comercios",
+    "types": [
+      "Atracción turística"
+    ]
+  },
+  {
+    "slug": "mural-conexion",
+    "name": "Mural Conexión",
+    "category": "cultura-ocio",
+    "types": [
+      "Atracción turística"
+    ]
+  },
+  {
+    "slug": "mural-proceso-magico",
+    "name": "Mural Proceso Mágico",
+    "category": "cultura-ocio",
+    "types": [
+      "Atracción turística"
+    ]
+  },
+  {
+    "slug": "museo-garnelo",
+    "name": "Museo Garnelo",
+    "category": "museos",
+    "types": [
+      "Museo",
+      "Atracción turística"
+    ]
+  },
+  {
+    "slug": "museo-historico-local-de-montilla",
+    "name": "Museo Histórico Local de Montilla",
+    "category": "museos",
+    "types": [
+      "Museo",
+      "Atracción turística"
+    ]
+  },
+  {
+    "slug": "olivo-milenario",
+    "name": "Olivo milenario",
+    "category": "monumentos",
+    "types": [
+      "historical landmark",
+      "historical place"
+    ]
+  },
+  {
+    "slug": "palacio-de-los-duques-de-medinaceli",
+    "name": "Palacio de los Duques de Medinaceli",
+    "category": "monumentos",
+    "types": [
+      "historical landmark",
+      "historical place"
+    ]
+  },
+  {
+    "slug": "parroquia-de-nuestra-senora-de-la-asuncion",
+    "name": "Parroquia de Nuestra Señora de la Asunción",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "parroquia-de-san-francisco-solano",
+    "name": "Parroquia de San Francisco Solano",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "parroquia-de-san-sebastian",
+    "name": "Parroquia de San Sebastián",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "parroquia-santiago",
+    "name": "Parroquia de Santiago Apóstol",
+    "category": "cultura-ocio",
+    "types": [
+      "Iglesia",
+      "place of worship",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "piedra-luenga",
+    "name": "Piedra Luenga",
+    "category": "parques",
+    "types": [
+      "Parque",
+      "Atracción turística"
+    ]
+  },
+  {
+    "slug": "poza-de-tintin",
+    "name": "Poza De Tintin",
+    "category": "museos",
+    "types": [
+      "Museo"
+    ]
+  },
+  {
+    "slug": "laguna-de-jarata",
+    "name": "Laguna de Jarata",
+    "category": "parques",
+    "types": [
+      "Parque"
+    ]
+  },
+  {
+    "slug": "montiaventura-local-cumpleanos",
+    "name": "MontiAventura Local Cumpleaños",
+    "category": "cultura-ocio",
+    "types": [
+      "indoor playground",
+      "Parque infantil",
+      "Recinto de eventos",
+      "service"
+    ]
+  },
+  {
+    "slug": "parque-de-la-rejoya",
+    "name": "Parque de la Rejoya",
+    "category": "parques",
+    "types": [
+      "Parque"
+    ]
+  },
+  {
+    "slug": "parque-infantil",
+    "name": "Parque Infantil",
+    "category": "parques",
+    "types": [
+      "Parque infantil"
+    ]
+  },
+  {
+    "slug": "parque-la-serna",
+    "name": "Parque La Serna (Paseo de Cervantes)",
+    "category": "parques",
+    "types": [
+      "Parque",
+      "city park"
+    ]
+  },
+  {
+    "slug": "parque-tierno-galvan",
+    "name": "Parque Tierno Galván",
+    "category": "parques",
+    "types": [
+      "Parque"
+    ]
+  },
+  {
+    "slug": "paseo-de-las-mercedes",
+    "name": "Paseo de las Mercedes",
+    "category": "parques",
+    "types": [
+      "Parque"
+    ]
+  },
+  {
+    "slug": "pico-el-cigarral",
+    "name": "Pico El Cigarral",
+    "category": "parques",
+    "types": [
+      "Parque"
+    ]
+  },
+  {
+    "slug": "plaza-de-munda",
+    "name": "Plaza de Munda",
+    "category": "parques",
+    "types": [
+      "Parque"
+    ]
+  },
+  {
+    "slug": "a-vv-gran-capitan-de-montilla",
+    "name": "A.VV. GRAN CAPITAN de Montilla",
+    "category": "cultura-ocio",
+    "types": [
+      "service",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "ademo-union-de-empresarios-de-montilla",
+    "name": "Ademo, Unión de Empresarios de Montilla",
+    "category": "cultura-ocio",
+    "types": [
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "almacenes-manolin-y-luis-s-l",
+    "name": "ALMACENES MANOLÍN Y LUIS S.L.",
+    "category": "comercios",
+    "types": []
+  },
+  {
+    "slug": "area-de-cultura-ayo-de-montilla",
+    "name": "Área de Cultura - Ayo. de Montilla",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "asesoria-garcia-fiscal-laboral-y-contable",
+    "name": "Asesoría García | Fiscal, Laboral y Contable",
+    "category": "profesionales",
+    "types": [
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "automatismos-itea-s-l",
+    "name": "Automatismos Itea, S.L.",
+    "category": "comercios",
+    "types": [
+      "supplier",
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "ayuntamiento-de-montilla",
+    "name": "Ayuntamiento de Montilla",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "balcon-de-la-escuchuela",
+    "name": "Balcón de la Escuchuela",
+    "category": "cultura-ocio",
+    "types": [
+      "scenic spot"
+    ]
+  },
+  {
+    "slug": "biblioteca-publica-municipal-cc-antonio-carpio",
+    "name": "Biblioteca Pública Municipal (CC Antonio Carpio)",
+    "category": "cultura-ocio",
+    "types": [
+      "Biblioteca",
+      "service"
+    ]
+  },
+  {
+    "slug": "casa-de-la-tercia",
+    "name": "Casa de la Tercia",
+    "category": "comercios",
+    "types": [
+      "apartment building",
+      "service"
+    ]
+  },
+  {
+    "slug": "casino-montillano",
+    "name": "Casino Montillano",
+    "category": "cultura-ocio",
+    "types": [
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "cep-centro-de-profesores-de-montilla",
+    "name": "CEP Centro de Profesores de Montilla",
+    "category": "educacion",
+    "types": [
+      "university",
+      "educational institution"
+    ]
+  },
+  {
+    "slug": "clinica-dental-rafael-arroyo-perez",
+    "name": "Clínica Dental Rafael Arroyo Pérez",
+    "category": "salud",
+    "types": [
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-dental-zurita-clinica-dental-montilla",
+    "name": "Clinica Dental Zurita - Clinica Dental - Montilla",
+    "category": "salud",
+    "types": [
+      "dental clinic",
+      "medical clinic",
+      "health"
+    ]
+  },
+  {
+    "slug": "cooperativa-la-union",
+    "name": "Cooperativa La Unión",
+    "category": "bodegas",
+    "types": [
+      "service",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "dental-montilla-francisco-mesa",
+    "name": "Dental Montilla Francisco Mesa",
+    "category": "salud",
+    "types": [
+      "dental clinic",
+      "medical clinic",
+      "health"
+    ]
+  },
+  {
+    "slug": "espuma-activa",
+    "name": "Espuma Activa",
+    "category": "motor",
+    "types": [
+      "car wash",
+      "service"
+    ]
+  },
+  {
+    "slug": "estacion-de-autobuses",
+    "name": "Estacion de Autobuses",
+    "category": "cultura-ocio",
+    "types": [
+      "Estación de autobuses",
+      "transit station",
+      "transportation service"
+    ]
+  },
+  {
+    "slug": "estatua-diego-de-alvear-y-ponce-de-leon",
+    "name": "Estatua Diego de Alvear y Ponce de León",
+    "category": "monumentos",
+    "types": [
+      "sculpture"
+    ]
+  },
+  {
+    "slug": "franmig-centro-de-lavado",
+    "name": "Franmig centro de lavado.",
+    "category": "motor",
+    "types": [
+      "car wash",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-canalerma",
+    "name": "Fuente Cañalerma",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-de-anacleto",
+    "name": "Fuente de Anacleto",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-de-la-higuera",
+    "name": "Fuente de La Higuera",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-de-la-malena",
+    "name": "Fuente de La Malena",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-de-san-carlos",
+    "name": "Fuente de San Carlos",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "service",
+      "local government office",
+      "government office"
+    ]
+  },
+  {
+    "slug": "fuente-de-san-francisco",
+    "name": "Fuente de San Francisco",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-de-santa-maria",
+    "name": "Fuente de Santa María",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-del-hierro",
+    "name": "Fuente del Hierro",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-del-piojo",
+    "name": "Fuente del Piojo",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-el-fontanar",
+    "name": "Fuente El Fontanar",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-la-canaleja",
+    "name": "Fuente La Canaleja",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "fuente-pilas-de-panchia",
+    "name": "Fuente Pilas de Panchía",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "inma-espejo-gestora-administrativa-y-contable",
+    "name": "Inma Espejo- Gestora administrativa y contable",
+    "category": "profesionales",
+    "types": [
+      "service"
+    ]
+  },
+  {
+    "slug": "inss-instituto-nacional-de-la-seguridad-social-ofi",
+    "name": "INSS. Instituto Nacional de la Seguridad Social - Oficina Montilla",
+    "category": "educacion",
+    "types": [
+      "local government office",
+      "government office",
+      "service",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "jefatura-de-la-policia-local",
+    "name": "Jefatura de la Policía Local",
+    "category": "comercios",
+    "types": [
+      "Policía",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "jerin-go",
+    "name": "Jerin-Go",
+    "category": "bares-cafes",
+    "types": [
+      "cafeteria"
+    ]
+  },
+  {
+    "slug": "jm-padillo-abogados",
+    "name": "JM Padillo Abogados",
+    "category": "profesionales",
+    "types": [
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "jose-manuel-marquez-mesa",
+    "name": "José Manuel Márquez Mesa",
+    "category": "motor",
+    "types": [
+      "car wash",
+      "service"
+    ]
+  },
+  {
+    "slug": "marathon-viajes",
+    "name": "Marathon Viajes",
+    "category": "comercios",
+    "types": [
+      "travel agency",
+      "service"
+    ]
+  },
+  {
+    "slug": "mercadillo-de-montilla",
+    "name": "Mercadillo de Montilla",
+    "category": "cultura-ocio",
+    "types": [
+      "flea market",
+      "market"
+    ]
+  },
+  {
+    "slug": "mercado-municipal-de-abastos-montilla",
+    "name": "Mercado Municipal de Abastos Montilla",
+    "category": "cultura-ocio",
+    "types": [
+      "market"
+    ]
+  },
+  {
+    "slug": "montilla-digital",
+    "name": "Montilla Digital",
+    "category": "comercios",
+    "types": []
+  },
+  {
+    "slug": "monumento-a-inca-garcilaso-de-la-vega-fuente-dedic",
+    "name": "Monumento a Inca Garcilaso de la Vega - Fuente dedicada al Mestizaje",
+    "category": "monumentos",
+    "types": [
+      "sculpture"
+    ]
+  },
+  {
+    "slug": "monumento-al-gran-capitan",
+    "name": "Monumento al Gran Capitán",
+    "category": "monumentos",
+    "types": [
+      "sculpture"
+    ]
+  },
+  {
+    "slug": "mural-amontillate",
+    "name": "Mural Amontillate",
+    "category": "cultura-ocio",
+    "types": []
+  },
+  {
+    "slug": "oficina-de-correos",
+    "name": "Oficina de Correos",
+    "category": "profesionales",
+    "types": [
+      "Correos",
+      "government office",
+      "finance",
+      "service",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "oficina-turismo-montilla",
+    "name": "Oficina de Turismo de Montilla",
+    "category": "cultura-ocio",
+    "types": [
+      "tourist information center",
+      "tour agency",
+      "travel agency",
+      "castle",
+      "historical place",
+      "service"
+    ]
+  },
+  {
+    "slug": "oleo-montilla-s-l",
+    "name": "Oleo Montilla S.L.",
+    "category": "comercios",
+    "types": [
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "parque-de-bomberos-de-montilla",
+    "name": "Parque de Bomberos de Montilla",
+    "category": "comercios",
+    "types": [
+      "Parque de bomberos",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "pino-asesoria",
+    "name": "Pino Asesoría",
+    "category": "profesionales",
+    "types": [
+      "consultant",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "plaza-toros-montilla",
+    "name": "Plaza de Toros (Plaza de la Rosa)",
+    "category": "cultura-ocio",
+    "types": [
+      "historical landmark",
+      "historical place"
+    ]
+  },
+  {
+    "slug": "poza-de-la-alcubilla",
+    "name": "Poza de la Alcubilla",
+    "category": "cultura-ocio",
+    "types": [
+      "Ayuntamiento",
+      "local government office",
+      "government office",
+      "service"
+    ]
+  },
+  {
+    "slug": "recinto-ferial-montilla",
+    "name": "Complejo Envidarte (Recinto Ferial)",
+    "category": "cultura-ocio",
+    "types": [
+      "community center",
+      "Recinto de eventos",
+      "service"
+    ]
+  },
+  {
+    "slug": "san-francisco-solano",
+    "name": "San Francisco Solano",
+    "category": "comercios",
+    "types": [
+      "sculpture"
+    ]
+  },
+  {
+    "slug": "santicerezo-com",
+    "name": "SantiCerezo.com",
+    "category": "comercios",
+    "types": [
+      "service"
+    ]
+  },
+  {
+    "slug": "teatro-garnelo",
+    "name": "Teatro Garnelo",
+    "category": "cultura-ocio",
+    "types": [
+      "Teatro",
+      "Recinto de eventos"
+    ]
+  },
+  {
+    "slug": "abdul-kebab",
+    "name": "Abdul Kebab",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "ama",
+    "name": "AMA",
+    "category": "alimentacion",
+    "types": [
+      "discount supermarket",
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "ansia-viva-montilla-pizzeria",
+    "name": "Ansia Viva Montilla Pizzeria",
+    "category": "restaurantes",
+    "types": [
+      "pizza restaurant",
+      "pizza delivery",
+      "meal delivery",
+      "food delivery",
+      "Comida para llevar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "aove-pago-de-riofrio",
+    "name": "AOVE Pago de RioFrío",
+    "category": "comercios",
+    "types": [
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "asador-el-jarriero",
+    "name": "Asador El Jarriero",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "asador-la-plaza",
+    "name": "Asador La Plaza",
+    "category": "restaurantes",
+    "types": [
+      "Comida para llevar",
+      "chicken restaurant",
+      "dessert shop",
+      "confectionery",
+      "food store",
+      "Tienda",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "bar-berlanga",
+    "name": "Bar Berlanga",
+    "category": "bares-cafes",
+    "types": [
+      "meal delivery",
+      "food delivery",
+      "warehouse store",
+      "dog cafe",
+      "Tienda",
+      "Bar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "bar-cana-brava",
+    "name": "Bar caña brava",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "bar-carrasquilla",
+    "name": "Bar Carrasquilla",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "bar-el-callejon",
+    "name": "Bar El Callejón",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "bar-el-paso",
+    "name": "Bar EL PASO",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "bar-frances",
+    "name": "Bar Francés",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "bar-la-espuela",
+    "name": "Bar LA ESPUELA",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "bar-la-trailla",
+    "name": "Bar La Traílla",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "bar-paraiso",
+    "name": "Bar Paraíso",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "bar-restaurante-chino-sofi",
+    "name": "Bar Restaurante Chino Sofi",
+    "category": "bares-cafes",
+    "types": [
+      "chinese restaurant",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "bar-restaurante-nino-rios",
+    "name": "Bar Restaurante Niño Ríos",
+    "category": "bares-cafes",
+    "types": [
+      "Restaurante",
+      "Bar"
+    ]
+  },
+  {
+    "slug": "burger-king",
+    "name": "Burger King",
+    "category": "restaurantes",
+    "types": [
+      "fast food restaurant",
+      "hamburger restaurant",
+      "vegan restaurant",
+      "chicken restaurant",
+      "vegetarian restaurant",
+      "Comida para llevar",
+      "american restaurant",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "cafe-bar-hisa",
+    "name": "Café Bar Hisa",
+    "category": "bares-cafes",
+    "types": [
+      "Bar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "cafe-bar-al-liquindoi",
+    "name": "Café-Bar Al-Liquindoi",
+    "category": "bares-cafes",
+    "types": [
+      "Restaurante",
+      "coffee shop",
+      "Cafetería",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "cafe-bar-el-palacio-de-manolo",
+    "name": "Café-Bar El Palacio de Manolo",
+    "category": "bares-cafes",
+    "types": [
+      "Bar",
+      "Cafetería"
+    ]
+  },
+  {
+    "slug": "cafeteria-avant-avenida",
+    "name": "Cafetería AVANT AVENIDA",
+    "category": "bares-cafes",
+    "types": [
+      "Cafetería"
+    ]
+  },
+  {
+    "slug": "cafeteria-azahara",
+    "name": "Cafetería Azahara",
+    "category": "bares-cafes",
+    "types": [
+      "Cafetería"
+    ]
+  },
+  {
+    "slug": "cafeteria-corredera-53",
+    "name": "Cafeteria Corredera 53",
+    "category": "alimentacion",
+    "types": [
+      "coffee shop",
+      "Cafetería",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "cafeteria-florida",
+    "name": "Cafetería Florida",
+    "category": "alimentacion",
+    "types": [
+      "Bar",
+      "hamburger restaurant",
+      "coffee shop",
+      "breakfast restaurant",
+      "Cafetería",
+      "food store",
+      "american restaurant",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "cafeteria-los-jacintos",
+    "name": "Cafeteria los Jacintos",
+    "category": "alimentacion",
+    "types": [
+      "Cafetería",
+      "coffee shop",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "cafeteria-uruguay-loterias-y-apuestas-del-estado",
+    "name": "Cafetería Uruguay - Loterías y Apuestas del Estado",
+    "category": "alimentacion",
+    "types": [
+      "coffee shop",
+      "Cafetería",
+      "food store",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "casa-don-manuel-bar-restaurante",
+    "name": "casa Don Manuel BAR/RESTAURANTE",
+    "category": "bares-cafes",
+    "types": [
+      "bar and grill",
+      "Bar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "casa-gabi",
+    "name": "Casa Gabi",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "catas-dirigidas",
+    "name": "CATAS DIRIGIDAS",
+    "category": "bares-cafes",
+    "types": [
+      "Bar de vinos",
+      "Bar"
+    ]
+  },
+  {
+    "slug": "cerveceria-gambrinus",
+    "name": "Cervecería Gambrinus",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "churreria-san-francisco-montilla",
+    "name": "Churreria San Francisco Montilla",
+    "category": "bares-cafes",
+    "types": [
+      "cafeteria",
+      "breakfast restaurant",
+      "dessert shop",
+      "confectionery",
+      "food store",
+      "Tienda",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "come-pizza",
+    "name": "Come & Pizza",
+    "category": "restaurantes",
+    "types": [
+      "pizza restaurant",
+      "fast food restaurant",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "coviran-qlikbs",
+    "name": "Coviran",
+    "category": "alimentacion",
+    "types": [
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "cremolatta-heladeria-artesana",
+    "name": "Cremolatta Heladería Artesana",
+    "category": "alimentacion",
+    "types": [
+      "ice cream shop",
+      "dessert shop",
+      "confectionery",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "cuatro-cafe-montilla-coffee-breakfast",
+    "name": "Cuatro Café Montilla | Coffee & Breakfast",
+    "category": "bares-cafes",
+    "types": [
+      "Restaurante",
+      "coffee shop",
+      "breakfast restaurant",
+      "Cafetería",
+      "food store",
+      "Tienda",
+      "Bar"
+    ]
+  },
+  {
+    "slug": "d-lou-bar-cafeteria",
+    "name": "D´Lou Bar Cafetería",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "disco-pub-teberee",
+    "name": "Disco-Pub Tebereé",
+    "category": "bares-cafes",
+    "types": [
+      "pub",
+      "dance hall",
+      "Bar",
+      "Recinto de eventos"
+    ]
+  },
+  {
+    "slug": "el-rincon-de-lola",
+    "name": "El Rincón de Lola",
+    "category": "alimentacion",
+    "types": [
+      "coffee shop",
+      "Cafetería",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "el-rincon-sabroso",
+    "name": "El Rincón Sabroso",
+    "category": "bares-cafes",
+    "types": [
+      "Bar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "esquinita-gourmet",
+    "name": "Esquinita Gourmet",
+    "category": "alimentacion",
+    "types": [
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "estacion-de-servicio-cepsa-ew0hpa",
+    "name": "Estación de servicio Cepsa",
+    "category": "motor",
+    "types": [
+      "Gasolinera",
+      "general store",
+      "car wash",
+      "supplier",
+      "food store",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "estacion-de-servicio-cepsa-cmrri4",
+    "name": "Estación de servicio Cepsa",
+    "category": "motor",
+    "types": [
+      "Gasolinera",
+      "car wash",
+      "general store",
+      "food store",
+      "supplier",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "family-cash",
+    "name": "Family Cash",
+    "category": "alimentacion",
+    "types": [
+      "hypermarket",
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "flamenquincordobes-com",
+    "name": "Flamenquincordobes.com",
+    "category": "alimentacion",
+    "types": [
+      "Tienda de conveniencia",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "fruteria-inma",
+    "name": "Frutería Inma",
+    "category": "alimentacion",
+    "types": [
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "galaxia-heladeria-cafeteria",
+    "name": "Galaxia Heladeria-Cafeteria",
+    "category": "alimentacion",
+    "types": [
+      "ice cream shop",
+      "hamburger restaurant",
+      "pizza restaurant",
+      "cafeteria",
+      "dessert shop",
+      "confectionery",
+      "food store",
+      "american restaurant"
+    ]
+  },
+  {
+    "slug": "gardenias-copas",
+    "name": "GARDENIAS COPAS",
+    "category": "bares-cafes",
+    "types": [
+      "pub",
+      "Bar"
+    ]
+  },
+  {
+    "slug": "godevo-restaurante",
+    "name": "Godevo restaurante",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "hotel-don-gonzalo",
+    "name": "Hotel Restaurante Don Gonzalo",
+    "category": "restaurantes",
+    "types": [
+      "Hotel",
+      "mediterranean restaurant",
+      "banquet hall",
+      "cafeteria",
+      "wedding venue",
+      "swimming pool",
+      "Bar",
+      "sports activity location"
+    ]
+  },
+  {
+    "slug": "hotel-don-ramiro",
+    "name": "Hotel Don Ramiro",
+    "category": "bares-cafes",
+    "types": [
+      "Hotel",
+      "indoor playground",
+      "catering service",
+      "Parque infantil",
+      "food delivery",
+      "wedding venue",
+      "coffee shop",
+      "Cafetería"
+    ]
+  },
+  {
+    "slug": "jose-galindo-e-hijos",
+    "name": "Jose Galindo e Hijos",
+    "category": "comercios",
+    "types": [
+      "supplier",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "komo-komo-montilla-alberti",
+    "name": "KOMO KOMO MONTILLA ALBERTI",
+    "category": "alimentacion",
+    "types": [
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "la-alacena",
+    "name": "La Alacena",
+    "category": "restaurantes",
+    "types": [
+      "pizza restaurant",
+      "italian restaurant",
+      "Comida para llevar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "la-bodeguita",
+    "name": "La Bodeguita",
+    "category": "alimentacion",
+    "types": [
+      "coffee shop",
+      "Cafetería",
+      "Bar",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "la-rentilla-s-l",
+    "name": "La Rentilla S.L.",
+    "category": "comercios",
+    "types": [
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "la-tahona-de-san-antonio",
+    "name": "La Tahona de San Antonio",
+    "category": "bares-cafes",
+    "types": [
+      "Panadería",
+      "pizza restaurant",
+      "coffee shop",
+      "Cafetería",
+      "food store",
+      "Tienda",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "lidl",
+    "name": "Lidl",
+    "category": "alimentacion",
+    "types": [
+      "discount supermarket",
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "lounge-la-gastrobodega",
+    "name": "Lounge La Gastrobodega",
+    "category": "bares-cafes",
+    "types": [
+      "lounge bar",
+      "Discoteca",
+      "Bar"
+    ]
+  },
+  {
+    "slug": "mercadona",
+    "name": "Mercadona",
+    "category": "alimentacion",
+    "types": [
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "molino-juanito-ortiz",
+    "name": "Molino Juanito Ortiz",
+    "category": "comercios",
+    "types": [
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "moncafe",
+    "name": "Moncafé",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "monteoliva-cordobesa-s-l",
+    "name": "Monteoliva Cordobesa S.L.",
+    "category": "comercios",
+    "types": [
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "montillana-de-bebidas-s-l",
+    "name": "Montillana De Bebidas S L",
+    "category": "alimentacion",
+    "types": [
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "supplier",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "obrador-cafeteria-san-jose",
+    "name": "Obrador Cafeteria San Jose",
+    "category": "alimentacion",
+    "types": [
+      "Cafetería",
+      "coffee shop",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "obrador-san-jose",
+    "name": "Obrador San José",
+    "category": "alimentacion",
+    "types": [
+      "Cafetería",
+      "coffee shop",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "panaderia-francisco-bellido",
+    "name": "Panadería Francisco Bellido",
+    "category": "alimentacion",
+    "types": [
+      "Panadería",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "panaderia-manuel-bellido-e-hijos",
+    "name": "Panadería Manuel Bellido e Hijos",
+    "category": "alimentacion",
+    "types": [
+      "Panadería",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "panaderia-moramar",
+    "name": "Panadería Moramar",
+    "category": "alimentacion",
+    "types": [
+      "Panadería",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "panificadora-montillana-sl",
+    "name": "Panificadora Montillana SL",
+    "category": "alimentacion",
+    "types": [
+      "Panadería",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "paseo-del-caracol",
+    "name": "Paseo del Caracol",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "pasteleria-manuel-aguilar",
+    "name": "Pastelería Manuel Aguilar",
+    "category": "alimentacion",
+    "types": [
+      "cake shop",
+      "Panadería",
+      "wholesaler",
+      "food store",
+      "Tienda",
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "productos-manolin-mora-sl",
+    "name": "PRODUCTOS MANOLIN MORA SL",
+    "category": "alimentacion",
+    "types": [
+      "manufacturer",
+      "Panadería",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "punto-y-coma-el-enganche",
+    "name": "Punto y Coma - El Enganche",
+    "category": "bares-cafes",
+    "types": [
+      "Bar",
+      "Bar de vinos",
+      "brewery",
+      "Cafetería",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "restaurante-el-barril-de-oro",
+    "name": "Restaurante El Barril de Oro",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "restaurante-el-quijote-ballen-seis",
+    "name": "Restaurante El Quijote / BALLÉN SEIS",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante",
+      "mediterranean restaurant",
+      "fine dining restaurant"
+    ]
+  },
+  {
+    "slug": "restaurante-la-cepa-montillana",
+    "name": "Restaurante La Cepa Montillana",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante",
+      "mediterranean restaurant",
+      "spanish restaurant"
+    ]
+  },
+  {
+    "slug": "restaurante-las-camachas",
+    "name": "Restaurante Las Camachas",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante",
+      "spanish restaurant"
+    ]
+  },
+  {
+    "slug": "restaurante-mareli",
+    "name": "Restaurante Mareli",
+    "category": "bares-cafes",
+    "types": [
+      "Cafetería"
+    ]
+  },
+  {
+    "slug": "restaurante-torres",
+    "name": "Restaurante Torres",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante",
+      "mediterranean restaurant"
+    ]
+  },
+  {
+    "slug": "restaurante-taberna-los-lagares",
+    "name": "Restaurante-Taberna Los Lagares",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante",
+      "breakfast restaurant"
+    ]
+  },
+  {
+    "slug": "sca-almazara-de-montillana",
+    "name": "SCA Almazara de Montillana",
+    "category": "comercios",
+    "types": [
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "sfera-cafe-bar",
+    "name": "Sfera cafe bar",
+    "category": "alimentacion",
+    "types": [
+      "Cafetería",
+      "coffee shop",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "supermercado-flimar",
+    "name": "Supermercado Flimar",
+    "category": "alimentacion",
+    "types": [
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "supermercados-contreras-coviran-capitan",
+    "name": "Supermercados Contreras Coviran Capitán",
+    "category": "alimentacion",
+    "types": [
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "supermercados-contreras-coviran-santa-maria",
+    "name": "Supermercados Contreras Coviran Santa María",
+    "category": "alimentacion",
+    "types": [
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "supermercados-el-jamon",
+    "name": "Supermercados El Jamón",
+    "category": "alimentacion",
+    "types": [
+      "Supermercado",
+      "butcher shop",
+      "market",
+      "Alimentación",
+      "Panadería",
+      "food store",
+      "Tienda",
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "supermercados-el-jamon-ln2g-g",
+    "name": "Supermercados El Jamón",
+    "category": "alimentacion",
+    "types": [
+      "discount supermarket",
+      "Supermercado",
+      "Alimentación",
+      "food store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "taberna-la-tempora",
+    "name": "Taberna La Temporá",
+    "category": "bares-cafes",
+    "types": [
+      "bistro",
+      "Bar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "taberna-rincon-del-conde",
+    "name": "Taberna Rincón del Conde",
+    "category": "restaurantes",
+    "types": [
+      "Restaurante",
+      "spanish restaurant"
+    ]
+  },
+  {
+    "slug": "taberna-bolero",
+    "name": "Taberna Bolero",
+    "category": "restaurantes",
+    "types": [
+      "spanish restaurant",
+      "Bar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "taberna-la-chiva",
+    "name": "Taberna La Chiva",
+    "category": "restaurantes",
+    "types": [
+      "bistro",
+      "spanish restaurant",
+      "Bar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "talleres-agro-cirilo",
+    "name": "Talleres Agro Cirilo",
+    "category": "motor",
+    "types": [
+      "Ferretería",
+      "Taller mecánico",
+      "building materials store",
+      "Hogar",
+      "garden center",
+      "truck dealer",
+      "supplier",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "tentempie",
+    "name": "Tentempié",
+    "category": "bares-cafes",
+    "types": [
+      "bar and grill",
+      "Bar",
+      "Restaurante"
+    ]
+  },
+  {
+    "slug": "the-new-garnelo",
+    "name": "The New Garnelo",
+    "category": "bares-cafes",
+    "types": [
+      "Bar"
+    ]
+  },
+  {
+    "slug": "acrisure-summa-montilla-cordoba",
+    "name": "Acrisure Summa - Montilla / Córdoba",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "aeconomi-consultoria-valores-fiscales",
+    "name": "AECONOMI Consultoria Valores Fiscales",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "Inmobiliaria",
+      "consultant",
+      "local government office",
+      "government office",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "aeroyoga-montilla",
+    "name": "AeroYoga Montilla",
+    "category": "educacion",
+    "types": [
+      "wellness center",
+      "yoga studio",
+      "fitness center",
+      "sports complex",
+      "Gimnasio",
+      "sports school",
+      "sports activity location",
+      "health"
+    ]
+  },
+  {
+    "slug": "agencia-de-santalucia-seguros",
+    "name": "Agencia de Santalucía Seguros",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "consultant",
+      "health",
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "agencia-de-seguros-zurich",
+    "name": "Agencia de seguros ZURICH",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "service"
+    ]
+  },
+  {
+    "slug": "agencia-generali-seguros",
+    "name": "Agencia Generali Seguros",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "alcosto-basic-montilla",
+    "name": "alcosto Basic MONTILLA",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "womens clothing store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "alcosto-montilla",
+    "name": "alcosto MONTILLA",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "womens clothing store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "allianz-seguros-agencia-montilla-asegurador-s-l",
+    "name": "Allianz Seguros - Agencia Montilla Asegurador S.L.",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "consultant",
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "allianz-seguros-agencia-seyge-hnos-jimenez-s-l",
+    "name": "Allianz Seguros - Agencia Seyge Hnos. Jimenez S.L.",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "consultant",
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "allianz-seguros-agente-manuela-cerezo-urbano",
+    "name": "Allianz Seguros - Agente Manuela Cerezo Urbano",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "consultant",
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "amalay-mari-carmen-aguilar-peluqueria-estetica-spa",
+    "name": "amalay -Mari Carmen Aguilar Peluquería, Estética & Spa",
+    "category": "belleza",
+    "types": [
+      "Centro de belleza",
+      "spa",
+      "service"
+    ]
+  },
+  {
+    "slug": "ana-portero-estilismo-y-peluqueria",
+    "name": "Ana Portero Estilismo y Peluquería",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "Centro de belleza",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "angeles-raya-estetica-avanzada",
+    "name": "ANGELES RAYA ESTETICA AVANZADA",
+    "category": "belleza",
+    "types": [
+      "Centro de belleza",
+      "service"
+    ]
+  },
+  {
+    "slug": "antonio-carrasco-aguilar",
+    "name": "Antonio Carrasco Aguilar",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "aromas-perfumerias-montilla",
+    "name": "Aromas Perfumerías - Montilla",
+    "category": "belleza",
+    "types": [
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "asefisco-asesores-s-l",
+    "name": "Asefisco Asesores S.L.",
+    "category": "profesionales",
+    "types": [
+      "Asesoría",
+      "consultant",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "asesores-rafael-rosal",
+    "name": "Asesores Rafael Rosal",
+    "category": "profesionales",
+    "types": [
+      "consultant",
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "asesoria-arrabal",
+    "name": "Asesoria Arrabal",
+    "category": "profesionales",
+    "types": [
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "asesoria-mruz",
+    "name": "Asesoría MRuz",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "atlas-montilla-centro-deportivo-tienda-de-suplemen",
+    "name": "Atlas Montilla. Centro deportivo, tienda de suplementación y ropa deportiva.",
+    "category": "cultura-ocio",
+    "types": [
+      "fitness center",
+      "sportswear store",
+      "yoga studio",
+      "sports complex",
+      "Gimnasio",
+      "Moda",
+      "sporting goods store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "autos-serycar-s-l",
+    "name": "Autos Serycar, S.L.",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "avia",
+    "name": "AVIA",
+    "category": "motor",
+    "types": [
+      "Gasolinera",
+      "service"
+    ]
+  },
+  {
+    "slug": "banco-santander",
+    "name": "Banco Santander",
+    "category": "profesionales",
+    "types": [
+      "Banco",
+      "finance"
+    ]
+  },
+  {
+    "slug": "barberia-miguel-carmona",
+    "name": "Barbería Miguel Carmona",
+    "category": "belleza",
+    "types": [
+      "barber shop",
+      "Peluquería",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "bbva",
+    "name": "BBVA",
+    "category": "profesionales",
+    "types": [
+      "Banco",
+      "finance"
+    ]
+  },
+  {
+    "slug": "beep-informatica",
+    "name": "BEEP Informática",
+    "category": "comercios",
+    "types": [
+      "cell phone store",
+      "Electrónica",
+      "service",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "bellavita",
+    "name": "Bellavita",
+    "category": "belleza",
+    "types": [
+      "Centro de belleza",
+      "nail salon",
+      "service"
+    ]
+  },
+  {
+    "slug": "bellido-manufacturas-metalicas-s-l",
+    "name": "BELLIDO Manufacturas Metálicas, S.L.",
+    "category": "comercios",
+    "types": [
+      "manufacturer",
+      "home improvement store",
+      "Hogar",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "berlin-packaging-iberia-s-l-u",
+    "name": "Berlin Packaging Iberia S.L.U.",
+    "category": "comercios",
+    "types": [
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "bigmat-city-montilla",
+    "name": "BIGMAT CITY MONTILLA",
+    "category": "comercios",
+    "types": [
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "c-e-i-p-san-francisco-solano",
+    "name": "C.E.I.P. San Francisco Solano",
+    "category": "educacion",
+    "types": [
+      "Centro educativo",
+      "educational institution",
+      "government office"
+    ]
+  },
+  {
+    "slug": "c-e-i-p-vicente-aleixandre",
+    "name": "C.E.I.P. Vicente Aleixandre",
+    "category": "educacion",
+    "types": [
+      "Centro educativo",
+      "educational institution",
+      "government office"
+    ]
+  },
+  {
+    "slug": "cache-belleza-profesional-peluqueria-y-estetica",
+    "name": "Caché Belleza Profesional Peluquería y Estética",
+    "category": "belleza",
+    "types": [
+      "beautician",
+      "hair salon",
+      "Peluquería",
+      "service"
+    ]
+  },
+  {
+    "slug": "caixabank-agrobank",
+    "name": "CaixaBank Agrobank",
+    "category": "profesionales",
+    "types": [
+      "Banco",
+      "finance"
+    ]
+  },
+  {
+    "slug": "cajalmendralejo",
+    "name": "Cajalmendralejo",
+    "category": "profesionales",
+    "types": [
+      "Banco",
+      "finance"
+    ]
+  },
+  {
+    "slug": "cajamar-caja-rural",
+    "name": "Cajamar Caja Rural",
+    "category": "profesionales",
+    "types": [
+      "Banco",
+      "atm",
+      "Seguros",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "carpinteria-ramalup-s-l",
+    "name": "Carpintería Ramalup S L",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "caylo-tejidos",
+    "name": "Caylo Tejidos",
+    "category": "comercios",
+    "types": [
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "centro-active",
+    "name": "Centro Active",
+    "category": "educacion",
+    "types": [
+      "yoga studio",
+      "fitness center",
+      "sports complex",
+      "Gimnasio",
+      "sports school",
+      "sports activity location",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "centro-deportivo-biofitness-gimnasio",
+    "name": "CENTRO DEPORTIVO BIOFITNESS (Gimnasio)",
+    "category": "educacion",
+    "types": [
+      "sports complex",
+      "Gimnasio",
+      "sports activity location",
+      "sports school",
+      "health"
+    ]
+  },
+  {
+    "slug": "centro-medico-conductores-clidecem",
+    "name": "Centro Medico conductores - CLIDECEM",
+    "category": "salud",
+    "types": [
+      "medical center",
+      "Dentista",
+      "Hospital",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "centro-veterinario-doggos",
+    "name": "Centro Veterinario Doggos",
+    "category": "salud",
+    "types": [
+      "Veterinario",
+      "pet care"
+    ]
+  },
+  {
+    "slug": "centro-veterinario-fauna",
+    "name": "CENTRO VETERINARIO FAUNA",
+    "category": "salud",
+    "types": [
+      "Veterinario",
+      "pet care"
+    ]
+  },
+  {
+    "slug": "chimeneas-central-renovables-e-i-e",
+    "name": "Chimeneas Central Renovables. E.I.E.",
+    "category": "comercios",
+    "types": [
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "chimeneas-lao",
+    "name": "Chimeneas Lao",
+    "category": "comercios",
+    "types": [
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "cjm-group",
+    "name": "CJM Group",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "wholesaler",
+      "Tienda",
+      "manufacturer",
+      "service"
+    ]
+  },
+  {
+    "slug": "clinica-carlos-trapero-podologia-avanzada",
+    "name": "CLINICA CARLOS TRAPERO- PODOLOGIA AVANZADA",
+    "category": "salud",
+    "types": [
+      "Consulta médica",
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-de-tatuajes-y-estetica",
+    "name": "Clinica de Tatuajes Y Estetica.",
+    "category": "salud",
+    "types": [
+      "body art service",
+      "Centro de belleza",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "clinica-del-pie-auxiliadora-martinez-urbano",
+    "name": "Clínica del Pie Auxiliadora Martínez Urbano",
+    "category": "salud",
+    "types": [
+      "Consulta médica",
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-del-pie-teresa-bautista",
+    "name": "Clinica del Pie Teresa Bautista",
+    "category": "salud",
+    "types": [
+      "Consulta médica",
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-dental-avenida",
+    "name": "Clínica Dental Avenida",
+    "category": "salud",
+    "types": [
+      "Dentista",
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-dental-gallardo",
+    "name": "Clinica Dental Gallardo",
+    "category": "salud",
+    "types": [
+      "dental clinic",
+      "Dentista",
+      "medical clinic",
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-dental-prieto",
+    "name": "Clínica Dental Prieto",
+    "category": "salud",
+    "types": [
+      "dental clinic",
+      "Dentista",
+      "medical clinic",
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-dra-carmen-carmona",
+    "name": "Clínica Dra. Carmen Carmona",
+    "category": "salud",
+    "types": [
+      "Dentista",
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-perez-baena",
+    "name": "Clínica Pérez Baena",
+    "category": "salud",
+    "types": [
+      "Consulta médica",
+      "beautician",
+      "skin care clinic",
+      "medical clinic",
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-san-fernando",
+    "name": "Clínica San Fernando",
+    "category": "salud",
+    "types": [
+      "Consulta médica",
+      "health"
+    ]
+  },
+  {
+    "slug": "clinica-veterinaria-deros",
+    "name": "Clínica Veterinaria Deros",
+    "category": "salud",
+    "types": [
+      "Veterinario",
+      "pet care"
+    ]
+  },
+  {
+    "slug": "clinica-veterinaria-montilla-mascotas",
+    "name": "CLÍNICA VETERINARIA MONTILLA mascotas",
+    "category": "salud",
+    "types": [
+      "Veterinario",
+      "Tienda de mascotas",
+      "pet care",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "colegio-la-asuncion-fundacion-spinola",
+    "name": "Colegio La Asunción - Fundación Spínola",
+    "category": "educacion",
+    "types": [
+      "Centro educativo",
+      "educational institution"
+    ]
+  },
+  {
+    "slug": "colegio-san-francisco-solano-salesianos",
+    "name": "Colegio San Francisco Solano - Salesianos",
+    "category": "educacion",
+    "types": [
+      "Centro educativo",
+      "educational institution"
+    ]
+  },
+  {
+    "slug": "colegio-san-luis-y-san-ildefonso",
+    "name": "Colegio San Luis y San Ildefonso",
+    "category": "educacion",
+    "types": [
+      "Centro educativo",
+      "educational institution"
+    ]
+  },
+  {
+    "slug": "coquettestilistas",
+    "name": "coquettestilistas",
+    "category": "belleza",
+    "types": [
+      "beautician",
+      "hair salon",
+      "massage spa",
+      "Peluquería",
+      "nail salon",
+      "spa",
+      "massage",
+      "Centro de belleza"
+    ]
+  },
+  {
+    "slug": "cotec-informatica-s-l",
+    "name": "Cotec Informatica, S.L.",
+    "category": "comercios",
+    "types": [
+      "Electrónica",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "criado-y-espejo-abogados",
+    "name": "Criado y Espejo Abogados",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "deportes-campeon",
+    "name": "Deportes Campeón",
+    "category": "comercios",
+    "types": [
+      "sporting goods store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "despacho-abogados-en-montilla-francisco-jose-garci",
+    "name": "DESPACHO ABOGADOS en MONTILLA - Francisco José García Zamora & María José Jiménez Pulido",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "distribuciones-polo-mascotas-polo",
+    "name": "DISTRIBUCIONES POLO (MASCOTAS POLO)",
+    "category": "comercios",
+    "types": [
+      "Tienda de mascotas",
+      "Floristería",
+      "pet care",
+      "sporting goods store",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "distribuidora-regional-de-perfumeria-s-l",
+    "name": "Distribuidora Regional de Perfumería S.L.",
+    "category": "belleza",
+    "types": [
+      "Moda",
+      "wholesaler",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "distrito-comics",
+    "name": "Distrito Cómics",
+    "category": "comercios",
+    "types": [
+      "Librería",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "dober-suministros-industriales",
+    "name": "DOBER SUMINISTROS INDUSTRIALES",
+    "category": "comercios",
+    "types": [
+      "Ferretería",
+      "building materials store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "doctores-ruz-clinica-dental-montilla",
+    "name": "Doctores Ruz - Clínica Dental Montilla",
+    "category": "salud",
+    "types": [
+      "Dentista",
+      "dental clinic",
+      "massage spa",
+      "spa",
+      "massage",
+      "Consulta médica",
+      "Centro de belleza",
+      "medical clinic"
+    ]
+  },
+  {
+    "slug": "e-s-alfar-entre-terminos-s-l",
+    "name": "E.S. Alfar Entre Términos S.L.",
+    "category": "motor",
+    "types": [
+      "Gasolinera",
+      "service"
+    ]
+  },
+  {
+    "slug": "e-s-fuel-energy-montilla",
+    "name": "E.S. Fuel-Energy Montilla",
+    "category": "motor",
+    "types": [
+      "Gasolinera",
+      "service"
+    ]
+  },
+  {
+    "slug": "engloba-t",
+    "name": "ENGLOBA⋅T",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "service"
+    ]
+  },
+  {
+    "slug": "ernesto-espejo-ruz",
+    "name": "ERNESTO ESPEJO RUZ",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "esencia-estetica-salon",
+    "name": "Esencia Estética Salón",
+    "category": "belleza",
+    "types": [
+      "nail salon",
+      "Centro de belleza",
+      "service"
+    ]
+  },
+  {
+    "slug": "estanco-expendeduria-n-3",
+    "name": "Estanco Expendeduría Nº3",
+    "category": "comercios",
+    "types": [
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "esteban-valverde-lopez-abogado",
+    "name": "Esteban Valverde López- Abogado",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "estetica-avanzada-y-spa-capilar-mireia-torreblanca",
+    "name": "Estética avanzada y spa capilar Mireia Torreblanca",
+    "category": "belleza",
+    "types": [
+      "Centro de belleza",
+      "massage spa",
+      "massage",
+      "spa",
+      "service"
+    ]
+  },
+  {
+    "slug": "eva-lara-asesora-personal-inmobiliaria",
+    "name": "Eva Lara asesora personal inmobiliaria",
+    "category": "profesionales",
+    "types": [
+      "Inmobiliaria",
+      "service"
+    ]
+  },
+  {
+    "slug": "fabiola-fernandez-marquez",
+    "name": "Fabiola Fernández Márquez",
+    "category": "salud",
+    "types": [
+      "Dentista",
+      "health"
+    ]
+  },
+  {
+    "slug": "farmacia-cabello-de-alba",
+    "name": "Farmacia Cabello de Alba",
+    "category": "salud",
+    "types": [
+      "Farmacia",
+      "Tienda",
+      "health"
+    ]
+  },
+  {
+    "slug": "farmacia-carmen-agraz-fernandez-montilla",
+    "name": "Farmacia Carmen Agraz Fernández - Montilla",
+    "category": "salud",
+    "types": [
+      "Farmacia",
+      "drugstore",
+      "Veterinario",
+      "Tienda",
+      "health"
+    ]
+  },
+  {
+    "slug": "farmacia-dra-elena-bugella-altamirano",
+    "name": "Farmacia Dra. Elena Bugella Altamirano",
+    "category": "salud",
+    "types": [
+      "Farmacia",
+      "Tienda",
+      "health"
+    ]
+  },
+  {
+    "slug": "farmacia-el-santo-montilla",
+    "name": "Farmacia El Santo Montilla",
+    "category": "salud",
+    "types": [
+      "Farmacia",
+      "health",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "farmacia-garcia-cobos",
+    "name": "Farmacia García Cobos",
+    "category": "salud",
+    "types": [
+      "Farmacia",
+      "Tienda",
+      "health"
+    ]
+  },
+  {
+    "slug": "farmacia-martinez-gomez-la-botica-del-barrio",
+    "name": "Farmacia Martínez Gómez (La botica del Barrio)",
+    "category": "salud",
+    "types": [
+      "Farmacia",
+      "Tienda",
+      "health"
+    ]
+  },
+  {
+    "slug": "felix-ponferrada-ortega",
+    "name": "FÉLIX PONFERRADA ORTEGA",
+    "category": "comercios",
+    "types": [
+      "supplier",
+      "Tienda",
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "ferreteria-la-cadena",
+    "name": "Ferreteria La Cadena",
+    "category": "comercios",
+    "types": [
+      "Ferretería",
+      "building materials store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "ferreteria-puerta-de-aguilar",
+    "name": "Ferretería Puerta De Aguilar",
+    "category": "monumentos",
+    "types": [
+      "Ferretería",
+      "building materials store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "fitness-center-24-7-montilla",
+    "name": "Fitness Center 24-7 Montilla",
+    "category": "cultura-ocio",
+    "types": [
+      "fitness center",
+      "Gimnasio",
+      "sports activity location",
+      "health"
+    ]
+  },
+  {
+    "slug": "flores-eva-s-l",
+    "name": "Flores Eva S.L.",
+    "category": "comercios",
+    "types": [
+      "Floristería",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "flores-eva-s-l-czzars",
+    "name": "Flores Eva S.L.",
+    "category": "comercios",
+    "types": [
+      "Floristería",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "floricultura-merino-menor",
+    "name": "Floricultura Merino Menor",
+    "category": "comercios",
+    "types": [
+      "Floristería",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "francisco-narvaez-lozano",
+    "name": "FRANCISCO NARVAEZ LOZANO",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "free-mobile-shopping",
+    "name": "Free Mobile Shopping",
+    "category": "comercios",
+    "types": [
+      "thrift store",
+      "telecommunications service provider",
+      "discount store",
+      "Electrónica",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "gaes-montilla",
+    "name": "GAES Montilla",
+    "category": "salud",
+    "types": [
+      "Consulta médica",
+      "Tienda",
+      "health",
+      "service",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "geasur-asesores-s-l-asesoria-luis-baena",
+    "name": "Geasur Asesores, S.L. - Asesoria Luis Baena",
+    "category": "profesionales",
+    "types": [
+      "consultant",
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "gestion-de-recursos-a-empresas",
+    "name": "Gestión de Recursos a Empresas",
+    "category": "profesionales",
+    "types": [
+      "consultant",
+      "supplier",
+      "Asesoría",
+      "manufacturer",
+      "finance",
+      "service",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "grupo-adisma",
+    "name": "GRUPO ADISMA",
+    "category": "cultura-ocio",
+    "types": [
+      "sportswear store",
+      "fitness center",
+      "Gimnasio",
+      "Moda",
+      "sporting goods store",
+      "Tienda",
+      "sports activity location",
+      "health"
+    ]
+  },
+  {
+    "slug": "guarnicioneria-pachorro",
+    "name": "Guarnicioneria Pachorro",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "gueto-agundo-s-l",
+    "name": "GUETO AGUNDO, S.L.",
+    "category": "motor",
+    "types": [
+      "tire shop",
+      "auto parts store",
+      "Taller mecánico",
+      "service",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "helma",
+    "name": "HELMA",
+    "category": "comercios",
+    "types": [
+      "shoe store",
+      "Moda",
+      "sporting goods store",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "helvetia-seguros-montilla",
+    "name": "HELVETIA SEGUROS MONTILLA",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "service"
+    ]
+  },
+  {
+    "slug": "hipertextil-baena-s-l",
+    "name": "Hipertextil Baena, S.L.",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "hoja-blanca",
+    "name": "Hoja Blanca",
+    "category": "comercios",
+    "types": [
+      "Librería",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "i-e-s-emilio-canalejo-olmeda",
+    "name": "I.E.S. Emilio Canalejo Olmeda",
+    "category": "educacion",
+    "types": [
+      "Instituto",
+      "Centro educativo",
+      "educational institution"
+    ]
+  },
+  {
+    "slug": "i-e-s-inca-garcilaso",
+    "name": "I.E.S. Inca Garcilaso",
+    "category": "educacion",
+    "types": [
+      "Instituto",
+      "Centro educativo",
+      "educational institution"
+    ]
+  },
+  {
+    "slug": "iberlegal-consultores",
+    "name": "IberLegal Consultores",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "indusoft",
+    "name": "Indusoft",
+    "category": "comercios",
+    "types": [
+      "Electrónica",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "infinity-fitness-life-montilla",
+    "name": "Infinity Fitness Life Montilla",
+    "category": "educacion",
+    "types": [
+      "yoga studio",
+      "fitness center",
+      "sports complex",
+      "Gimnasio",
+      "sports school",
+      "sports activity location",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "inmobiliaria-andalucia",
+    "name": "Inmobiliaria Andalucía",
+    "category": "profesionales",
+    "types": [
+      "Inmobiliaria",
+      "service"
+    ]
+  },
+  {
+    "slug": "inmobiliaria-zero",
+    "name": "Inmobiliaria Zero",
+    "category": "profesionales",
+    "types": [
+      "Inmobiliaria",
+      "service"
+    ]
+  },
+  {
+    "slug": "it-solutions-montilla",
+    "name": "IT Solutions Montilla",
+    "category": "profesionales",
+    "types": [
+      "consultant",
+      "Electrónica",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "jaraba-mezquida",
+    "name": "Jaraba Mezquida",
+    "category": "salud",
+    "types": [
+      "Farmacia",
+      "Tienda",
+      "health"
+    ]
+  },
+  {
+    "slug": "jimenez-mana-recambios-s-l-u",
+    "name": "Jiménez Maña Recambios S.L.U.",
+    "category": "motor",
+    "types": [
+      "auto parts store",
+      "Taller mecánico",
+      "service",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "jose-cruz-gomez",
+    "name": "José Cruz Gómez",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "kutxabank",
+    "name": "Kutxabank",
+    "category": "profesionales",
+    "types": [
+      "Banco",
+      "atm",
+      "consultant",
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "lamparas-montilla",
+    "name": "Lámparas Montilla",
+    "category": "comercios",
+    "types": [
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "lao-castro-abogados",
+    "name": "LAO & CASTRO ABOGADOS",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "Asesoría",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "lavadero-cisternas-angel-marquez",
+    "name": "Lavadero cisternas Ángel Márquez",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "libreria-del-arbol",
+    "name": "LIBRERÍA DEL ÁRBOL",
+    "category": "profesionales",
+    "types": [
+      "Librería",
+      "supplier",
+      "Tienda",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "libreria-papeleria-gala",
+    "name": "LIBRERÍA PAPELERÍA GALA",
+    "category": "comercios",
+    "types": [
+      "Librería",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "libreria-papeleria-nobel",
+    "name": "Librería Papelería Nobel",
+    "category": "comercios",
+    "types": [
+      "Librería",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "libreria-y-papeleria-cervantes",
+    "name": "Librería y Papelería Cervantes",
+    "category": "comercios",
+    "types": [
+      "gift shop",
+      "Librería",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "lolaflowers-floristas",
+    "name": "Lolaflowers floristas",
+    "category": "comercios",
+    "types": [
+      "Floristería",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "m-r-57-barber-shop",
+    "name": "M.R 57 Barber Shop",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "service"
+    ]
+  },
+  {
+    "slug": "m2-centro-deportivo",
+    "name": "M2 Centro Deportivo",
+    "category": "cultura-ocio",
+    "types": [
+      "fitness center",
+      "Gimnasio",
+      "sports activity location",
+      "health"
+    ]
+  },
+  {
+    "slug": "manuel-hidalgo-barber-shop",
+    "name": "Manuel Hidalgo Barber shop",
+    "category": "belleza",
+    "types": [
+      "barber shop",
+      "Peluquería",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "mapfre",
+    "name": "Mapfre",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "Asesoría",
+      "consultant",
+      "finance",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "maralucasa-inmobiliaria",
+    "name": "Maralucasa Inmobiliaria",
+    "category": "profesionales",
+    "types": [
+      "Inmobiliaria",
+      "service"
+    ]
+  },
+  {
+    "slug": "maria-cabezas-velasco",
+    "name": "MARÍA CABEZAS VELASCO",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "marina-banos-estethic",
+    "name": "Marina Baños Estethic",
+    "category": "belleza",
+    "types": [
+      "Centro de belleza",
+      "service"
+    ]
+  },
+  {
+    "slug": "marina-morales-guerrero",
+    "name": "Marina Morales Guerrero",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "mateo-perfumeria",
+    "name": "Mateo Perfumeria",
+    "category": "belleza",
+    "types": [
+      "Centro de belleza",
+      "Moda",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "mb-decoracion-descanso",
+    "name": "MB DECORACIÓN & DESCANSO",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "mdhogar-montilla",
+    "name": "MdHogar Montilla",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "mdhogar-montilla-colchoneria",
+    "name": "MdHogar Montilla Colchonería",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "merino-automocion-merino-chapa-y-pintura-taller-de",
+    "name": "Merino Automoción - Merino chapa y pintura - taller de chapa y pintura",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "milar-montilla",
+    "name": "Milar Montilla",
+    "category": "comercios",
+    "types": [
+      "cell phone store",
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "moe-collezione",
+    "name": "Moe Collezione",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "monti-reclam",
+    "name": "Monti-Reclam",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "montilla-factory",
+    "name": "MONTILLA FACTORY",
+    "category": "comercios",
+    "types": [
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "motos-triangulo-concesionario-yamaha",
+    "name": "MOTOS TRIANGULO CONCESIONARIO YAMAHA",
+    "category": "motor",
+    "types": [
+      "sportswear store",
+      "auto parts store",
+      "Taller mecánico",
+      "Moda",
+      "sporting goods store",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "mssparkles-nails",
+    "name": "Mssparkles Nails",
+    "category": "belleza",
+    "types": [
+      "nail salon",
+      "Centro de belleza",
+      "service"
+    ]
+  },
+  {
+    "slug": "muebles-1-click",
+    "name": "Muebles 1 Click",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "oficina-caja-rural-del-sur",
+    "name": "Oficina Caja Rural del Sur",
+    "category": "profesionales",
+    "types": [
+      "Banco",
+      "atm",
+      "consultant",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "oficina-seguros-pelayo",
+    "name": "Oficina Seguros Pelayo",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "olea-shop",
+    "name": "OLEA SHOP",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "open-padel-center",
+    "name": "Open Padel Center",
+    "category": "cultura-ocio",
+    "types": [
+      "fitness center",
+      "Gimnasio",
+      "sports activity location",
+      "health"
+    ]
+  },
+  {
+    "slug": "optica-gran-capitan-montilla",
+    "name": "Óptica Gran Capitán Montilla",
+    "category": "salud",
+    "types": [
+      "Consulta médica",
+      "Tienda",
+      "health",
+      "service",
+      "association or organization"
+    ]
+  },
+  {
+    "slug": "padel-munda",
+    "name": "Pádel Munda",
+    "category": "cultura-ocio",
+    "types": [
+      "fitness center",
+      "Gimnasio",
+      "sports activity location",
+      "health"
+    ]
+  },
+  {
+    "slug": "pajareria-y-flores-banos",
+    "name": "PAJARERÍA Y FLORES BAÑOS",
+    "category": "comercios",
+    "types": [
+      "Tienda de mascotas",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "paloma-garcia-tu-centro-de-estetica",
+    "name": "Paloma García Tu Centro de Estética",
+    "category": "belleza",
+    "types": [
+      "Centro de belleza",
+      "service"
+    ]
+  },
+  {
+    "slug": "papeleria-avenida-ii",
+    "name": "Papeleria Avenida II",
+    "category": "comercios",
+    "types": [
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "pedro-repiso-asociados",
+    "name": "Pedro Repiso & Asociados",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "peluqueria-aquarela-inmaculada-villegas",
+    "name": "PELUQUERÍA Aquarela INMACULADA VILLEGAS.",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "service"
+    ]
+  },
+  {
+    "slug": "peluqueria-caballeros-alvaro",
+    "name": "Peluquería Caballeros Álvaro",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "service"
+    ]
+  },
+  {
+    "slug": "peluqueria-caballeros-antonio-banos",
+    "name": "Peluquería Caballeros Antonio Baños",
+    "category": "belleza",
+    "types": [
+      "barber shop",
+      "hair salon",
+      "Peluquería",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "peluqueria-de-caballeros-garal",
+    "name": "Peluquería de Caballeros GARAL",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "Centro de belleza",
+      "service"
+    ]
+  },
+  {
+    "slug": "peluqueria-macu",
+    "name": "Peluquería Macu",
+    "category": "belleza",
+    "types": [
+      "Centro de belleza",
+      "service"
+    ]
+  },
+  {
+    "slug": "peluqueria-paquis",
+    "name": "Peluqueria Paquis",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "service"
+    ]
+  },
+  {
+    "slug": "peluqueria-rafa",
+    "name": "Peluquería Rafa",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "barber shop",
+      "Peluquería",
+      "Centro de belleza",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "peluqueria-unisex-j-j",
+    "name": "Peluquería Unisex J.J",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "service"
+    ]
+  },
+  {
+    "slug": "peugeot-talleres-mariano-cruz",
+    "name": "Peugeot Talleres Mariano Cruz",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "car dealer",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "phone-house-montilla-tienda-de-moviles",
+    "name": "Phone House Montilla - Tienda de móviles",
+    "category": "comercios",
+    "types": [
+      "cell phone store",
+      "telecommunications service provider",
+      "Electrónica",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "piedad-lopez-molina",
+    "name": "Piedad Lopez Molina",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "pimara-moda-montilla",
+    "name": "Pimara Moda Montilla",
+    "category": "comercios",
+    "types": [
+      "womens clothing store",
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "podologa-inmaculada-castro",
+    "name": "Podóloga Inmaculada Castro",
+    "category": "salud",
+    "types": [
+      "Consulta médica",
+      "health"
+    ]
+  },
+  {
+    "slug": "povedano-vet-horses-s-l",
+    "name": "Povedano Vet Horses S.L.",
+    "category": "salud",
+    "types": [
+      "Veterinario",
+      "pet care"
+    ]
+  },
+  {
+    "slug": "psicologia-y-psiquiatria-inmaculada-avendano-clini",
+    "name": "Psicología y Psiquiatría, Inmaculada Avendaño Clínica",
+    "category": "salud",
+    "types": [
+      "Consulta médica",
+      "medical clinic",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "rafi-madrid-confecciones",
+    "name": "Rafi Madrid Confecciones",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "recambios-marcasur",
+    "name": "Recambios Marcasur",
+    "category": "motor",
+    "types": [
+      "auto parts store",
+      "Taller mecánico",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "reset-informatica",
+    "name": "Reset Informática",
+    "category": "comercios",
+    "types": [
+      "Electrónica",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "rest-and-home-tienda-de-colchones-en-montilla",
+    "name": "Rest and Home | Tienda de Colchones en Montilla",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "retrotech-informatica-s-l",
+    "name": "Retrotech Informática S.L.",
+    "category": "comercios",
+    "types": [
+      "telecommunications service provider",
+      "Electrónica",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "rv-motor-sport",
+    "name": "RV MOTOR SPORT",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "s-millan-abogados",
+    "name": "S MILLAN ABOGADOS",
+    "category": "profesionales",
+    "types": [
+      "Abogado",
+      "consultant",
+      "service"
+    ]
+  },
+  {
+    "slug": "salon-belleza-aurora",
+    "name": "salon belleza aurora",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "service"
+    ]
+  },
+  {
+    "slug": "salon-de-peluqueria-inma",
+    "name": "SALÓN DE PELUQUERÍA INMA.",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "service"
+    ]
+  },
+  {
+    "slug": "salon-municipal-de-exposiciones-san-juan-de-dios",
+    "name": "Salón Municipal de Exposiciones San Juan de Dios",
+    "category": "comercios",
+    "types": [
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "salud-y-entreno-box-montilla",
+    "name": "Salud y Entreno BOX Montilla",
+    "category": "cultura-ocio",
+    "types": [
+      "Gimnasio",
+      "sports activity location",
+      "health"
+    ]
+  },
+  {
+    "slug": "sandra-gomez-peluqueria-estetica",
+    "name": "Sandra Gómez Peluquería & Estética.",
+    "category": "belleza",
+    "types": [
+      "hair salon",
+      "Peluquería",
+      "service"
+    ]
+  },
+  {
+    "slug": "saneamientos-bujalance-s-l",
+    "name": "SANEAMIENTOS BUJALANCE S.L.",
+    "category": "comercios",
+    "types": [
+      "building materials store",
+      "supplier",
+      "manufacturer",
+      "Hogar",
+      "service",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "seguros-ramon-jimenez",
+    "name": "Seguros Ramón Jiménez",
+    "category": "profesionales",
+    "types": [
+      "Seguros",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "sgs-barbershop",
+    "name": "SgS.barbershop",
+    "category": "belleza",
+    "types": [
+      "barber shop",
+      "hair salon",
+      "Peluquería",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "sian-sistemas-informaticos-y-aula-de-formacion",
+    "name": "SIAN - SISTEMAS INFORMATICOS Y AULA DE FORMACION",
+    "category": "comercios",
+    "types": [
+      "Electrónica",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "silvia-lao-inmobiliaria",
+    "name": "SILVIA LAO INMOBILIARIA",
+    "category": "profesionales",
+    "types": [
+      "Inmobiliaria",
+      "service"
+    ]
+  },
+  {
+    "slug": "singularplus-cocinas",
+    "name": "Singularplus cocinas",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "sinvello-montilla-depilacion-laser-diodo",
+    "name": "SinVello! Montilla | Depilación Láser Diodo",
+    "category": "salud",
+    "types": [
+      "Peluquería",
+      "Centro de belleza",
+      "medical clinic",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "solis-marques-iveco-cordoba-sur",
+    "name": "SOLIS MARQUES - IVECO CORDOBA SUR",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "car dealer",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "taller-antonin",
+    "name": "Taller Antoñin",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "taller-avenauto",
+    "name": "Taller Avenauto",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "taller-jose-miguel-marquez",
+    "name": "Taller Jose Miguel Marquez",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "taller-manuel-ruz",
+    "name": "Taller Manuel Ruz",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "taller-perez",
+    "name": "Taller Pérez",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "talleres-garcia-construcciones-mecanicas-s-l",
+    "name": "Talleres García Construcciones Mecánicas, S.L.",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "manufacturer",
+      "supplier",
+      "service"
+    ]
+  },
+  {
+    "slug": "talleres-luque-munoz",
+    "name": "Talleres Luque Muñoz",
+    "category": "motor",
+    "types": [
+      "electrician",
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "talleres-monti-auto-c-b",
+    "name": "Talleres Monti-auto c.b",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "talleres-solano-molina-sl",
+    "name": "Talleres Solano Molina SL",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "talleres-y-gruas-carrasquilla-sl",
+    "name": "Talleres y Gruas Carrasquilla Sl",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "talleres-y-gruas-rafael-garcia-carrasquilla",
+    "name": "Talleres y grúas Rafael García Carrasquilla",
+    "category": "motor",
+    "types": [
+      "Taller mecánico",
+      "service"
+    ]
+  },
+  {
+    "slug": "tania-moda-infantil",
+    "name": "Tania Moda Infantil",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "tecnocasa-agencia-inmobiliaria",
+    "name": "Tecnocasa agencia inmobiliaria",
+    "category": "profesionales",
+    "types": [
+      "Inmobiliaria",
+      "service"
+    ]
+  },
+  {
+    "slug": "the-pavon-s-barber",
+    "name": "THE PAVON'S BARBER",
+    "category": "belleza",
+    "types": [
+      "barber shop",
+      "Peluquería",
+      "health",
+      "service"
+    ]
+  },
+  {
+    "slug": "tien21-hnos-fernandez-cordoba",
+    "name": "Tien21 Hnos. Fernandez Cordoba",
+    "category": "comercios",
+    "types": [
+      "cell phone store",
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "tienda-de-deporte-montilla-decimas",
+    "name": "Tienda de deporte Montilla Décimas",
+    "category": "comercios",
+    "types": [
+      "sportswear store",
+      "womens clothing store",
+      "shoe store",
+      "sporting goods store",
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "tienda-la-ganga",
+    "name": "Tienda La Ganga",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "tienda-lunettes",
+    "name": "Tienda Lunettes",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "Tienda"
+    ]
+  },
+  {
+    "slug": "timeless-natura",
+    "name": "Timeless Natura",
+    "category": "comercios",
+    "types": [
+      "Muebles",
+      "home improvement store",
+      "Hogar",
+      "Tienda",
+      "manufacturer"
+    ]
+  },
+  {
+    "slug": "tu-finca-real-estate",
+    "name": "Tu Finca Real Estate",
+    "category": "profesionales",
+    "types": [
+      "Inmobiliaria",
+      "service"
+    ]
+  },
+  {
+    "slug": "unicaja-banco",
+    "name": "Unicaja Banco",
+    "category": "profesionales",
+    "types": [
+      "Banco",
+      "finance",
+      "service"
+    ]
+  },
+  {
+    "slug": "union-inmobiliaria-c-b",
+    "name": "Unión Inmobiliaria C B",
+    "category": "profesionales",
+    "types": [
+      "Inmobiliaria",
+      "service"
+    ]
+  },
+  {
+    "slug": "vidosa-sonido-e-iluminacion-s-l",
+    "name": "VIDOSA SONIDO E ILUMINACION S.L.",
+    "category": "comercios",
+    "types": [
+      "Electrónica",
+      "Tienda",
+      "service"
+    ]
+  },
+  {
+    "slug": "zeeman-montilla",
+    "name": "Zeeman Montilla",
+    "category": "comercios",
+    "types": [
+      "Moda",
+      "discount store",
+      "womens clothing store",
+      "Hogar",
+      "Tienda"
+    ]
+  }
+]

@@ -1,0 +1,81 @@
+---
+import categories from "../../data/categories.json";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a href={base} class="brand" aria-label="Guía Montilla — inicio">
+      <img
+        class="brand__logo"
+        src={`${base}images/logo-guia-montilla.png`}
+        alt="Guía Montilla — Todo Montilla, en un solo lugar"
+        width="168"
+        height="220"
+        loading="eager"
+        decoding="async"
+      />
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      aria-expanded="false"
+      aria-controls="site-nav"
+    >
+      <span class="menu-toggle__icon" aria-hidden="true">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </span>
+      <span class="menu-toggle__label">Menú</span>
+    </button>
+  </div>
+
+  <div class="nav-backdrop" hidden aria-hidden="true"></div>
+
+  <nav id="site-nav" class="site-nav" aria-label="Principal">
+    <ul class="menu">
+      {categories.map((cat) => (
+        <li><a href={`${base}${cat.slug}/`}>{cat.name}</a></li>
+      ))}
+      <li><a href={`${base}noticias/`}>Noticias</a></li>
+      <li><a href={`${base}eventos/`}>Agenda</a></li>
+      <li><a href={`${base}blog/`}>Blog</a></li>
+      <li class="menu__cta-item"><a href={`${base}para-negocios/`} class="menu-cta">Anunciar tu negocio</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const header = document.querySelector(".topbar");
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.getElementById("site-nav");
+  const backdrop = document.querySelector(".nav-backdrop");
+  const label = toggle?.querySelector(".menu-toggle__label");
+
+  function setOpen(open) {
+    nav?.classList.toggle("is-open", open);
+    backdrop?.toggleAttribute("hidden", !open);
+    toggle?.setAttribute("aria-expanded", String(open));
+    if (label) label.textContent = open ? "Cerrar" : "Menú";
+    document.body.classList.toggle("nav-open", open);
+  }
+
+  toggle?.addEventListener("click", () => {
+    setOpen(!nav?.classList.contains("is-open"));
+  });
+
+  backdrop?.addEventListener("click", () => setOpen(false));
+
+  nav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+
+  window.matchMedia("(min-width: 721px)").addEventListener("change", (e) => {
+    if (e.matches) setOpen(false);
+  });
+</script>

@@ -1,0 +1,38 @@
+/* Terroir montillano — cal blanca, sombra de lagar, luz de tarde en la Campiña */
+:root {
+  --wine: oklch(0.42 0.14 32);
+  --wine-deep: oklch(0.30 0.11 30);
+  --wine-light: oklch(0.96 0.018 55);
+  --gold: oklch(0.68 0.13 78);
+  --gold-muted: oklch(0.48 0.09 75);
+
+  --paper: oklch(1 0 0);
+  --paper-tint: oklch(0.985 0.004 55);
+  --ink: oklch(0.22 0.035 32);
+  --ink-soft: oklch(0.38 0.025 38);
+  --ink-muted: oklch(0.52 0.018 40);
+  --rule: oklch(0.86 0.012 55);
+
+  --font-serif: "Alegreya", "Georgia", serif;
+  --font-sans: "Karla", system-ui, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.75rem;
+  --space-4: 2.75rem;
+  --space-5: 4.5rem;
+  --space-6: 7rem;
+
+  --width: 68rem;
+  --header-h: 3.75rem;
+
+  --ease: cubic-bezier(0.22, 0.98, 0.42, 1);
+  --t: 0.35s;
+
+  --z-sticky: 50;
+  --z-menu: 60;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --t: 0.01ms; }
+}

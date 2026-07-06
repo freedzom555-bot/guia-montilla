@@ -1,0 +1,141 @@
+{
+  "license": "Wikimedia Commons + webs oficiales. Ver public/images/ATTRIBUTION.md",
+  "galleries": {
+    "bodegas-alvear": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bodegas_Alvear.jpg/1280px-Bodegas_Alvear.jpg", "alt": "Fachada de Bodegas Alvear" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bodegas_Alvear_1.jpg/1280px-Bodegas_Alvear_1.jpg", "alt": "Interior de bodega Alvear" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Bodegas_Alvear%2C_2.jpg/1280px-Bodegas_Alvear%2C_2.jpg", "alt": "Soleras y botas en Alvear" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Fino_Alvear_20240911_182118.jpg/960px-Fino_Alvear_20240911_182118.jpg", "alt": "Fino Alvear en copa" }
+    ],
+    "bodegas-robles": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Vinos_de_Bodegas_Robles.jpg", "alt": "Vinos de Bodegas Robles" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Bodegas_Doblas.jpg/1280px-Bodegas_Doblas.jpg", "alt": "Bodega en Montilla-Moriles" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Campo_de_vi%C3%B1edos%2C_Montilla.jpg/1280px-Campo_de_vi%C3%B1edos%2C_Montilla.jpg", "alt": "Viñedos de la bodega" }
+    ],
+    "bodegas-perez-barquero": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bodegas_Alvear%2C_3.jpg/1280px-Bodegas_Alvear%2C_3.jpg", "alt": "Bodega histórica Montilla-Moriles" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Fino_Montilla_Moriles_P_Xim%C3%A9nez.jpg/960px-Fino_Montilla_Moriles_P_Xim%C3%A9nez.jpg", "alt": "Fino Montilla-Moriles" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bodegas_Alvear_1.jpg/1280px-Bodegas_Alvear_1.jpg", "alt": "Interior de bodega visitable" }
+    ],
+    "cooperativa-san-isidro": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Instalaciones_industriales%2C_Bodegas_San_Acacio.jpg/1280px-Instalaciones_industriales%2C_Bodegas_San_Acacio.jpg", "alt": "Instalaciones cooperativa vitivinícola" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Detalle_botellas_Cooperativa_La_Uni%C3%B3n_de_Montilla.jpg", "alt": "Botellas de la cooperativa" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Campo_de_vi%C3%B1edos%2C_Montilla.jpg/1280px-Campo_de_vi%C3%B1edos%2C_Montilla.jpg", "alt": "Viñedos de socios" }
+    ],
+    "castillo-montilla": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Castillo_de_Montilla.jpg/1280px-Castillo_de_Montilla.jpg", "alt": "Castillo de Montilla" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Castillo_de_Montilla%2C_acceso.jpg/1280px-Castillo_de_Montilla%2C_acceso.jpg", "alt": "Acceso al castillo" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Castillo_de_Montilla%2C_ruinas.jpg/1280px-Castillo_de_Montilla%2C_ruinas.jpg", "alt": "Ruinas del castillo" }
+    ],
+    "casa-del-inca": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Casa_del_Inca-Montilla_C%C3%B3rdoba_Spain.JPG", "alt": "Casa del Inca Garcilaso" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Parroquia_Santiago._Vista_nocturna.jpg/1280px-Parroquia_Santiago._Vista_nocturna.jpg", "alt": "Plaza de Santiago" }
+    ],
+    "convento-santa-clara": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Convento_de_Santa_Clara%2C_Montilla.jpg/1280px-Convento_de_Santa_Clara%2C_Montilla.jpg", "alt": "Convento de Santa Clara" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Fachada_de_la_iglesia_del_Convento_de_Santa_Clara%2C_Montilla.jpg/1280px-Fachada_de_la_iglesia_del_Convento_de_Santa_Clara%2C_Montilla.jpg", "alt": "Fachada del convento" }
+    ],
+    "parroquia-santiago": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Parroquia_Santiago._Vista_nocturna.jpg/1280px-Parroquia_Santiago._Vista_nocturna.jpg", "alt": "Parroquia de Santiago" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Montilla_Encarnaci%C3%B3n.jpg/1280px-Montilla_Encarnaci%C3%B3n.jpg", "alt": "Iglesia de la Encarnación" }
+    ],
+    "feria-montilla": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Montilla%2C_caballo.jpg/1280px-Montilla%2C_caballo.jpg", "alt": "Feria de Montilla" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Cartel_Montilla_%2810949867723%29.jpg/1280px-Cartel_Montilla_%2810949867723%29.jpg", "alt": "Cartel feria" }
+    ],
+    "semana-santa-montilla": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Montilla_Encarnaci%C3%B3n.jpg/1280px-Montilla_Encarnaci%C3%B3n.jpg", "alt": "Semana Santa en Montilla" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Parroquia_Santiago._Vista_nocturna.jpg/1280px-Parroquia_Santiago._Vista_nocturna.jpg", "alt": "Procesiones en el centro" }
+    ],
+    "ruta-vino-moriles": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Campo_de_vi%C3%B1edos%2C_Montilla.jpg/1280px-Campo_de_vi%C3%B1edos%2C_Montilla.jpg", "alt": "Viñedos Montilla-Moriles" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/21.Moriles_Vi%C3%B1as_de_Pedro_Xim%C3%A9nez.JPG/1280px-21.Moriles_Vi%C3%B1as_de_Pedro_Xim%C3%A9nez.JPG", "alt": "Viñas Pedro Ximénez" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bodegas_Alvear.jpg/1280px-Bodegas_Alvear.jpg", "alt": "Parada en bodega" }
+    ],
+    "casa-rural-moriles": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Cortijo_San_Francisco_casa_rural_alojamiento.JPG", "alt": "Cortijo rural en Moriles" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Montilla%2C_olivar.jpg/1280px-Montilla%2C_olivar.jpg", "alt": "Entorno rural" }
+    ]
+  },
+  "categoryPools": {
+    "bodegas": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bodegas_Alvear_1.jpg/1280px-Bodegas_Alvear_1.jpg", "alt": "Interior de bodega {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bodegas_Olivares.jpg/1280px-Bodegas_Olivares.jpg", "alt": "Bodega {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Bodegas_Doblas.jpg/1280px-Bodegas_Doblas.jpg", "alt": "Instalaciones de {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Bodegas_Alvear%2C_2.jpg/1280px-Bodegas_Alvear%2C_2.jpg", "alt": "Soleras de {name}" }
+    ],
+    "restaurantes": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Antonio_sanchez_copa.jpg", "alt": "Copa de vino en {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bodegas_Alvear_1.jpg/1280px-Bodegas_Alvear_1.jpg", "alt": "Ambiente bodeguero de {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Fino_Montilla_Moriles_P_Xim%C3%A9nez.jpg/960px-Fino_Montilla_Moriles_P_Xim%C3%A9nez.jpg", "alt": "Maridaje en {name}" }
+    ],
+    "alojamiento": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Cortijo_San_Francisco_casa_rural_alojamiento.JPG", "alt": "Alojamiento {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hospital_de_Montilla%2C_2.jpg/1280px-Hospital_de_Montilla%2C_2.jpg", "alt": "Edificio de {name}" }
+    ],
+    "servicios": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hospital_de_Montilla%2C_2.jpg/1280px-Hospital_de_Montilla%2C_2.jpg", "alt": "Local comercial en Montilla" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Montilla%2C_Conservatorio_Elemental_de_M%C3%BAsica.jpg/1280px-Montilla%2C_Conservatorio_Elemental_de_M%C3%BAsica.jpg", "alt": "Establecimiento en Montilla" }
+    ],
+    "que-hacer": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Montilla%2C_Santana.jpg/1280px-Montilla%2C_Santana.jpg", "alt": "Espacio público {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Montilla%2C_olivar.jpg/1280px-Montilla%2C_olivar.jpg", "alt": "Entorno de {name}" }
+    ],
+    "comercios": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Montilla%2C_Conservatorio_Elemental_de_M%C3%BAsica.jpg/1280px-Montilla%2C_Conservatorio_Elemental_de_M%C3%BAsica.jpg", "alt": "Comercio {name} en Montilla" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hospital_de_Montilla%2C_2.jpg/1280px-Hospital_de_Montilla%2C_2.jpg", "alt": "Calle comercial de Montilla" }
+    ],
+    "monumentos": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Castillo_de_Montilla.jpg/1280px-Castillo_de_Montilla.jpg", "alt": "Patrimonio de Montilla — {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Parroquia_Santiago._Vista_nocturna.jpg/1280px-Parroquia_Santiago._Vista_nocturna.jpg", "alt": "Centro histórico de Montilla" }
+    ],
+    "parques": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Montilla%2C_olivar.jpg/1280px-Montilla%2C_olivar.jpg", "alt": "Parque y naturaleza en Montilla — {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Montilla%2C_Santana.jpg/1280px-Montilla%2C_Santana.jpg", "alt": "Espacio verde {name}" }
+    ],
+    "museos": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Casa_del_Inca-Montilla_C%C3%B3rdoba_Spain.JPG", "alt": "Museo y cultura en Montilla — {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Convento_de_Santa_Clara%2C_Montilla.jpg/1280px-Convento_de_Santa_Clara%2C_Montilla.jpg", "alt": "Patrimonio cultural {name}" }
+    ],
+    "cultura-ocio": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Montilla%2C_Santana.jpg/1280px-Montilla%2C_Santana.jpg", "alt": "Cultura y ocio en Montilla — {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Montilla%2C_caballo.jpg/1280px-Montilla%2C_caballo.jpg", "alt": "Feria y ocio montillano" }
+    ],
+    "alimentacion": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Campo_de_vi%C3%B1edos%2C_Montilla.jpg/1280px-Campo_de_vi%C3%B1edos%2C_Montilla.jpg", "alt": "Producto local — {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Montilla%2C_olivar.jpg/1280px-Montilla%2C_olivar.jpg", "alt": "Alimentación en Montilla" }
+    ],
+    "bares-cafes": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Antonio_sanchez_copa.jpg", "alt": "Copa de vino en {name}" },
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bodegas_Alvear_1.jpg/1280px-Bodegas_Alvear_1.jpg", "alt": "Ambiente de taberna montillana" }
+    ],
+    "salud": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hospital_de_Montilla%2C_2.jpg/1280px-Hospital_de_Montilla%2C_2.jpg", "alt": "Salud en Montilla — {name}" }
+    ],
+    "belleza": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Montilla%2C_Conservatorio_Elemental_de_M%C3%BAsica.jpg/1280px-Montilla%2C_Conservatorio_Elemental_de_M%C3%BAsica.jpg", "alt": "Establecimiento en Montilla — {name}" }
+    ],
+    "profesionales": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hospital_de_Montilla%2C_2.jpg/1280px-Hospital_de_Montilla%2C_2.jpg", "alt": "Oficina profesional en Montilla — {name}" }
+    ],
+    "motor": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Campo_de_vi%C3%B1edos%2C_Montilla.jpg/1280px-Campo_de_vi%C3%B1edos%2C_Montilla.jpg", "alt": "Carretera y comarca de Montilla — {name}" }
+    ],
+    "educacion": [
+      { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Montilla%2C_Conservatorio_Elemental_de_M%C3%BAsica.jpg/1280px-Montilla%2C_Conservatorio_Elemental_de_M%C3%BAsica.jpg", "alt": "Centro educativo {name}" }
+    ]
+  },
+  "hero": {
+    "vinedo": { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Campo_de_vi%C3%B1edos%2C_Montilla.jpg/1280px-Campo_de_vi%C3%B1edos%2C_Montilla.jpg", "alt": "Viñedos Montilla-Moriles" },
+    "bodega": { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bodegas_Alvear.jpg/1280px-Bodegas_Alvear.jpg", "alt": "Bodegas Alvear" },
+    "ruta": { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/21.Moriles_Vi%C3%B1as_de_Pedro_Xim%C3%A9nez.JPG/1280px-21.Moriles_Vi%C3%B1as_de_Pedro_Xim%C3%A9nez.JPG", "alt": "Ruta del vino" }
+  },
+  "categories": {
+    "bodegas": { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bodegas_Alvear_1.jpg/1280px-Bodegas_Alvear_1.jpg", "alt": "Bodegas Montilla-Moriles" },
+    "restaurantes": { "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Antonio_sanchez_copa.jpg", "alt": "Gastronomía y vino montillano" },
+    "alojamiento": { "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Cortijo_San_Francisco_casa_rural_alojamiento.JPG", "alt": "Alojamiento en la Campiña" },
+    "servicios": { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hospital_de_Montilla%2C_2.jpg/1280px-Hospital_de_Montilla%2C_2.jpg", "alt": "Comercios y servicios" },
+    "que-hacer": { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Castillo_de_Montilla.jpg/1280px-Castillo_de_Montilla.jpg", "alt": "Patrimonio de Montilla" }
+  },
+  "og": { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Bodegas_Alvear.jpg/1280px-Bodegas_Alvear.jpg", "alt": "Guía Montilla" }
+}

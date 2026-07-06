@@ -1,0 +1,224 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SearchBox from "../components/SearchBox.astro";
+import CategoryGrid from "../components/CategoryGrid.astro";
+import FeatureLead from "../components/FeatureLead.astro";
+import IndexRow from "../components/IndexRow.astro";
+import businesses from "../../data/businesses.json";
+import categories from "../../data/categories.json";
+import routes from "../../data/routes.json";
+import events from "../../data/events.json";
+import news from "../../data/news.json";
+import { getCollection } from "astro:content";
+import { SEO } from "../data/site";
+
+const lead = businesses.find((b) => b.slug === "bodegas-alvear") ?? businesses[0];
+const shortlist = businesses.filter((b) => b.featured && b.slug !== lead.slug).slice(0, 8);
+const featuredRoute = routes[0];
+const recentEvents = events.slice(0, 5);
+const latestNews = [...news]
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 4);
+const base = import.meta.env.BASE_URL;
+const quickCats = ["bodegas", "restaurantes", "monumentos", "rutas"]
+  .map((id) => categories.find((c) => c.id === id))
+  .filter(Boolean);
+const latestPosts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<Layout
+  title={SEO.defaultTitle}
+  description={SEO.defaultDescription}
+  image="/images/og-default.jpg"
+>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__scene" aria-hidden="true">
+      <img
+        class="hero__photo"
+        src={`${base}images/hero/hero.jpg`}
+        alt=""
+        width="1600"
+        height="1067"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="hero__veil"></div>
+    </div>
+
+    <div class="wrap hero__shell">
+      <div class="hero__panel">
+        <p class="hero__kicker">Guía Montilla · Córdoba</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__title-line">Montilla,</span>
+          <span class="hero__title-line hero__title-line--accent">sin dar vueltas</span>
+        </h1>
+        <p class="hero__deck">
+          Dónde comer, qué visitar, dónde dormir y qué abre hoy. Bodegas, monumentos, comercios y rutas — con teléfono, horario y cómo llegar.
+        </p>
+
+        <SearchBox compact={false} />
+
+        <nav class="hero__shortcuts" aria-label="Accesos rápidos">
+          {quickCats.map((cat) => (
+            <a href={`${base}${cat.slug}/`}>{cat.name}</a>
+          ))}
+        </nav>
+
+        <dl class="hero__stats">
+          <div>
+            <dt>Fichas</dt>
+            <dd>{businesses.length}</dd>
+          </div>
+          <div>
+            <dt>Secciones</dt>
+            <dd>{categories.length}</dd>
+          </div>
+          <div>
+            <dt>Rutas</dt>
+            <dd>{routes.length}</dd>
+          </div>
+        </dl>
+      </div>
+
+      <figure class="hero__aside">
+        <img
+          src={`${base}images/hero/hero.jpg`}
+          alt="Montilla: casco histórico, viñedos, fino y bodegas"
+          width="900"
+          height="1200"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <figcaption>Casco, viñedos y bodegas de Montilla</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <CategoryGrid categories={categories} />
+  </div>
+
+  {latestPosts.length > 0 && (
+    <section class="home-blog-teaser">
+      <div class="wrap">
+        <div class="home-blog-teaser__head fade-in">
+          <h2>Guías sobre Montilla</h2>
+          <a href={`${base}blog/`}>Ver las 50 →</a>
+        </div>
+        <ul class="home-blog-teaser__list fade-in">
+          {latestPosts.map((post) => (
+            <li>
+              <a href={`${base}blog/${post.id}/`}>{post.data.title}</a>
+              <p>{post.data.description}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head fade-in">
+        <h2>Lo esencial</h2>
+        <a href={`${base}bodegas/`}>Todas las bodegas →</a>
+      </div>
+      <FeatureLead business={lead} />
+      <ul class="index-list">
+        {shortlist.map((b) => <IndexRow business={b} />)}
+      </ul>
+    </div>
+  </section>
+
+  {featuredRoute && (
+    <section class="block block--tint">
+      <div class="wrap fade-in">
+        <div class="route-strip">
+          <div class="route-strip__img">
+            <img src={`${base}images/hero/ruta.jpg`} alt="Calle empedrada y Castillo de Montilla" width="1000" height="700" loading="lazy" />
+          </div>
+          <div class="route-strip__body">
+            <h3>{featuredRoute.title}</h3>
+            <p>{featuredRoute.description}</p>
+            <p>{featuredRoute.duration} · {featuredRoute.idealFor}</p>
+            <ul class="route-strip__stops">
+              {featuredRoute.stops.map((s) => (
+                <li>
+                  {s.slug ? (
+                    <a href={`${base}negocio/${s.slug}/`}>{s.name}</a>
+                  ) : (
+                    s.name
+                  )}
+                </li>
+              ))}
+            </ul>
+            <a href={`${base}ruta/${featuredRoute.slug}/`} class="route-strip__link">Ruta completa →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {latestNews.length > 0 && (
+    <section class="block block--tint">
+      <div class="wrap">
+        <div class="block-head fade-in">
+          <h2>Noticias</h2>
+          <a href={`${base}noticias/`}>Todas las noticias →</a>
+        </div>
+        <ul class="agenda fade-in">
+          {latestNews.map((item) => {
+            const d = new Date(item.date);
+            return (
+              <li class="agenda-item">
+                <time class="agenda-item__when" datetime={item.date}>
+                  {d.toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" })}
+                </time>
+                <div>
+                  <h2 class="agenda-item__title">
+                    <a href={`${base}noticias/${item.slug}/`}>{item.title}</a>
+                  </h2>
+                  <p class="agenda-item__excerpt">{item.source}{item.excerpt ? ` · ${item.excerpt.slice(0, 100)}…` : ""}</p>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  <section class="block">
+    <div class="wrap">
+      <div class="block-head fade-in">
+        <h2>Agenda</h2>
+        <a href={`${base}eventos/`}>Ver todo →</a>
+      </div>
+      {recentEvents.length > 0 ? (
+        <ul class="agenda fade-in">
+          {recentEvents.map((ev) => {
+            const d = new Date(ev.date);
+            return (
+              <li class="agenda-item">
+                <time class="agenda-item__when" datetime={ev.date}>
+                  {d.toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" })}
+                </time>
+                <div>
+                  <h2 class="agenda-item__title">
+                    {ev.url ? <a href={ev.url} target="_blank" rel="noopener">{ev.title}</a> : ev.title}
+                  </h2>
+                  {ev.excerpt && <p class="agenda-item__excerpt">{ev.excerpt.slice(0, 120)}…</p>}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p class="empty-note">Próxima actualización automática de eventos.</p>
+      )}
+    </div>
+  </section>
+</Layout>

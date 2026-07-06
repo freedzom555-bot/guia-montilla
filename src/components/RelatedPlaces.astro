@@ -1,0 +1,89 @@
+---
+import categories from "../../data/categories.json";
+
+interface Business {
+  slug: string;
+  name: string;
+  tagline: string;
+  category: string;
+}
+
+interface Props {
+  current: Business;
+  all: Business[];
+  limit?: number;
+}
+
+const { current, all, limit = 6 } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const catLabels = Object.fromEntries(categories.map((c) => [c.id, c.name]));
+
+const related = all
+  .filter((b) => b.category === current.category && b.slug !== current.slug)
+  .sort((a, b) => a.name.localeCompare(b.name, "es"))
+  .slice(0, limit);
+
+if (related.length === 0) return null;
+---
+
+<section class="related-places" aria-labelledby="related-heading">
+  <h2 id="related-heading">Más {catLabels[current.category]?.toLowerCase() ?? "lugares"} en Montilla</h2>
+  <ul>
+    {related.map((b) => (
+      <li>
+        <a href={`${base}negocio/${b.slug}/`}>
+          <strong>{b.name}</strong>
+          <span>{b.tagline}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p class="related-places__more">
+    <a href={`${base}${current.category}/`}>Ver todos en {catLabels[current.category]} →</a>
+  </p>
+</section>
+
+<style>
+  .related-places {
+    margin-top: var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--rule);
+  }
+  .related-places h2 {
+    font-size: 1.15rem;
+    margin: 0 0 var(--space-2);
+  }
+  .related-places ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+  }
+  .related-places a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+  }
+  .related-places a:hover {
+    border-color: var(--wine);
+  }
+  .related-places strong {
+    display: block;
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+  .related-places span {
+    display: block;
+    font-size: 0.88rem;
+    opacity: 0.78;
+    margin-top: 0.15rem;
+  }
+  .related-places__more {
+    margin: var(--space-2) 0 0;
+    font-size: 0.9rem;
+  }
+</style>

@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Página no encontrada" description="La página que buscas no existe en Guía Montilla." noindex={true}>
+  <section class="page-head">
+    <div class="wrap">
+      <h1>404</h1>
+      <p class="page-head__sub">Esta página no está en la guía.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap prose-narrow">
+      <p class="empty-note">Puede que el enlace esté roto o la ficha haya cambiado.</p>
+      <p class="back-link">
+        <a href={base}>Volver al inicio →</a>
+      </p>
+    </div>
+  </section>
+</Layout>

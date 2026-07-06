@@ -1,0 +1,354 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PhotoGallery from "../../components/PhotoGallery.astro";
+import RelatedPlaces from "../../components/RelatedPlaces.astro";
+import businesses from "../../../data/businesses.json";
+import categories from "../../../data/categories.json";
+import { SITE } from "../../data/site";
+import {
+  businessTitle,
+  businessDescription,
+  businessKeywords,
+  buildBusinessSchemas,
+  seoGalleryImages,
+} from "../../lib/seo";
+
+export function getStaticPaths() {
+  return businesses.map((business) => ({
+    params: { slug: business.slug },
+    props: { business },
+  }));
+}
+
+const { business } = Astro.props;
+const category = categories.find((c) => c.id === business.category);
+const categoryName = category?.name ?? "Montilla";
+const base = import.meta.env.BASE_URL;
+const siteUrl = (Astro.site ?? new URL("http://localhost:4321")).href.replace(/\/$/, "");
+const pageUrl = new URL(`${base}negocio/${business.slug}/`, siteUrl).href;
+const categoryUrl = new URL(`${base}${business.category}/`, siteUrl).href;
+
+const rawGallery = business.gallery?.length
+  ? business.gallery
+  : business.image
+    ? [{ src: business.image, alt: business.name }]
+    : [];
+
+const gallery = seoGalleryImages(rawGallery, business, categoryName, base);
+
+const imagesForSchema = gallery.map((g) => new URL(g.href, siteUrl).href);
+
+const metaTitle = businessTitle(business.name, categoryName);
+const metaDescription = businessDescription(business, categoryName);
+const metaKeywords = businessKeywords(business, categoryName);
+const ogImage = gallery[0]?.src ?? "/images/og-default.jpg";
+
+const schemas = buildBusinessSchemas({
+  business,
+  categoryName,
+  categoryUrl,
+  pageUrl,
+  siteUrl,
+  siteName: SITE.name,
+  images: imagesForSchema,
+  metaTitle,
+  metaDescription,
+});
+---
+
+<Layout
+  title={metaTitle}
+  description={metaDescription}
+  keywords={metaKeywords}
+  image={ogImage}
+  ogType="website"
+  includeSiteSchema={false}
+  jsonLd={schemas}
+>
+  <article class="business-page" itemscope itemtype="https://schema.org/LocalBusiness">
+    <meta itemprop="name" content={business.name} />
+    {business.phone && <meta itemprop="telephone" content={business.phone} />}
+    {gallery[0] && <meta itemprop="image" content={new URL(gallery[0].href, siteUrl).href} />}
+
+    <section class="page-head">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href={base}>Inicio</a>
+          <span aria-hidden="true"> / </span>
+          <a href={`${base}${business.category}/`}>{categoryName}</a>
+          <span aria-hidden="true"> / </span>
+          <span aria-current="page">{business.name}</span>
+        </nav>
+        <div class="page-head__meta">
+          {business.featured && <span class="pill">Destacado</span>}
+          {business.priceRange && <span class="price-badge">{business.priceRange}</span>}
+          {business.rating && (
+            <span class="pill pill--muted">
+              {business.rating.toFixed(1)} ★
+              {business.reviewCount ? ` (${business.reviewCount})` : ""}
+            </span>
+          )}
+        </div>
+        <h1>
+          {business.name}
+          <span class="h1-location"> en Montilla, Córdoba</span>
+        </h1>
+        <p class="page-head__sub">{business.tagline}</p>
+        <p class="page-head__local">
+          {categoryName} · Montilla (14550) · Campiña Sur
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap">
+      {gallery.length > 0 ? (
+        <PhotoGallery images={gallery} name={business.name} />
+      ) : (
+        <p class="no-photos">Sin fotos en Google Maps. Consulta la ficha en Google Maps para ver imágenes actualizadas.</p>
+      )}
+    </div>
+
+    <div class="wrap page-body">
+      <div class="page-body__prose">
+        <section class="info-block info-block--about">
+          <h2>Sobre {business.name} en Montilla</h2>
+          {
+            business.description.split("\n\n").map((para, i) => (
+              <p class:list={[{ "description-lead": i === 0 }]} itemprop={i === 0 ? "description" : undefined}>
+                {para}
+              </p>
+            ))
+          }
+        </section>
+
+        {business.highlights?.length > 0 && (
+          <section class="info-block info-block--highlights">
+            <h2>Qué destaca</h2>
+            <ul class="highlights-list">
+              {business.highlights.map((h) => <li>{h}</li>)}
+            </ul>
+          </section>
+        )}
+
+        {business.tips && (
+          <section class="info-block">
+            <h2>Consejo práctico</h2>
+            <p>{business.tips}</p>
+          </section>
+        )}
+
+        {business.hoursList?.length > 0 ? (
+          <section class="info-block">
+            <h2>Horario habitual</h2>
+            <ul class="hours-list">
+              {business.hoursList.map((line) => <li>{line}</li>)}
+            </ul>
+          </section>
+        ) : business.hours ? (
+          <section class="info-block">
+            <h2>Horario</h2>
+            <p>{business.hours}</p>
+          </section>
+        ) : null}
+
+        {business.currentHours?.length > 0 && (
+          <section class="info-block">
+            <h2>Horario actual</h2>
+            <ul class="hours-list">
+              {business.currentHours.map((line) => <li>{line}</li>)}
+            </ul>
+          </section>
+        )}
+
+        {business.accessibility && (
+          <section class="info-block">
+            <h2>Accesibilidad</h2>
+            <p>{business.accessibility}</p>
+          </section>
+        )}
+
+        {business.payment && (
+          <section class="info-block">
+            <h2>Formas de pago</h2>
+            <p>{business.payment}</p>
+          </section>
+        )}
+
+        <RelatedPlaces current={business} all={businesses} />
+
+        {business.tags && (
+          <ul class="tag-row" aria-label="Etiquetas">
+            {business.tags.map((tag) => <li>{tag}</li>)}
+          </ul>
+        )}
+      </div>
+
+      <aside class="sidebox" aria-label="Contacto y ubicación">
+        <h2 class="sidebox__title">Información de contacto</h2>
+        {business.businessStatusLabel && (
+          <p class="status-badge">{business.businessStatusLabel}</p>
+        )}
+        <dl class="contact-dl">
+          {business.address && (
+            <>
+              <dt>Dirección</dt>
+              <dd itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">{business.address}</span>
+                <span class="visually-hidden">
+                  <span itemprop="addressLocality">Montilla</span>
+                  <span itemprop="postalCode">14550</span>
+                  <span itemprop="addressRegion">Córdoba</span>
+                  <span itemprop="addressCountry">ES</span>
+                </span>
+              </dd>
+            </>
+          )}
+          {business.phone && (
+            <>
+              <dt>Teléfono</dt>
+              <dd>
+                <a href={`tel:${business.phone.replace(/\s/g, "")}`} itemprop="telephone">{business.phone}</a>
+              </dd>
+            </>
+          )}
+          {business.email && (
+            <>
+              <dt>Correo</dt>
+              <dd>
+                <a href={`mailto:${business.email}`} itemprop="email">{business.email}</a>
+              </dd>
+            </>
+          )}
+          {business.web && (
+            <>
+              <dt>Web</dt>
+              <dd>
+                <a href={business.web} target="_blank" rel="noopener noreferrer" itemprop="url">
+                  {business.web.replace(/^https?:\/\/(www\.)?/, "")}
+                </a>
+              </dd>
+            </>
+          )}
+          {business.priceRange && (
+            <>
+              <dt>Precio</dt>
+              <dd itemprop="priceRange">{business.priceRange}</dd>
+            </>
+          )}
+        </dl>
+
+        {business.social?.length > 0 && (
+          <>
+            <h3>Redes sociales</h3>
+            <ul class="social-links">
+              {business.social.map((url) => (
+                <li>
+                  <a href={url} target="_blank" rel="noopener noreferrer">
+                    {url.includes("instagram") ? "Instagram" : url.includes("facebook") ? "Facebook" : "Red social"}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {business.googleMapsUrl && (
+          <a
+            class="btn btn--maps"
+            href={business.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver en Google Maps
+          </a>
+        )}
+
+        {business.turismoUrl && (
+          <p class="sidebox__source">
+            <a href={business.turismoUrl} target="_blank" rel="noopener noreferrer">
+              Ficha en Turismo de Montilla
+            </a>
+          </p>
+        )}
+      </aside>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .h1-location {
+    font-weight: 400;
+    font-size: 0.72em;
+    opacity: 0.82;
+  }
+  .page-head__local {
+    margin: 0.35rem 0 0;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .sidebox__title {
+    font-size: 0.95rem;
+    margin: 0 0 var(--space-2);
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .contact-dl dd {
+    margin-bottom: 0.75rem;
+  }
+  .btn--maps {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.65rem 1.1rem;
+    background: var(--accent, #8b2942);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+  }
+  .btn--maps:hover {
+    filter: brightness(1.08);
+  }
+  .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  .social-links a {
+    font-size: 0.95rem;
+  }
+  .sidebox__source {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    opacity: 0.75;
+  }
+  .pill--muted {
+    background: rgba(0, 0, 0, 0.06);
+    color: inherit;
+  }
+  .hours-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.7;
+  }
+  .status-badge {
+    display: inline-block;
+    margin: 0 0 1rem;
+    padding: 0.25rem 0.65rem;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+</style>

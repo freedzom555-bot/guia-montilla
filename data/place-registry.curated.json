@@ -1,0 +1,253 @@
+[
+  {
+    "slug": "bodegas-alvear",
+    "turismoSlug": "bodegas-alvear",
+    "category": "bodegas",
+    "placeId": "ChIJp-RHHXMTbQ0R8k5DObJduaw",
+    "featured": false
+  },
+  {
+    "slug": "bodegas-robles",
+    "turismoSlug": "bodegas-robles",
+    "category": "bodegas",
+    "placeId": "ChIJXf6PcKUUbQ0RYvalxnNwqIQ",
+    "featured": false
+  },
+  {
+    "slug": "bodegas-perez-barquero",
+    "turismoSlug": "bodegas-perez-barquero",
+    "category": "bodegas",
+    "googleQuery": "Pérez Barquero, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "bodegas-cruz-conde",
+    "turismoSlug": "bodegas-cruz-conde",
+    "category": "bodegas",
+    "googleQuery": "Bodegas Cruz Conde, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "bodegas-navarro",
+    "turismoSlug": "bodegas-navarro",
+    "category": "bodegas",
+    "googleQuery": "Bodegas Navarro, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "bodegas-los-raigones",
+    "turismoSlug": "los-raigones",
+    "category": "bodegas",
+    "googleQuery": "Lagar los Raigones, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "bodegas-gracia",
+    "category": "bodegas",
+    "googleQuery": "Gracia Hermanos, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "bodegas-caballero",
+    "category": "bodegas",
+    "placeId": "ChIJB0MnEckTbQ0RGABj4wLgA-s",
+    "fallback": {
+      "name": "Bodegas Caballero"
+    },
+    "featured": false
+  },
+  {
+    "slug": "cooperativa-san-isidro",
+    "category": "bodegas",
+    "placeId": "ChIJq6qqJokUbQ0RbESiIBhT76Q",
+    "fallback": {
+      "name": "Cooperativa San Isidro"
+    },
+    "featured": false
+  },
+  {
+    "slug": "bodegas-canada-navarro",
+    "category": "bodegas",
+    "googleQuery": "Lagar Cañada Navarro, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "taberna-bolero",
+    "turismoSlug": "taberna-bolero",
+    "category": "restaurantes",
+    "placeId": "ChIJjRLf63sTbQ0R1rD-96_f6lI",
+    "featured": false
+  },
+  {
+    "slug": "taberna-la-chiva",
+    "turismoSlug": "taberna-la-chiva",
+    "category": "restaurantes",
+    "googleQuery": "Taberna La Chiva, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "taberna-rincon-del-conde",
+    "category": "restaurantes",
+    "googleQuery": "Taberna Rincón del Conde, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "asador-la-plaza",
+    "category": "restaurantes",
+    "googleQuery": "Asador La Plaza, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "asador-el-jarriero",
+    "category": "restaurantes",
+    "googleQuery": "Asador El Jarriero, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "hotel-don-gonzalo",
+    "turismoSlug": "hotel-don-gonzalo",
+    "category": "alojamiento",
+    "googleQuery": "Hotel Don Gonzalo, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "hostal-bellido",
+    "turismoSlug": "hostal-bellido",
+    "category": "alojamiento",
+    "googleQuery": "Hostal Bellido, Montilla",
+    "strictName": true,
+    "featured": false,
+    "skipPhotoIndexes": [
+      0
+    ]
+  },
+  {
+    "slug": "hotel-alfar",
+    "turismoSlug": "hotel-alfar",
+    "category": "alojamiento",
+    "googleQuery": "Hotel Alfar, Montilla",
+    "strictName": true,
+    "featured": false
+  },
+  {
+    "slug": "castillo-montilla",
+    "category": "monumentos",
+    "placeId": "ChIJqyqoSgATbQ0RuuV5UY90Y2M",
+    "featured": true
+  },
+  {
+    "slug": "casa-del-inca",
+    "category": "museos",
+    "googleQuery": "Casa del Inca Garcilaso, Montilla",
+    "strictName": true,
+    "featured": true
+  },
+  {
+    "slug": "convento-santa-clara",
+    "category": "monumentos",
+    "placeId": "ChIJBzaNGHgTbQ0Rtn1tLgz8NFA",
+    "featured": true,
+    "localPhotos": true
+  },
+  {
+    "slug": "parroquia-santiago",
+    "category": "monumentos",
+    "placeId": "ChIJGXU4jYITbQ0RGVc62KDFk24",
+    "featured": true
+  },
+  {
+    "slug": "basilica-pontificia-de-san-juan-de-avila",
+    "category": "monumentos",
+    "featured": true
+  },
+  {
+    "slug": "palacio-de-los-duques-de-medinaceli",
+    "category": "monumentos",
+    "featured": true
+  },
+  {
+    "slug": "arco-de-santa-clara",
+    "category": "monumentos",
+    "featured": true
+  },
+  {
+    "slug": "monumento-al-gran-capitan",
+    "category": "monumentos",
+    "featured": true
+  },
+  {
+    "slug": "parque-la-serna",
+    "category": "parques",
+    "placeId": "ChIJtY7yiXcTbQ0R7btIhWvTk1o",
+    "fallback": {
+      "name": "Parque La Serna (Paseo de Cervantes)"
+    },
+    "featured": false
+  },
+  {
+    "slug": "oficina-turismo-montilla",
+    "turismoSlug": "oficina-de-turismo",
+    "category": "cultura-ocio",
+    "placeId": "ChIJawDsWIITbQ0R8KP3fd9M-jA",
+    "fallback": {
+      "name": "Oficina de Turismo de Montilla"
+    },
+    "featured": false
+  },
+  {
+    "slug": "plaza-toros-montilla",
+    "category": "cultura-ocio",
+    "placeId": "ChIJsdR8nXgTbQ0Rsh32g_bHUeQ",
+    "fallback": {
+      "name": "Plaza de Toros de Montilla"
+    },
+    "featured": false
+  },
+  {
+    "slug": "recinto-ferial-montilla",
+    "category": "cultura-ocio",
+    "placeId": "ChIJp3MOzZoUbQ0RZGXHh9nUfw4",
+    "fallback": {
+      "name": "Recinto Ferial Envidarte"
+    },
+    "featured": false
+  },
+  {
+    "slug": "ortopedia-tecnica-el-santo",
+    "placeId": "ChIJ7R0EXHkTbQ0RyPlobu8GOpE",
+    "googleQuery": "ORTOPEDIA TECNICA EL SANTO, Montilla",
+    "category": "salud",
+    "fallback": {
+      "name": "ORTOPEDIA TECNICA EL SANTO | MONTILLA"
+    }
+  },
+  {
+    "slug": "ortopedia-tecnica-manuel-baena",
+    "placeId": "ChIJQVZ6Dp0UbQ0Rh9DsHPDc4E0",
+    "googleQuery": "Ortopedia Técnica Manuel Baena, Montilla",
+    "category": "salud",
+    "fallback": {
+      "name": "Ortopedia Técnica Manuel Baena"
+    }
+  },
+  {
+    "slug": "amparo-gomez-de-tejada-munoz-farmacia-y-ortopedia-",
+    "placeId": "ChIJecrzCm9rbQ0Rr_UPmOSCpEE",
+    "googleQuery": "Farmacia y Ortopedia IPAGRO, Montilla",
+    "category": "salud",
+    "fallback": {
+      "name": "Amparo Gómez De Tejada Muñoz (FARMACIA Y ORTOPEDIA IPAGRO)"
+    }
+  }
+]

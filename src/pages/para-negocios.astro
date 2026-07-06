@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Anuncia tu negocio en Montilla" description="Destaca tu bodega, restaurante o alojamiento en la guía local de Montilla.">
+  <section class="page-head">
+    <div class="wrap">
+      <a href={import.meta.env.BASE_URL} class="back">← Inicio</a>
+      <h1>Tu negocio, visible</h1>
+      <p class="page-head__sub">Cuando busquen «bodegas montilla» o «restaurantes montilla», que salgas tú.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="tiers">
+        <div class="tier">
+          <h3>Gratis</h3>
+          <p class="tier-price">0 €<small>/mes</small></p>
+          <ul>
+            <li>Ficha en el directorio</li>
+            <li>Datos de Google Maps</li>
+            <li>Enlace a tu web y teléfono</li>
+          </ul>
+        </div>
+        <div class="tier tier--pick">
+          <h3>Destacado</h3>
+          <p class="tier-price">29 €<small>/mes</small></p>
+          <ul>
+            <li>Primero en tu categoría</li>
+            <li>Etiqueta destacado</li>
+            <li>Fotos de Google Maps</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <h3>Patrocinio</h3>
+          <p class="tier-price">79 €<small>/mes</small></p>
+          <ul>
+            <li>Portada y rutas</li>
+            <li>Alertas de eventos</li>
+            <li>Feria y vendimia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="biz-form-block">
+        <h2>¿Quieres aparecer?</h2>
+        <p>
+          Escríbenos a <a href="mailto:info@guiamontilla.es">info@guiamontilla.es</a> con el nombre del negocio,
+          dirección y enlace de Google Maps. Solo incluimos locales reales verificados.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

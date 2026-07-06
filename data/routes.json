@@ -1,0 +1,134 @@
+[
+  {
+    "id": "ruta-fino-manana",
+    "slug": "ruta-fino-manana",
+    "title": "Mañana de fino en el casco",
+    "duration": "3 horas",
+    "stops": [
+      { "name": "Bodegas Alvear", "slug": "bodegas-alvear" },
+      { "name": "Castillo de Montilla", "slug": "castillo-montilla" },
+      { "name": "Bodegas Pérez Barquero", "slug": "bodegas-perez-barquero" },
+      { "name": "Taberna Bolero", "slug": "taberna-bolero" }
+    ],
+    "description": "La ruta imprescindible: visita en Alvear, paseo por el castillo y el centro empedrado, cata en Pérez Barquero y tapas con fino en Taberna Bolero. Ideal para un sábado de enoturismo sin prisas.",
+    "idealFor": "Parejas y primerizos en Moriles"
+  },
+  {
+    "id": "ruta-ecologica",
+    "slug": "ruta-ecologica",
+    "title": "Montilla verde: bodega ecológica y olivares",
+    "duration": "Medio día",
+    "stops": [
+      { "name": "Bodegas Robles", "slug": "bodegas-robles" },
+      { "name": "Bodegas Caballero", "slug": "bodegas-caballero" },
+      { "name": "Asador La Plaza", "slug": "asador-la-plaza" }
+    ],
+    "description": "Enoturismo sostenible entre viñedos y olivares de la Campiña Sur. Bodegas Robles como referencia ecológica, visita en Caballero y comida montillana en Asador La Plaza.",
+    "idealFor": "Familias y amantes del vino natural"
+  },
+  {
+    "id": "ruta-patrimonio",
+    "slug": "ruta-patrimonio",
+    "title": "Patrimonio y cultura montillana",
+    "duration": "4 horas",
+    "stops": [
+      { "name": "Castillo de Montilla", "slug": "castillo-montilla" },
+      { "name": "Palacio de los Duques de Medinaceli", "slug": "palacio-de-los-duques-de-medinaceli" },
+      { "name": "Arco de Santa Clara", "slug": "arco-de-santa-clara" },
+      { "name": "Monumento al Gran Capitán", "slug": "monumento-al-gran-capitan" },
+      { "name": "Basílica de San Juan de Ávila", "slug": "basilica-pontificia-de-san-juan-de-avila" }
+    ],
+    "description": "Montilla no es solo vino. Castillo, palacio ducal, arcos históricos, homenaje al Gran Capitán y el patrimonio religioso de San Juan de Ávila antes de cerrar con una copa en el casco.",
+    "idealFor": "Curiosos de historia"
+  },
+  {
+    "id": "ruta-tabernas",
+    "slug": "ruta-tabernas",
+    "title": "Ruta de tabernas y mesa montillana",
+    "duration": "1 día",
+    "stops": [
+      { "name": "Taberna Bolero", "slug": "taberna-bolero" },
+      { "name": "Taberna La Chiva", "slug": "taberna-la-chiva" },
+      { "name": "Taberna Rincón del Conde", "slug": "taberna-rincon-del-conde" },
+      { "name": "Asador El Jarriero", "slug": "asador-el-jarriero" },
+      { "name": "Casa Don Manuel", "slug": "casa-don-manuel-bar-restaurante" }
+    ],
+    "description": "Recorrido gastronómico por las tabernas más emblemáticas de Montilla: desde la centenaria Bolero hasta el Rincón del Conde, pasando por La Chiva, El Jarriero y Casa Don Manuel.",
+    "idealFor": "Foodies y grupos de amigos"
+  },
+  {
+    "id": "ruta-bodegas-completa",
+    "slug": "ruta-bodegas-completa",
+    "title": "Gran ruta de bodegas Montilla-Moriles",
+    "duration": "2 días",
+    "stops": [
+      { "name": "Bodegas Alvear", "slug": "bodegas-alvear" },
+      { "name": "Bodegas Robles", "slug": "bodegas-robles" },
+      { "name": "Bodegas Pérez Barquero", "slug": "bodegas-perez-barquero" },
+      { "name": "Bodegas Cruz Conde", "slug": "bodegas-cruz-conde" },
+      { "name": "Bodegas Navarro", "slug": "bodegas-navarro" },
+      { "name": "Bodegas Caballero", "slug": "bodegas-caballero" }
+    ],
+    "description": "Las bodegas imprescindibles de la D.O. Montilla-Moriles en dos jornadas: soleras centenarias, vino ecológico, fino bajo velo de flor y crianza oxidadiva. Reserva visitas con antelación.",
+    "idealFor": "Enoturistas y coleccionistas de vino"
+  },
+  {
+    "id": "ruta-parques",
+    "slug": "ruta-parques",
+    "title": "Paseo verde por Montilla",
+    "duration": "2 horas",
+    "stops": [
+      { "name": "Parque La Serna", "slug": "parque-la-serna" },
+      { "name": "Parque de la Rejoya", "slug": "parque-de-la-rejoya" },
+      { "name": "Parque Tierno Galván", "slug": "parque-tierno-galvan" },
+      { "name": "Plaza Juan Colín", "slug": "plaza-juan-colin" },
+      { "name": "Paseo de las Mercedes", "slug": "paseo-de-las-mercedes" }
+    ],
+    "description": "Ruta a pie por los espacios verdes del pueblo: La Serna, Rejoya, Tierno Galván, plazas y el Paseo de las Mercedes con la estatua del Gran Capitán. Perfecta con niños o al atardecer.",
+    "idealFor": "Familias y paseantes"
+  },
+  {
+    "id": "ruta-monumentos-iglesias",
+    "slug": "ruta-monumentos-iglesias",
+    "title": "Iglesias, conventos y patrimonio religioso",
+    "duration": "3 horas",
+    "stops": [
+      { "name": "Parroquia de Santiago", "slug": "parroquia-santiago" },
+      { "name": "Basílica de San Juan de Ávila", "slug": "basilica-pontificia-de-san-juan-de-avila" },
+      { "name": "Convento de Santa Clara", "slug": "convento-santa-clara" },
+      { "name": "Casa de la Tercia", "slug": "casa-de-la-tercia" },
+      { "name": "Ayuntamiento de Montilla", "slug": "ayuntamiento-de-montilla" }
+    ],
+    "description": "Recorrido por el patrimonio religioso y civil de Montilla: Santiago Apóstol, la basílica de San Juan de Ávila, Santa Clara, la Casa de la Tercia y el ayuntamiento junto a la Puerta de Aguilar.",
+    "idealFor": "Amantes del arte y la historia"
+  },
+  {
+    "id": "ruta-feria-gastronomia",
+    "slug": "ruta-feria-gastronomia",
+    "title": "Feria, mercado y gastronomía local",
+    "duration": "Medio día",
+    "stops": [
+      { "name": "Asador La Plaza", "slug": "asador-la-plaza" },
+      { "name": "La Bodeguita", "slug": "la-bodeguita" },
+      { "name": "Recinto Ferial Envidarte", "slug": "recinto-ferial-montilla" },
+      { "name": "Hotel Restaurante Don Gonzalo", "slug": "hotel-don-gonzalo" }
+    ],
+    "description": "Vive Montilla como un local: tapas en la plaza de abastos, ambiente de barrio en La Bodeguita, conoce el recinto ferial y cierra con comida en Don Gonzalo.",
+    "idealFor": "Viajeros que buscan autenticidad"
+  },
+  {
+    "id": "ruta-alojamiento-fin-de-semana",
+    "slug": "ruta-alojamiento-fin-de-semana",
+    "title": "Fin de semana completo en Montilla",
+    "duration": "2 días",
+    "stops": [
+      { "name": "Hostal Bellido", "slug": "hostal-bellido" },
+      { "name": "Oficina de Turismo", "slug": "oficina-turismo-montilla" },
+      { "name": "Teatro Garnelo", "slug": "teatro-garnelo" },
+      { "name": "Plaza de Toros", "slug": "plaza-toros-montilla" },
+      { "name": "Hotel Alfar", "slug": "hotel-alfar" }
+    ],
+    "description": "Plan de fin de semana: alójate en el centro, recoge información en turismo, cultura en el teatro, ambiente taurino en la plaza de toros y cena en el entorno de Hotel Alfar.",
+    "idealFor": "Escapada de fin de semana"
+  }
+]

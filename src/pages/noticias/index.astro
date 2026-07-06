@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import news from "../../../data/news.json";
+import { trimMeta, buildNewsIndexSchema } from "../../lib/news-seo";
+
+const sorted = [...news].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const base = import.meta.env.BASE_URL;
+const siteUrl = (Astro.site ?? new URL("http://localhost:4321")).href.replace(/\/$/, "");
+
+const bySource = sorted.reduce<Record<string, typeof sorted>>((acc, item) => {
+  (acc[item.source] ??= []).push(item);
+  return acc;
+}, {});
+
+const description =
+  "Noticias de Montilla (Córdoba) recogidas automáticamente de Montilla Digital y el Ayuntamiento. Resumen y enlace a la fuente original.";
+---
+
+<Layout
+  title="Noticias de Montilla · Guía Montilla"
+  description={trimMeta(description)}
+  keywords="noticias Montilla, actualidad Montilla, Montilla Digital, ayuntamiento Montilla"
+  image="/images/hero/hero.jpg"
+  jsonLd={buildNewsIndexSchema(siteUrl, base)}
+>
+  <header class="news-mast">
+    <div class="wrap news-mast__inner">
+      <p class="news-mast__kicker">Actualidad · Campiña Sur</p>
+      <h1>Noticias de Montilla</h1>
+      <p class="news-mast__deck">
+        Lo que pasa en el pueblo, recogido de fuentes públicas. Cada ficha resume la noticia y enlaza al medio original.
+      </p>
+      <p class="news-mast__count">{sorted.length} noticias indexadas</p>
+    </div>
+  </header>
+
+  <div class="wrap news-index">
+    {Object.entries(bySource).map(([source, items]) => (
+      <section class="news-group">
+        <h2 class="news-group__title">{source}</h2>
+        <ul class="news-list">
+          {items.map((item) => {
+            const d = new Date(item.date);
+            return (
+              <li class="news-list__item">
+                <time class="news-list__when" datetime={item.date}>
+                  {d.toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" })}
+                </time>
+                <div class="news-list__body">
+                  <h3>
+                    <a href={`${base}noticias/${item.slug}/`}>{item.title}</a>
+                  </h3>
+                  {item.excerpt && <p>{item.excerpt}</p>}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))}
+
+    {sorted.length === 0 && <p class="empty-note">Sin noticias indexadas todavía. El pipeline se ejecuta cada día.</p>}
+  </div>
+</Layout>

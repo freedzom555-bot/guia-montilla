@@ -1,0 +1,43 @@
+---
+import searchIndex from "../../data/search-index.json";
+
+interface Props {
+  compact?: boolean;
+  initialQuery?: string;
+}
+
+const { compact = true, initialQuery = "" } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const searchPage = `${base}buscar/`;
+const serialized = JSON.stringify(searchIndex);
+---
+
+<div
+  class:list={["finder", { "finder--wide": !compact }]}
+  data-search-root
+  data-base={base}
+  data-search-page={searchPage}
+  data-compact={compact ? "true" : "false"}
+>
+  <label for="site-search">Buscar en Montilla</label>
+  <div class="finder-row">
+    <input
+      type="search"
+      id="site-search"
+      name="q"
+      value={initialQuery}
+      placeholder="Flores, bodega, farmacia, comer, taller…"
+      autocomplete="off"
+      aria-controls="search-results"
+      aria-autocomplete="list"
+    />
+    <button type="button" id="search-submit">Buscar</button>
+  </div>
+  <p class="finder-hint">No hace falta el nombre exacto: prueba «flores», «vino», «peluquería» o «dónde comer».</p>
+  <div id="search-results" class="finder-results" role="listbox" aria-label="Resultados de búsqueda"></div>
+  <script type="application/json" data-search-index set:html={serialized}></script>
+</div>
+
+<script>
+  import "../lib/search-box.client.js";
+</script>

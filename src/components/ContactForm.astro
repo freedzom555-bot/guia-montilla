@@ -1,0 +1,99 @@
+---
+interface Props {
+  subject?: string;
+  formName?: string;
+  buttonLabel?: string;
+  redirectTo?: string;
+}
+
+const {
+  subject = "Consulta desde Guía Montilla",
+  formName = "contacto",
+  buttonLabel = "Enviar mensaje",
+  redirectTo,
+} = Astro.props;
+
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "";
+const hasKey = accessKey.length > 10;
+---
+
+{hasKey ? (
+  <form
+    class="field-grid contact-form"
+    action="https://api.web3forms.com/submit"
+    method="POST"
+    data-contact-form
+  >
+    <input type="hidden" name="access_key" value={accessKey} />
+    <input type="hidden" name="subject" value={subject} />
+    <input type="hidden" name="from_name" value="Guía Montilla Web" />
+    {redirectTo && <input type="hidden" name="redirect" value={redirectTo} />}
+    <input type="checkbox" name="botcheck" class="contact-form__honeypot" tabindex="-1" autocomplete="off" />
+    <input type="text" name="name" placeholder="Tu nombre" required minlength="2" />
+    <input type="email" name="email" placeholder="Tu email" required />
+    <input type="tel" name="phone" placeholder="Teléfono (opcional)" />
+    <textarea name="message" placeholder="Tu mensaje" rows="4" required minlength="10"></textarea>
+    <button type="submit" class="btn">{buttonLabel}</button>
+    <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+  </form>
+) : (
+  <div class="form-fallback">
+    <p class="form-fallback__note">
+      Activa los formularios: crea clave gratis en <a href="https://web3forms.com" target="_blank" rel="noopener">web3forms.com</a> y ponla en <code>PUBLIC_WEB3FORMS_KEY</code> en el archivo <code>.env</code>
+    </p>
+    <a class="btn" href={`mailto:hola@guiamontilla.es?subject=${encodeURIComponent(subject)}`}>Escribir por email</a>
+  </div>
+)}
+
+<script>
+  document.querySelectorAll("[data-contact-form]").forEach((form) => {
+    const status = form.querySelector("[data-form-status]");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+      if (status) status.textContent = "Enviando…";
+
+      try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: new FormData(form),
+        });
+        const data = await res.json();
+        if (data.success) {
+          if (status) status.textContent = "✓ Mensaje enviado. Te responderemos pronto.";
+          form.reset();
+        } else {
+          if (status) status.textContent = "Error al enviar. Prueba por email.";
+        }
+      } catch {
+        if (status) status.textContent = "Error de conexión. Prueba más tarde.";
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    });
+  });
+</script>
+
+<style>
+  .contact-form__honeypot {
+    display: none;
+  }
+  .form-status {
+    font-size: 0.85rem;
+    color: var(--wine);
+    margin: 0;
+    min-height: 1.25rem;
+  }
+  .form-fallback__note {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin-bottom: var(--space-2);
+  }
+  .form-fallback code {
+    font-size: 0.78rem;
+    background: var(--paper-tint);
+    padding: 0.1rem 0.3rem;
+  }
+</style>

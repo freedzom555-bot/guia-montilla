@@ -1,0 +1,481 @@
+{
+  "total": 457,
+  "sections": {
+    "educacion": 12,
+    "parques": 4,
+    "monumentos": 16,
+    "bodegas": 17,
+    "museos": 5,
+    "cultura-ocio": 22
+  },
+  "samples": {
+    "educacion": [
+      {
+        "slug": "c-e-i-p-beato-juan-de-avila",
+        "name": "C.E.I.P. Beato Juan de Ávila",
+        "types": "Centro educativo, educational institution, government office",
+        "address": "C. Luis Braille, 19, Montilla"
+      },
+      {
+        "slug": "c-e-i-p-gran-capitan",
+        "name": "C.E.I.P. Gran Capitán",
+        "types": "Centro educativo, educational institution, government office",
+        "address": "Av. de la Constitución, 16, Montilla"
+      },
+      {
+        "slug": "c-e-i-p-san-francisco-solano",
+        "name": "C.E.I.P. San Francisco Solano",
+        "types": "government office, Centro educativo, educational institution",
+        "address": "C. Giner de los Ríos, 4, Montilla"
+      },
+      {
+        "slug": "c-e-i-p-san-jose",
+        "name": "C.E.I.P. San José",
+        "types": "Centro educativo, educational institution, government office",
+        "address": "C. Rda. de Curtidores, 8, Montilla"
+      },
+      {
+        "slug": "c-e-i-p-vicente-aleixandre",
+        "name": "C.E.I.P. Vicente Aleixandre",
+        "types": "Centro educativo, educational institution, government office",
+        "address": "C/ Conde de la Cortina, 26, Montilla"
+      },
+      {
+        "slug": "cep-centro-de-profesores-de-montilla",
+        "name": "CEP Centro de Profesores de Montilla",
+        "types": "university, educational institution",
+        "address": "C. Luis Braille, 17, Montilla"
+      },
+      {
+        "slug": "colegio-la-asuncion-fundacion-spinola",
+        "name": "Colegio La Asunción - Fundación Spínola",
+        "types": "Centro educativo, educational institution",
+        "address": "C. Don Diego de Alvear, 6, Montilla"
+      },
+      {
+        "slug": "colegio-san-francisco-solano-salesianos",
+        "name": "Colegio San Francisco Solano - Salesianos",
+        "types": "Centro educativo, educational institution",
+        "address": "C. Arcipreste Fernández Casado, 3, Montilla"
+      },
+      {
+        "slug": "colegio-san-luis-y-san-ildefonso",
+        "name": "Colegio San Luis y San Ildefonso",
+        "types": "Centro educativo, educational institution",
+        "address": "C. San Luis, 14, Montilla"
+      },
+      {
+        "slug": "e-i-ana-ximenez",
+        "name": "E.I. Ana Ximénez",
+        "types": "Centro educativo, educational institution, government office",
+        "address": "C. Rda. de Curtidores, 12, Montilla"
+      },
+      {
+        "slug": "i-e-s-emilio-canalejo-olmeda",
+        "name": "I.E.S. Emilio Canalejo Olmeda",
+        "types": "Instituto, Centro educativo, educational institution",
+        "address": "Av. del Trabajo, 24, Montilla"
+      },
+      {
+        "slug": "i-e-s-inca-garcilaso",
+        "name": "I.E.S. Inca Garcilaso",
+        "types": "Instituto, Centro educativo, educational institution",
+        "address": "Av. de la Constitución, 14, Montilla"
+      }
+    ],
+    "parques": [
+      {
+        "slug": "parque-la-serna",
+        "name": "Parque La Serna (Paseo de Cervantes)",
+        "types": "Parque, city park",
+        "address": "P.º de Cervantes, Montilla"
+      },
+      {
+        "slug": "paseo-de-las-mercedes",
+        "name": "Paseo de las Mercedes",
+        "types": "Parque",
+        "address": "Av. de Andalucía, 42, Montilla"
+      },
+      {
+        "slug": "plaza-de-munda",
+        "name": "Plaza de Munda",
+        "types": "Parque",
+        "address": "Pl. de Munda, 1, Montilla"
+      },
+      {
+        "slug": "plaza-juan-colin",
+        "name": "Plaza Juan Colín",
+        "types": "Parque",
+        "address": "C. Juan Colin, 130, Montilla"
+      }
+    ],
+    "monumentos": [
+      {
+        "slug": "ayuntamiento-de-montilla",
+        "name": "Ayuntamiento de Montilla",
+        "types": "Ayuntamiento, local government office, government office",
+        "address": "C. Prta de Aguilar, 10, Montilla"
+      },
+      {
+        "slug": "basilica-pontificia-de-san-juan-de-avila",
+        "name": "Basílica Pontificia de San Juan de Ávila",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "C. la Corredera, 21, Montilla"
+      },
+      {
+        "slug": "casa-de-la-tercia",
+        "name": "Casa de la Tercia",
+        "types": "apartment building, service",
+        "address": "C. José de los Ángeles, 1, Montilla"
+      },
+      {
+        "slug": "castillo-montilla",
+        "name": "Castillo de Montilla",
+        "types": "historical landmark, historical place",
+        "address": "Calle Iglesia, 3, Montilla"
+      },
+      {
+        "slug": "comunidad-de-amor-cristiano",
+        "name": "Comunidad de Amor Cristiano",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "C. Rda. de Curtidores, 37, Montilla"
+      },
+      {
+        "slug": "convento-de-santa-ana",
+        "name": "Convento de Santa Ana",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "C. Sta. Ana, 1, Montilla"
+      },
+      {
+        "slug": "convento-santa-clara",
+        "name": "Convento de Santa Clara",
+        "types": "premise, street address",
+        "address": "C. Llano de Palacio, Montilla"
+      },
+      {
+        "slug": "ermita-de-la-paz-casa-de-san-juan-de-avila",
+        "name": "Ermita de la Paz - Casa de San Juan de Ávila",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "C. San Juan de Dios, 10, Montilla"
+      },
+      {
+        "slug": "iglesia-santuario-de-maria-auxiliadora",
+        "name": "Iglesia-Santuario de María Auxiliadora",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "C. la Cuesta del Silencio, 5, Montilla"
+      },
+      {
+        "slug": "molino-juanito-ortiz",
+        "name": "Molino Juanito Ortiz",
+        "types": "manufacturer",
+        "address": "C. Escuelas, 20, A, Montilla"
+      },
+      {
+        "slug": "mural-amontillate",
+        "name": "Mural Amontillate",
+        "types": "",
+        "address": "C. Prta de Aguilar, 1, Montilla"
+      },
+      {
+        "slug": "mural-proceso-magico",
+        "name": "Mural Proceso Mágico",
+        "types": "Atracción turística",
+        "address": "C. Palomar, 11Acc, Montilla"
+      },
+      {
+        "slug": "parroquia-de-nuestra-senora-de-la-asuncion",
+        "name": "Parroquia de Nuestra Señora de la Asunción",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "Calle Dr. Raúl Porras, 7, Montilla"
+      },
+      {
+        "slug": "parroquia-de-san-francisco-solano",
+        "name": "Parroquia de San Francisco Solano",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "C. San Francisco Solano, 18, Montilla"
+      },
+      {
+        "slug": "parroquia-de-san-sebastian",
+        "name": "Parroquia de San Sebastián",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "C. San Sebastián, 17, Montilla"
+      },
+      {
+        "slug": "parroquia-santiago",
+        "name": "Parroquia de Santiago Apóstol",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "Calle Iglesia, 9, Montilla"
+      }
+    ],
+    "bodegas": [
+      {
+        "slug": "bodega-boutique-finca-buytron",
+        "name": "Bodega Boutique Finca Buytron",
+        "types": "bed and breakfast, Bodega, farm",
+        "address": "Carretera Córdoba - Málaga, N-331 km 43, Montilla"
+      },
+      {
+        "slug": "bodega-y-vinedos-lagar-de-la-salud",
+        "name": "Bodega y viñedos Lagar de la Salud",
+        "types": "Bodega, farm, manufacturer",
+        "address": "Carr. Córdoba - Málaga, km 41, Montilla"
+      },
+      {
+        "slug": "bodegas-alvear",
+        "name": "Bodegas Alvear",
+        "types": "Bodega, Vinoteca, farm",
+        "address": "Av. de María Auxiliadora, 1, Montilla"
+      },
+      {
+        "slug": "bodegas-caballero",
+        "name": "Bodegas Caballero",
+        "types": "manufacturer",
+        "address": "C. Rda. del Canillo, 4, Montilla"
+      },
+      {
+        "slug": "bodegas-cruz-conde",
+        "name": "Bodegas Cruz Conde",
+        "types": "Bodega, Atracción turística, Vinoteca",
+        "address": "C. Rda. del Canillo, 4, Montilla"
+      },
+      {
+        "slug": "bodegas-galan-portero",
+        "name": "Bodegas Galan Portero",
+        "types": "Bodega, farm, manufacturer",
+        "address": "Av. del Marqués de la Vega de Armijo, 76, Montilla"
+      },
+      {
+        "slug": "bodegas-galan-portero-lagar-el-puntal",
+        "name": "Bodegas Galán Portero - Lagar El Puntal",
+        "types": "Bodega, farm, manufacturer",
+        "address": "Carretera, A-3130, km 24, Montilla"
+      },
+      {
+        "slug": "bodegas-gracia",
+        "name": "Bodegas Gracia Hermanos",
+        "types": "",
+        "address": "Av. del Marqués de la Vega de Armijo, 103, Montilla"
+      },
+      {
+        "slug": "bodegas-la-aurora",
+        "name": "Bodegas La Aurora",
+        "types": "Bodega, Vinoteca, farm",
+        "address": "Av. de Europa, 7, Montilla"
+      },
+      {
+        "slug": "bodegas-navarro",
+        "name": "Bodegas Navarro",
+        "types": "Bodega, farm, manufacturer",
+        "address": "Av. Antonio y Miguel Navarro, 1, Montilla"
+      },
+      {
+        "slug": "bodegas-navisa",
+        "name": "Bodegas Navisa",
+        "types": "Bodega, farm, manufacturer",
+        "address": "Av. José Padillo Delgado, 0, Montilla"
+      },
+      {
+        "slug": "bodegas-perez-barquero",
+        "name": "Bodegas Pérez Barquero",
+        "types": "Bodega, vineyard, Atracción turística",
+        "address": "Avenida de Andalucía, 27 (Camiones y Autocares: entrada por, C. Luis de Góngora y Argote, s/n, Montilla"
+      },
+      {
+        "slug": "bodegas-robles",
+        "name": "Bodegas Robles",
+        "types": "Bodega, vineyard, Vinoteca",
+        "address": "Carr. Córdoba - Málaga, 5, N-331, Km 47, Montilla"
+      },
+      {
+        "slug": "catas-dirigidas",
+        "name": "CATAS DIRIGIDAS",
+        "types": "Bar de vinos, Bar",
+        "address": "P.º de Cervantes, 11, Montilla"
+      },
+      {
+        "slug": "hacienda-bolonia",
+        "name": "Hacienda Bolonia",
+        "types": "Vinoteca, Tienda",
+        "address": "C. San Francisco Solano, 20, Montilla"
+      },
+      {
+        "slug": "marenas-vinedo-y-bodega-vinos-naturales",
+        "name": "Marenas Viñedo y Bodega / Vinos Naturales",
+        "types": "Bodega, farm, manufacturer",
+        "address": "Cerro Encinas, Montilla"
+      },
+      {
+        "slug": "vinos-de-anora",
+        "name": "Vinos de Anora",
+        "types": "Bodega, Bar de vinos, Vinoteca",
+        "address": "Av. de Europa, 20, Montilla"
+      }
+    ],
+    "museos": [
+      {
+        "slug": "casa-del-inca",
+        "name": "Casa del Inca Garcilaso de la Vega",
+        "types": "Museo, Atracción turística",
+        "address": "C. Capitán Alonso de Vargas, 3, Montilla"
+      },
+      {
+        "slug": "exposicion-permanente-de-el-gran-capitan",
+        "name": "Exposición permanente de El Gran Capitán",
+        "types": "Museo",
+        "address": "Calle Iglesia, 3, Montilla"
+      },
+      {
+        "slug": "museo-garnelo",
+        "name": "Museo Garnelo",
+        "types": "Museo, Atracción turística",
+        "address": "Plaza de la Cultura, s/n, Montilla"
+      },
+      {
+        "slug": "museo-historico-local-de-montilla",
+        "name": "Museo Histórico Local de Montilla",
+        "types": "Museo, Atracción turística",
+        "address": "Calle Rita Pérez, Montilla"
+      },
+      {
+        "slug": "salon-municipal-de-exposiciones-san-juan-de-dios",
+        "name": "Salón Municipal de Exposiciones San Juan de Dios",
+        "types": "Tienda",
+        "address": "C. Prta de Aguilar, 8, Montilla"
+      }
+    ],
+    "cultura-ocio": [
+      {
+        "slug": "academia-de-baile-fuego-latino",
+        "name": "Academia de Baile Fuego Latino",
+        "types": "dance hall, sports school, Recinto de eventos",
+        "address": "P.º de Cervantes, 7, Montilla"
+      },
+      {
+        "slug": "area-de-cultura-ayo-de-montilla",
+        "name": "Área de Cultura - Ayo. de Montilla",
+        "types": "Ayuntamiento, local government office, government office",
+        "address": "C. Rda. de Curtidores, 10, Montilla"
+      },
+      {
+        "slug": "biblioteca-publica-municipal-cc-antonio-carpio",
+        "name": "Biblioteca Pública Municipal (CC Antonio Carpio)",
+        "types": "Biblioteca, service",
+        "address": "1 Casa de la Juventud, C. Rda. de Curtidores, 10, Montilla"
+      },
+      {
+        "slug": "casino-montillano",
+        "name": "Casino Montillano",
+        "types": "association or organization",
+        "address": "C. la Corredera, 33, Montilla"
+      },
+      {
+        "slug": "centro-active",
+        "name": "Centro Active",
+        "types": "yoga studio, fitness center, sports complex",
+        "address": "C. Capataz Francisco Molina Feria, 4, Montilla"
+      },
+      {
+        "slug": "centro-deportivo-biofitness-gimnasio",
+        "name": "CENTRO DEPORTIVO BIOFITNESS (Gimnasio)",
+        "types": "sports complex, Gimnasio, sports school",
+        "address": "C. José de los Ángeles, 6, Montilla"
+      },
+      {
+        "slug": "centro-diocesano-san-juan-de-avila",
+        "name": "Centro Diocesano San Juan de Ávila",
+        "types": "association or organization",
+        "address": "C. la Corredera, 23A, 2.º 1, Montilla"
+      },
+      {
+        "slug": "recinto-ferial-montilla",
+        "name": "Complejo Envidarte (Recinto Ferial)",
+        "types": "community center, Recinto de eventos, service",
+        "address": "Av. José Padillo Delgado, S/N, Montilla"
+      },
+      {
+        "slug": "fitness-center-24-7-montilla",
+        "name": "Fitness Center 24-7 Montilla",
+        "types": "fitness center, Gimnasio, sports activity location",
+        "address": "Av. de Italia, 16, Montilla"
+      },
+      {
+        "slug": "fundacion-biblioteca-manuel-ruiz-luque",
+        "name": "Fundación Biblioteca Manuel Ruiz Luque",
+        "types": "Biblioteca, service",
+        "address": "Plaza de la Cultura, s/n, Montilla"
+      },
+      {
+        "slug": "grupo-adisma",
+        "name": "GRUPO ADISMA",
+        "types": "sportswear store, fitness center, Gimnasio",
+        "address": "Pol. Ind. Llanos de Jarata, C. Marconi, 57, Montilla"
+      },
+      {
+        "slug": "infinity-fitness-life-montilla",
+        "name": "Infinity Fitness Life Montilla",
+        "types": "yoga studio, fitness center, sports complex",
+        "address": "C. Antonio Gala, 4, Montilla"
+      },
+      {
+        "slug": "m2-centro-deportivo",
+        "name": "M2 Centro Deportivo",
+        "types": "fitness center, Gimnasio, sports activity location",
+        "address": "Av. del Marqués de la Vega de Armijo, nº93, Montilla"
+      },
+      {
+        "slug": "marathon-viajes",
+        "name": "Marathon Viajes",
+        "types": "travel agency, service",
+        "address": "C. Prta de Aguilar, 31, Loc, Montilla"
+      },
+      {
+        "slug": "montiaventura-local-cumpleanos",
+        "name": "MontiAventura Local Cumpleaños",
+        "types": "indoor playground, Parque infantil, Recinto de eventos",
+        "address": "C. Melgar, 35, Montilla"
+      },
+      {
+        "slug": "oficina-turismo-montilla",
+        "name": "Oficina de Turismo de Montilla",
+        "types": "tourist information center, tour agency, travel agency",
+        "address": "Calle Iglesia, 3, Montilla"
+      },
+      {
+        "slug": "open-padel-center",
+        "name": "Open Padel Center",
+        "types": "fitness center, Gimnasio, sports activity location",
+        "address": "Av. del Marqués de la Vega de Armijo, 51B, Montilla"
+      },
+      {
+        "slug": "parque-de-bomberos-de-montilla",
+        "name": "Parque de Bomberos de Montilla",
+        "types": "Parque de bomberos, government office, service",
+        "address": "Av. del Marqués de la Vega de Armijo, 83, Montilla"
+      },
+      {
+        "slug": "plaza-toros-montilla",
+        "name": "Plaza de Toros (Plaza de la Rosa)",
+        "types": "historical landmark, historical place",
+        "address": "Pl. de la Rosa, Montilla"
+      },
+      {
+        "slug": "sala-multifuncional-edificio-solera",
+        "name": "Sala Multifuncional Edificio Solera",
+        "types": "Ayuntamiento, local government office, government office",
+        "address": "C. Palomar, 11Acc, Montilla"
+      },
+      {
+        "slug": "salon-del-reino-de-los-testigos-cristianos-de-jeho",
+        "name": "Salón del Reino de los Testigos Cristianos de Jehová",
+        "types": "Iglesia, place of worship, association or organization",
+        "address": "C. las Eras, 9, Montilla"
+      },
+      {
+        "slug": "teatro-garnelo",
+        "name": "Teatro Garnelo",
+        "types": "Teatro, Recinto de eventos",
+        "address": "Pl. de la Rosa, Montilla"
+      }
+    ]
+  }
+}

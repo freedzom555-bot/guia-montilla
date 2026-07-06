@@ -1,0 +1,42 @@
+{
+  "ok": 395,
+  "refreshed": 7,
+  "noGoogle": 0,
+  "mismatches": [
+    {
+      "slug": "almacenes-manolin-y-luis-s-l",
+      "name": "ALMACENES MANOLÍN Y LUIS S.L.",
+      "reason": "hash-mismatch"
+    },
+    {
+      "slug": "asador-el-jarriero",
+      "name": "Asador El Jarriero",
+      "reason": "hash-mismatch"
+    },
+    {
+      "slug": "automatismos-itea-s-l",
+      "name": "Automatismos Itea, S.L.",
+      "reason": "hash-mismatch"
+    },
+    {
+      "slug": "boutique-house-lujo-pobre",
+      "name": "Boutique House Lujo Pobre",
+      "reason": "hash-mismatch"
+    },
+    {
+      "slug": "c-e-i-p-san-francisco-solano",
+      "name": "C.E.I.P. San Francisco Solano",
+      "reason": "hash-mismatch"
+    },
+    {
+      "slug": "clinica-carlos-trapero-podologia-avanzada",
+      "name": "CLINICA CARLOS TRAPERO- PODOLOGIA AVANZADA",
+      "reason": "hash-mismatch"
+    },
+    {
+      "slug": "colegio-la-asuncion-fundacion-spinola",
+      "name": "Colegio La Asunción - Fundación Spínola",
+      "reason": "hash-mismatch"
+    }
+  ]
+}

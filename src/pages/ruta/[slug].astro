@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import routes from "../../../data/routes.json";
+
+export function getStaticPaths() {
+  return routes.map((route) => ({
+    params: { slug: route.slug },
+    props: { route },
+  }));
+}
+
+const { route } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title={route.title} description={route.description} image="/images/hero/ruta.jpg">
+  <section class="page-head">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Ruta">
+        <a href={base}>Inicio</a>
+        <span aria-hidden="true"> / </span>
+        <a href={`${base}rutas/`}>Rutas</a>
+        <span aria-hidden="true"> / </span>
+        <span aria-current="page">{route.title}</span>
+      </nav>
+      <h1>{route.title}</h1>
+      <p class="page-head__sub">{route.duration} · {route.idealFor}</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap prose-narrow">
+      <p class="page-body__prose">{route.description}</p>
+      <h2 class="section-title">Paradas</h2>
+      <ol class="stops-list">
+        {route.stops.map((s) => (
+          <li>
+            {s.slug ? (
+              <a href={`${base}negocio/${s.slug}/`}>{s.name}</a>
+            ) : (
+              s.name
+            )}
+          </li>
+        ))}
+      </ol>
+      <p class="back-link">
+        <a href={`${base}rutas/`}>← Todas las rutas</a>
+      </p>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,39 @@
+---
+import categories from "../../data/categories.json";
+
+interface Business {
+  slug: string;
+  name: string;
+  tagline: string;
+  featured?: boolean;
+  category: string;
+  image?: string;
+  gallery?: { src: string; alt: string }[];
+}
+
+interface Props {
+  business: Business;
+}
+
+const { business } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const catLabels = Object.fromEntries(categories.map((c) => [c.id, c.name]));
+const thumbSrc = business.gallery?.[0]?.src ?? business.image;
+const img = thumbSrc ? `${base}${thumbSrc.replace(/^\//, "")}` : null;
+---
+
+<li class="index-row fade-in">
+  {img && (
+    <a href={`${base}negocio/${business.slug}/`} class="index-row__thumb" tabindex="-1" aria-hidden="true">
+      <img src={img} alt="" width="72" height="72" loading="lazy" />
+    </a>
+  )}
+  <div class="index-row__body">
+    <h3 class="index-row__title">
+      {business.featured && <span class="pill">Destacado</span>}
+      <a href={`${base}negocio/${business.slug}/`}>{business.name}</a>
+    </h3>
+    <p class="index-row__sub">{business.tagline}</p>
+  </div>
+  <span class="index-row__cat">{catLabels[business.category] ?? business.category}</span>
+</li>

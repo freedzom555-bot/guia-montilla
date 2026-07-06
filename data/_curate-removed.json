@@ -1,0 +1,1010 @@
+[
+  {
+    "slug": "miguel-cruz-tienda-de-vinos",
+    "name": "Miguel Cruz Tienda de Vinos",
+    "cat": "bodegas",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "toneleria-j-l-rodriguez-s-l",
+    "name": "Toneleria J.L. Rodriguez S.L.",
+    "cat": "bodegas",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "a-vv-gran-capitan-de-montilla",
+    "name": "A.VV. GRAN CAPITAN de Montilla",
+    "cat": "cultura-ocio",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "ademo-union-de-empresarios-de-montilla",
+    "name": "Ademo, Unión de Empresarios de Montilla",
+    "cat": "cultura-ocio",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "almacenes-manolin-y-luis-s-l",
+    "name": "ALMACENES MANOLÍN Y LUIS S.L.",
+    "cat": "comercios",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "asesoria-garcia-fiscal-laboral-y-contable",
+    "name": "Asesoría García | Fiscal, Laboral y Contable",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "automatismos-itea-s-l",
+    "name": "Automatismos Itea, S.L.",
+    "cat": "comercios",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "cep-centro-de-profesores-de-montilla",
+    "name": "CEP Centro de Profesores de Montilla",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-dental-rafael-arroyo-perez",
+    "name": "Clínica Dental Rafael Arroyo Pérez",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-dental-zurita-clinica-dental-montilla",
+    "name": "Clinica Dental Zurita - Clinica Dental - Montilla",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "dental-montilla-francisco-mesa",
+    "name": "Dental Montilla Francisco Mesa",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "espuma-activa",
+    "name": "Espuma Activa",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "franmig-centro-de-lavado",
+    "name": "Franmig centro de lavado.",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "inma-espejo-gestora-administrativa-y-contable",
+    "name": "Inma Espejo- Gestora administrativa y contable",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "inss-instituto-nacional-de-la-seguridad-social-ofi",
+    "name": "INSS. Instituto Nacional de la Seguridad Social - Oficina Montilla",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "jm-padillo-abogados",
+    "name": "JM Padillo Abogados",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "jose-manuel-marquez-mesa",
+    "name": "José Manuel Márquez Mesa",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "oficina-de-correos",
+    "name": "Oficina de Correos",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "pino-asesoria",
+    "name": "Pino Asesoría",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "aove-pago-de-riofrio",
+    "name": "AOVE Pago de RioFrío",
+    "cat": "comercios",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "bar-berlanga",
+    "name": "Bar Berlanga",
+    "cat": "bares-cafes",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "talleres-agro-cirilo",
+    "name": "Talleres Agro Cirilo",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "acrisure-summa-montilla-cordoba",
+    "name": "Acrisure Summa - Montilla / Córdoba",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "aeconomi-consultoria-valores-fiscales",
+    "name": "AECONOMI Consultoria Valores Fiscales",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "aeroyoga-montilla",
+    "name": "AeroYoga Montilla",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "agencia-de-santalucia-seguros",
+    "name": "Agencia de Santalucía Seguros",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "agencia-de-seguros-zurich",
+    "name": "Agencia de seguros ZURICH",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "agencia-generali-seguros",
+    "name": "Agencia Generali Seguros",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "allianz-seguros-agencia-montilla-asegurador-s-l",
+    "name": "Allianz Seguros - Agencia Montilla Asegurador S.L.",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "allianz-seguros-agencia-seyge-hnos-jimenez-s-l",
+    "name": "Allianz Seguros - Agencia Seyge Hnos. Jimenez S.L.",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "allianz-seguros-agente-manuela-cerezo-urbano",
+    "name": "Allianz Seguros - Agente Manuela Cerezo Urbano",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "amalay-mari-carmen-aguilar-peluqueria-estetica-spa",
+    "name": "amalay -Mari Carmen Aguilar Peluquería, Estética & Spa",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "ana-portero-estilismo-y-peluqueria",
+    "name": "Ana Portero Estilismo y Peluquería",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "angeles-raya-estetica-avanzada",
+    "name": "ANGELES RAYA ESTETICA AVANZADA",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "antonio-carrasco-aguilar",
+    "name": "Antonio Carrasco Aguilar",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "aromas-perfumerias-montilla",
+    "name": "Aromas Perfumerías - Montilla",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "asefisco-asesores-s-l",
+    "name": "Asefisco Asesores S.L.",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "asesores-rafael-rosal",
+    "name": "Asesores Rafael Rosal",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "asesoria-arrabal",
+    "name": "Asesoria Arrabal",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "asesoria-mruz",
+    "name": "Asesoría MRuz",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "autos-serycar-s-l",
+    "name": "Autos Serycar, S.L.",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "banco-santander",
+    "name": "Banco Santander",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "barberia-miguel-carmona",
+    "name": "Barbería Miguel Carmona",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "bbva",
+    "name": "BBVA",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "beep-informatica",
+    "name": "BEEP Informática",
+    "cat": "comercios",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "bellavita",
+    "name": "Bellavita",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "c-e-i-p-san-francisco-solano",
+    "name": "C.E.I.P. San Francisco Solano",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "c-e-i-p-vicente-aleixandre",
+    "name": "C.E.I.P. Vicente Aleixandre",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "cache-belleza-profesional-peluqueria-y-estetica",
+    "name": "Caché Belleza Profesional Peluquería y Estética",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "caixabank-agrobank",
+    "name": "CaixaBank Agrobank",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "cajalmendralejo",
+    "name": "Cajalmendralejo",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "cajamar-caja-rural",
+    "name": "Cajamar Caja Rural",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "centro-active",
+    "name": "Centro Active",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "centro-deportivo-biofitness-gimnasio",
+    "name": "CENTRO DEPORTIVO BIOFITNESS (Gimnasio)",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "centro-medico-conductores-clidecem",
+    "name": "Centro Medico conductores - CLIDECEM",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "centro-veterinario-doggos",
+    "name": "Centro Veterinario Doggos",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "centro-veterinario-fauna",
+    "name": "CENTRO VETERINARIO FAUNA",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-carlos-trapero-podologia-avanzada",
+    "name": "CLINICA CARLOS TRAPERO- PODOLOGIA AVANZADA",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-de-tatuajes-y-estetica",
+    "name": "Clinica de Tatuajes Y Estetica.",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-del-pie-auxiliadora-martinez-urbano",
+    "name": "Clínica del Pie Auxiliadora Martínez Urbano",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-del-pie-teresa-bautista",
+    "name": "Clinica del Pie Teresa Bautista",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-dental-avenida",
+    "name": "Clínica Dental Avenida",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-dental-gallardo",
+    "name": "Clinica Dental Gallardo",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-dental-prieto",
+    "name": "Clínica Dental Prieto",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-dra-carmen-carmona",
+    "name": "Clínica Dra. Carmen Carmona",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-perez-baena",
+    "name": "Clínica Pérez Baena",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-san-fernando",
+    "name": "Clínica San Fernando",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-veterinaria-deros",
+    "name": "Clínica Veterinaria Deros",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "clinica-veterinaria-montilla-mascotas",
+    "name": "CLÍNICA VETERINARIA MONTILLA mascotas",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "colegio-la-asuncion-fundacion-spinola",
+    "name": "Colegio La Asunción - Fundación Spínola",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "colegio-san-francisco-solano-salesianos",
+    "name": "Colegio San Francisco Solano - Salesianos",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "colegio-san-luis-y-san-ildefonso",
+    "name": "Colegio San Luis y San Ildefonso",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "coquettestilistas",
+    "name": "coquettestilistas",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "cotec-informatica-s-l",
+    "name": "Cotec Informatica, S.L.",
+    "cat": "comercios",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "criado-y-espejo-abogados",
+    "name": "Criado y Espejo Abogados",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "despacho-abogados-en-montilla-francisco-jose-garci",
+    "name": "DESPACHO ABOGADOS en MONTILLA - Francisco José García Zamora & María José Jiménez Pulido",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "distribuidora-regional-de-perfumeria-s-l",
+    "name": "Distribuidora Regional de Perfumería S.L.",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "doctores-ruz-clinica-dental-montilla",
+    "name": "Doctores Ruz - Clínica Dental Montilla",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "e-s-alfar-entre-terminos-s-l",
+    "name": "E.S. Alfar Entre Términos S.L.",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "e-s-fuel-energy-montilla",
+    "name": "E.S. Fuel-Energy Montilla",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "engloba-t",
+    "name": "ENGLOBA⋅T",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "ernesto-espejo-ruz",
+    "name": "ERNESTO ESPEJO RUZ",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "esencia-estetica-salon",
+    "name": "Esencia Estética Salón",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "esteban-valverde-lopez-abogado",
+    "name": "Esteban Valverde López- Abogado",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "estetica-avanzada-y-spa-capilar-mireia-torreblanca",
+    "name": "Estética avanzada y spa capilar Mireia Torreblanca",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "eva-lara-asesora-personal-inmobiliaria",
+    "name": "Eva Lara asesora personal inmobiliaria",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "fabiola-fernandez-marquez",
+    "name": "Fabiola Fernández Márquez",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "francisco-narvaez-lozano",
+    "name": "FRANCISCO NARVAEZ LOZANO",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "gaes-montilla",
+    "name": "GAES Montilla",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "geasur-asesores-s-l-asesoria-luis-baena",
+    "name": "Geasur Asesores, S.L. - Asesoria Luis Baena",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "gestion-de-recursos-a-empresas",
+    "name": "Gestión de Recursos a Empresas",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "gueto-agundo-s-l",
+    "name": "GUETO AGUNDO, S.L.",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "helvetia-seguros-montilla",
+    "name": "HELVETIA SEGUROS MONTILLA",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "i-e-s-emilio-canalejo-olmeda",
+    "name": "I.E.S. Emilio Canalejo Olmeda",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "i-e-s-inca-garcilaso",
+    "name": "I.E.S. Inca Garcilaso",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "iberlegal-consultores",
+    "name": "IberLegal Consultores",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "indusoft",
+    "name": "Indusoft",
+    "cat": "comercios",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "infinity-fitness-life-montilla",
+    "name": "Infinity Fitness Life Montilla",
+    "cat": "educacion",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "inmobiliaria-andalucia",
+    "name": "Inmobiliaria Andalucía",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "inmobiliaria-zero",
+    "name": "Inmobiliaria Zero",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "it-solutions-montilla",
+    "name": "IT Solutions Montilla",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "jaraba-mezquida",
+    "name": "Jaraba Mezquida",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "jimenez-mana-recambios-s-l-u",
+    "name": "Jiménez Maña Recambios S.L.U.",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "jose-cruz-gomez",
+    "name": "José Cruz Gómez",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "kutxabank",
+    "name": "Kutxabank",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "lao-castro-abogados",
+    "name": "LAO & CASTRO ABOGADOS",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "lavadero-cisternas-angel-marquez",
+    "name": "Lavadero cisternas Ángel Márquez",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "libreria-del-arbol",
+    "name": "LIBRERÍA DEL ÁRBOL",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "m-r-57-barber-shop",
+    "name": "M.R 57 Barber Shop",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "manuel-hidalgo-barber-shop",
+    "name": "Manuel Hidalgo Barber shop",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "mapfre",
+    "name": "Mapfre",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "maralucasa-inmobiliaria",
+    "name": "Maralucasa Inmobiliaria",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "maria-cabezas-velasco",
+    "name": "MARÍA CABEZAS VELASCO",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "marina-banos-estethic",
+    "name": "Marina Baños Estethic",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "marina-morales-guerrero",
+    "name": "Marina Morales Guerrero",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "mateo-perfumeria",
+    "name": "Mateo Perfumeria",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "merino-automocion-merino-chapa-y-pintura-taller-de",
+    "name": "Merino Automoción - Merino chapa y pintura - taller de chapa y pintura",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "motos-triangulo-concesionario-yamaha",
+    "name": "MOTOS TRIANGULO CONCESIONARIO YAMAHA",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "mssparkles-nails",
+    "name": "Mssparkles Nails",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "oficina-caja-rural-del-sur",
+    "name": "Oficina Caja Rural del Sur",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "oficina-seguros-pelayo",
+    "name": "Oficina Seguros Pelayo",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "optica-gran-capitan-montilla",
+    "name": "Óptica Gran Capitán Montilla",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "paloma-garcia-tu-centro-de-estetica",
+    "name": "Paloma García Tu Centro de Estética",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "pedro-repiso-asociados",
+    "name": "Pedro Repiso & Asociados",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "peluqueria-aquarela-inmaculada-villegas",
+    "name": "PELUQUERÍA Aquarela INMACULADA VILLEGAS.",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "peluqueria-caballeros-alvaro",
+    "name": "Peluquería Caballeros Álvaro",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "peluqueria-caballeros-antonio-banos",
+    "name": "Peluquería Caballeros Antonio Baños",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "peluqueria-de-caballeros-garal",
+    "name": "Peluquería de Caballeros GARAL",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "peluqueria-macu",
+    "name": "Peluquería Macu",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "peluqueria-paquis",
+    "name": "Peluqueria Paquis",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "peluqueria-rafa",
+    "name": "Peluquería Rafa",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "peluqueria-unisex-j-j",
+    "name": "Peluquería Unisex J.J",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "peugeot-talleres-mariano-cruz",
+    "name": "Peugeot Talleres Mariano Cruz",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "piedad-lopez-molina",
+    "name": "Piedad Lopez Molina",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "podologa-inmaculada-castro",
+    "name": "Podóloga Inmaculada Castro",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "povedano-vet-horses-s-l",
+    "name": "Povedano Vet Horses S.L.",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "psicologia-y-psiquiatria-inmaculada-avendano-clini",
+    "name": "Psicología y Psiquiatría, Inmaculada Avendaño Clínica",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "recambios-marcasur",
+    "name": "Recambios Marcasur",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "reset-informatica",
+    "name": "Reset Informática",
+    "cat": "comercios",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "retrotech-informatica-s-l",
+    "name": "Retrotech Informática S.L.",
+    "cat": "comercios",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "rv-motor-sport",
+    "name": "RV MOTOR SPORT",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "s-millan-abogados",
+    "name": "S MILLAN ABOGADOS",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "salon-belleza-aurora",
+    "name": "salon belleza aurora",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "salon-de-peluqueria-inma",
+    "name": "SALÓN DE PELUQUERÍA INMA.",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "sandra-gomez-peluqueria-estetica",
+    "name": "Sandra Gómez Peluquería & Estética.",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "saneamientos-bujalance-s-l",
+    "name": "SANEAMIENTOS BUJALANCE S.L.",
+    "cat": "comercios",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "seguros-ramon-jimenez",
+    "name": "Seguros Ramón Jiménez",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "sgs-barbershop",
+    "name": "SgS.barbershop",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "silvia-lao-inmobiliaria",
+    "name": "SILVIA LAO INMOBILIARIA",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "sinvello-montilla-depilacion-laser-diodo",
+    "name": "SinVello! Montilla | Depilación Láser Diodo",
+    "cat": "salud",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "solis-marques-iveco-cordoba-sur",
+    "name": "SOLIS MARQUES - IVECO CORDOBA SUR",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "taller-antonin",
+    "name": "Taller Antoñin",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "taller-avenauto",
+    "name": "Taller Avenauto",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "taller-jose-miguel-marquez",
+    "name": "Taller Jose Miguel Marquez",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "taller-manuel-ruz",
+    "name": "Taller Manuel Ruz",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "taller-perez",
+    "name": "Taller Pérez",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "talleres-garcia-construcciones-mecanicas-s-l",
+    "name": "Talleres García Construcciones Mecánicas, S.L.",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "talleres-luque-munoz",
+    "name": "Talleres Luque Muñoz",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "talleres-monti-auto-c-b",
+    "name": "Talleres Monti-auto c.b",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "talleres-solano-molina-sl",
+    "name": "Talleres Solano Molina SL",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "talleres-y-gruas-carrasquilla-sl",
+    "name": "Talleres y Gruas Carrasquilla Sl",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "talleres-y-gruas-rafael-garcia-carrasquilla",
+    "name": "Talleres y grúas Rafael García Carrasquilla",
+    "cat": "motor",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "tecnocasa-agencia-inmobiliaria",
+    "name": "Tecnocasa agencia inmobiliaria",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "the-pavon-s-barber",
+    "name": "THE PAVON'S BARBER",
+    "cat": "belleza",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "tu-finca-real-estate",
+    "name": "Tu Finca Real Estate",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "unicaja-banco",
+    "name": "Unicaja Banco",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "union-inmobiliaria-c-b",
+    "name": "Unión Inmobiliaria C B",
+    "cat": "profesionales",
+    "reason": "no-guia"
+  },
+  {
+    "slug": "vidosa-sonido-e-iluminacion-s-l",
+    "name": "VIDOSA SONIDO E ILUMINACION S.L.",
+    "cat": "comercios",
+    "reason": "no-guia"
+  }
+]

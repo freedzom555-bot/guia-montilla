@@ -1,0 +1,25 @@
+---
+interface Category {
+  id: string;
+  slug: string;
+  name: string;
+  headline: string;
+}
+
+interface Props {
+  categories: Category[];
+}
+
+const { categories } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<nav class="cat-index fade-in" aria-label="Categorías">
+  {categories.map((cat, i) => (
+    <a href={`${base}${cat.slug}/`}>
+      <span class="cat-index__num">{String(i + 1).padStart(2, "0")}</span>
+      <span class="cat-index__name">{cat.name}</span>
+      <span class="cat-index__hint">{cat.headline}</span>
+    </a>
+  ))}
+</nav>

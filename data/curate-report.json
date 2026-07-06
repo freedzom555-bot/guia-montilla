@@ -1,0 +1,21 @@
+{
+  "kept": 463,
+  "removed": [],
+  "byCategory": {
+    "comercios": 86,
+    "restaurantes": 25,
+    "profesionales": 69,
+    "motor": 33,
+    "alojamiento": 11,
+    "alimentacion": 23,
+    "belleza": 33,
+    "salud": 42,
+    "monumentos": 44,
+    "cultura-ocio": 19,
+    "bares-cafes": 32,
+    "bodegas": 16,
+    "educacion": 12,
+    "museos": 6,
+    "parques": 12
+  }
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "bodegas",
+    "slug": "bodegas",
+    "name": "Bodegas",
+    "headline": "Montilla-Moriles en copa",
+    "description": "Bodegas, lagares, cooperativas y vinotecas con visitas y catas.",
+    "seoTitle": "Bodegas en Montilla — Directorio Moriles",
+    "seoDescription": "Todas las bodegas de Montilla. Horarios, visitas y enoturismo Montilla-Moriles."
+  },
+  {
+    "id": "restaurantes",
+    "slug": "restaurantes",
+    "name": "Restaurantes",
+    "headline": "Mesa montillana",
+    "description": "Restaurantes, tabernas, asadores y cocina de autor.",
+    "seoTitle": "Restaurantes en Montilla — Directorio completo",
+    "seoDescription": "Restaurantes y tabernas de Montilla. Horarios, teléfono y ubicación."
+  },
+  {
+    "id": "bares-cafes",
+    "slug": "bares-cafes",
+    "name": "Bares y cafés",
+    "headline": "Tapeo y terraza",
+    "description": "Bares, cafeterías, heladerías y churrerías.",
+    "seoTitle": "Bares y cafés en Montilla",
+    "seoDescription": "Bares, cafés y heladerías de Montilla."
+  },
+  {
+    "id": "alimentacion",
+    "slug": "alimentacion",
+    "name": "Alimentación",
+    "headline": "Compra local",
+    "description": "Supermercados, panaderías, obradores, fruterías y ultramarinos.",
+    "seoTitle": "Alimentación en Montilla — Tiendas de comida",
+    "seoDescription": "Supermercados y tiendas de alimentación en Montilla."
+  },
+  {
+    "id": "alojamiento",
+    "slug": "alojamiento",
+    "name": "Alojamiento",
+    "headline": "Pernoctar en Montilla",
+    "description": "Hoteles, hostales, casas rurales y apartamentos.",
+    "seoTitle": "Alojamiento en Montilla — Hoteles y hostales",
+    "seoDescription": "Dónde dormir en Montilla."
+  },
+  {
+    "id": "monumentos",
+    "slug": "monumentos",
+    "name": "Monumentos",
+    "headline": "Historia en piedra",
+    "description": "Castillo, iglesias, conventos, arcos, palacios y patrimonio.",
+    "seoTitle": "Monumentos de Montilla — Patrimonio",
+    "seoDescription": "Monumentos e iglesias de Montilla."
+  },
+  {
+    "id": "museos",
+    "slug": "museos",
+    "name": "Museos",
+    "headline": "Memoria y cultura",
+    "description": "Museos, exposiciones permanentes y centros de interpretación.",
+    "seoTitle": "Museos en Montilla",
+    "seoDescription": "Museos y exposiciones en Montilla."
+  },
+  {
+    "id": "parques",
+    "slug": "parques",
+    "name": "Parques y naturaleza",
+    "headline": "Aire libre",
+    "description": "Parques, paseos, dehesas y espacios verdes.",
+    "seoTitle": "Parques en Montilla — Naturaleza y paseos",
+    "seoDescription": "Parques y naturaleza en Montilla."
+  },
+  {
+    "id": "cultura-ocio",
+    "slug": "cultura-ocio",
+    "name": "Cultura y ocio",
+    "headline": "Planes en el pueblo",
+    "description": "Teatro, mercados, feria, deporte, turismo e instituciones.",
+    "seoTitle": "Cultura y ocio en Montilla",
+    "seoDescription": "Qué hacer en Montilla: cultura, mercados, deporte y turismo."
+  },
+  {
+    "id": "rutas",
+    "slug": "rutas",
+    "name": "Rutas",
+    "headline": "Recorre Montilla",
+    "description": "Rutas enoturísticas, patrimoniales y de naturaleza.",
+    "seoTitle": "Rutas en Montilla — Enoturismo y patrimonio",
+    "seoDescription": "Rutas por Montilla: vino, patrimonio y naturaleza."
+  },
+  {
+    "id": "comercios",
+    "slug": "comercios",
+    "name": "Comercios",
+    "headline": "Tiendas del pueblo",
+    "description": "Moda, hogar, librerías, floristerías, papelería y comercio de barrio.",
+    "seoTitle": "Comercios en Montilla — Tiendas locales",
+    "seoDescription": "Tiendas y comercios de Montilla."
+  },
+  {
+    "id": "salud",
+    "slug": "salud",
+    "name": "Salud",
+    "headline": "Bienestar y cuidado",
+    "description": "Farmacias, clínicas, dentistas y veterinarios.",
+    "seoTitle": "Salud en Montilla — Farmacias y clínicas",
+    "seoDescription": "Farmacias, clínicas y salud en Montilla."
+  },
+  {
+    "id": "belleza",
+    "slug": "belleza",
+    "name": "Belleza",
+    "headline": "Cuidado personal",
+    "description": "Peluquerías, barberías, estética y spas.",
+    "seoTitle": "Belleza en Montilla — Peluquerías y estética",
+    "seoDescription": "Peluquerías, barberías y centros de belleza en Montilla."
+  },
+  {
+    "id": "profesionales",
+    "slug": "profesionales",
+    "name": "Profesionales",
+    "headline": "Gestión del día a día",
+    "description": "Abogados, gestorías, inmobiliarias, bancos y seguros.",
+    "seoTitle": "Profesionales en Montilla — Asesoría y servicios",
+    "seoDescription": "Abogados, gestorías, inmobiliarias y seguros en Montilla."
+  },
+  {
+    "id": "motor",
+    "slug": "motor",
+    "name": "Motor",
+    "headline": "Coche y taller",
+    "description": "Gasolineras, talleres, concesionarios y grúas.",
+    "seoTitle": "Motor en Montilla — Talleres y gasolineras",
+    "seoDescription": "Talleres, gasolineras y servicios de motor en Montilla."
+  },
+  {
+    "id": "educacion",
+    "slug": "educacion",
+    "name": "Educación",
+    "headline": "Formación",
+    "description": "Colegios, institutos y centros educativos.",
+    "seoTitle": "Educación en Montilla — Colegios e institutos",
+    "seoDescription": "Centros educativos de Montilla."
+  }
+]

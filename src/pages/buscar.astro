@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SearchBox from "../components/SearchBox.astro";
+import searchIndex from "../../data/search-index.json";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Buscar en Montilla"
+  description="Encuentra bodegas, comercios, restaurantes y servicios de Montilla (14550). Búsqueda inteligente por palabras, no hace falta el nombre exacto."
+>
+  <section class="page-head">
+    <div class="wrap">
+      <a href={base} class="back">← Inicio</a>
+      <h1>Buscar en Montilla</h1>
+      <p class="page-head__sub">
+        {searchIndex.total} negocios y lugares de Montilla (14550). Escribe lo que necesitas — flores, vino, dentista, comer…
+      </p>
+      <SearchBox compact={false} initialQuery="" />
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap" data-search-page-results data-base={base}>
+      <div data-search-page-panel>
+        <p class="empty-note">
+          Escribe al menos 2 letras. Ejemplos: <a href={`${base}buscar/?q=flores`}>flores</a>,
+          {" "}<a href={`${base}buscar/?q=bodega`}>bodega</a>,
+          {" "}<a href={`${base}buscar/?q=farmacia`}>farmacia</a>,
+          {" "}<a href={`${base}buscar/?q=comer`}>comer</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import "../lib/search-page.client.js";
+</script>

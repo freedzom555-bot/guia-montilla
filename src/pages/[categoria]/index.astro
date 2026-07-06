@@ -1,0 +1,85 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import IndexRow from "../../components/IndexRow.astro";
+import categories from "../../../data/categories.json";
+import businesses from "../../../data/businesses.json";
+import routes from "../../../data/routes.json";
+
+export function getStaticPaths() {
+  return categories.map((cat) => ({
+    params: { categoria: cat.slug },
+    props: { category: cat },
+  }));
+}
+
+const { category } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const isRutas = category.id === "rutas";
+const items = isRutas
+  ? []
+  : businesses
+      .filter((b) => b.category === category.id)
+      .sort((a, b) => Number(b.featured) - Number(a.featured) || a.name.localeCompare(b.name, "es"));
+const banner = `${base}images/categories/${category.id}.jpg`;
+const fallbackBanner = `${base}images/hero/ruta.jpg`;
+---
+
+<Layout title={category.seoTitle} description={category.seoDescription} image={isRutas ? "/images/hero/ruta.jpg" : `/images/categories/${category.id}.jpg`}>
+  <div class="cat-banner">
+    <img src={isRutas ? fallbackBanner : banner} alt={`${category.name} en Montilla`} width="1400" height="400" loading="eager" onerror={`this.src='${fallbackBanner}'`} />
+    <div class="cat-banner__overlay">
+      <div class="wrap">
+        <a href={base} class="back back--light">← Inicio</a>
+        <h1>{category.headline}</h1>
+        <p>{category.description}</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      {isRutas ? (
+        <>
+          <div class="block-head">
+            <h2>{routes.length} rutas recomendadas</h2>
+          </div>
+          <ul class="routes-list">
+            {routes.map((r) => (
+              <li class="route-card">
+                <a href={`${base}ruta/${r.slug}/`}>
+                  <h3>{r.title}</h3>
+                  <p>{r.duration} · {r.idealFor}</p>
+                  <p>{r.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <>
+          <div class="block-head">
+            <h2>{items.length} fichas en {category.name}</h2>
+          </div>
+          {items.length > 0 ? (
+            <ul class="index-list">
+              {items.map((b) => <IndexRow business={b} />)}
+            </ul>
+          ) : (
+            <p class="empty-note">Sin fichas en esta categoría.</p>
+          )}
+        </>
+      )}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .routes-list { list-style: none; padding: 0; display: grid; gap: 1rem; }
+  .route-card a {
+    display: block; padding: 1.25rem; border: 1px solid rgba(0,0,0,.08);
+    border-radius: 8px; text-decoration: none; color: inherit;
+  }
+  .route-card a:hover { border-color: var(--accent, #8b2942); }
+  .route-card h3 { margin: 0 0 .35rem; }
+  .route-card p { margin: .25rem 0; opacity: .85; font-size: .95rem; }
+</style>

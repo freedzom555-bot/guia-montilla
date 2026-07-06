@@ -1,0 +1,91 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import {
+  articleTitle,
+  articleKeywords,
+  topicLabel,
+  buildBlogIndexSchema,
+  trimMeta,
+} from "../../lib/blog-seo";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const base = import.meta.env.BASE_URL;
+const siteUrl = (Astro.site ?? new URL("http://localhost:4321")).href.replace(/\/$/, "");
+
+const topics = [...new Set(posts.map((p) => p.data.topic))];
+
+const description =
+  "50 guías editoriales sobre Montilla (Córdoba): qué hacer, qué ver, bodegas Montilla-Moriles, dónde comer, patrimonio y planes de fin de semana.";
+---
+
+<Layout
+  title={articleTitle("Blog — Qué hacer y qué ver en Montilla")}
+  description={trimMeta(description)}
+  keywords={articleKeywords([
+    "qué hacer en Montilla",
+    "qué ver en Montilla",
+    "qué hay en Montilla",
+    "turismo Montilla",
+    "blog Montilla",
+  ])}
+  image="/images/hero/hero.jpg"
+  ogType="website"
+  jsonLd={buildBlogIndexSchema(siteUrl, base)}
+>
+  <header class="blog-mast">
+    <div class="wrap blog-mast__inner">
+      <p class="blog-mast__kicker">Blog · Campiña Sur</p>
+      <h1>Montilla, explicada</h1>
+      <p class="blog-mast__deck">
+        Planes, bodegas, mesas y patrimonio — artículos para quien busca <strong>qué hacer en Montilla</strong>,
+        <strong>qué ver</strong> o <strong>qué hay</strong> en la ciudad del fino.
+      </p>
+      <p class="blog-mast__count">{posts.length} artículos</p>
+    </div>
+  </header>
+
+  <div class="wrap blog-index">
+    <nav class="blog-topics" aria-label="Temas del blog">
+      {topics.map((topic) => (
+        <a href={`#topic-${topic}`}>{topicLabel(topic)}</a>
+      ))}
+    </nav>
+
+    {topics.map((topic) => {
+      const group = posts.filter((p) => p.data.topic === topic);
+      return (
+        <section class="blog-group" id={`topic-${topic}`}>
+          <h2 class="blog-group__title">{topicLabel(topic)}</h2>
+          <ul class="blog-grid">
+            {group.map((post) => (
+              <li>
+                <article class="blog-card">
+                  <p class="blog-card__meta">
+                    <time datetime={post.data.pubDate.toISOString()}>
+                      {post.data.pubDate.toLocaleDateString("es-ES", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </time>
+                  </p>
+                  <h3>
+                    <a href={`${base}blog/${post.id}/`}>{post.data.title}</a>
+                  </h3>
+                  <p>{post.data.description}</p>
+                  <a class="blog-card__link" href={`${base}blog/${post.id}/`}>
+                    Leer artículo →
+                  </a>
+                </article>
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    })}
+  </div>
+</Layout>

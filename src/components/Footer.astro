@@ -1,0 +1,45 @@
+---
+import categories from "../../data/categories.json";
+
+const base = import.meta.env.BASE_URL;
+const year = new Date().getFullYear();
+---
+
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div class="site-foot__brand">
+      <a href={base} aria-label="Guía Montilla — inicio">
+        <img
+          class="site-foot__logo"
+          src={`${base}images/logo-guia-montilla.png`}
+          alt="Guía Montilla — Todo Montilla, en un solo lugar"
+          width="140"
+          height="184"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <p>Directorio verificado de Montilla-Moriles. Bodegas, mesas, parques, monumentos y planes.</p>
+    </div>
+    <div>
+      <h4>Secciones</h4>
+      <ul>
+        {categories.map((cat) => (
+          <li><a href={`${base}${cat.slug}/`}>{cat.name}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h4>Negocios</h4>
+      <ul>
+        <li><a href={`${base}para-negocios/`}>Aparecer destacado</a></li>
+        <li><a href={`${base}noticias/`}>Noticias Montilla</a></li>
+        <li><a href={`${base}blog/`}>Blog Montilla</a></li>
+        <li><a href={`${base}eventos/`}>Agenda</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-foot__copy">
+    © {year} Guía Montilla · Medio automatizado · Fuentes públicas
+  </div>
+</footer>

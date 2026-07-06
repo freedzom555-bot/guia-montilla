@@ -1,0 +1,74 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import news from "../../../data/news.json";
+import { newsTitle, trimMeta, buildNewsArticleSchema } from "../../lib/news-seo";
+
+export function getStaticPaths() {
+  return news.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const siteUrl = (Astro.site ?? new URL("http://localhost:4321")).href.replace(/\/$/, "");
+const d = new Date(item.date);
+
+const schemas = buildNewsArticleSchema({
+  title: item.title,
+  excerpt: item.excerpt,
+  slug: item.slug,
+  date: item.date,
+  url: item.url,
+  source: item.source,
+  siteUrl,
+  base,
+});
+---
+
+<Layout
+  title={newsTitle(item.title)}
+  description={trimMeta(item.excerpt || item.title)}
+  keywords={`noticias Montilla, ${item.title}`}
+  image="/images/hero/hero.jpg"
+  ogType="article"
+  jsonLd={schemas}
+>
+  <article class="news-article">
+    <header class="news-article__head">
+      <div class="wrap news-article__head-inner">
+        <nav class="news-article__crumb" aria-label="Miga de pan">
+          <a href={base}>Inicio</a>
+          <span aria-hidden="true">/</span>
+          <a href={`${base}noticias/`}>Noticias</a>
+        </nav>
+        <p class="news-article__source">{item.source}</p>
+        <h1>{item.title}</h1>
+        <p class="news-article__meta">
+          <time datetime={item.date}>
+            {d.toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long", year: "numeric" })}
+          </time>
+        </p>
+      </div>
+    </header>
+
+    <div class="wrap news-article__body">
+      {item.excerpt && <p class="news-article__excerpt">{item.excerpt}</p>}
+
+      <div class="news-article__cta">
+        <p>
+          Esta noticia se publicó originalmente en <strong>{item.source}</strong>.
+          En Guía Montilla mostramos un resumen para que encuentres la actualidad local; el contenido completo está en el medio de origen.
+        </p>
+        <a class="btn" href={item.url} target="_blank" rel="noopener noreferrer">
+          Leer en {item.source} →
+        </a>
+      </div>
+
+      <p class="news-article__legal">
+        Fuente: <a href={item.url} target="_blank" rel="noopener noreferrer">{item.url}</a>
+      </p>
+    </div>
+  </article>
+</Layout>
