@@ -55,5 +55,5 @@ jobs:
           password: ${{ secrets.IONOS_FTP_PASSWORD }}
           port: 22
           local_path: "./dist/*"
-          remote_path: ${{ secrets.IONOS_FTP_SERVER_DIR || '/' }}
+          remote_path: ${{ secrets.IONOS_FTP_SERVER_DIR || '/Guiamontilla/' }}
           sftp_only: true
