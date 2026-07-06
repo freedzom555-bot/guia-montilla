@@ -28,6 +28,8 @@ export function initSearchBox(root) {
   const base = root.dataset.base ?? "/";
   const searchPage = root.dataset.searchPage ?? `${base}buscar/`;
   const compact = root.dataset.compact !== "false";
+  const onSearchPage = Boolean(document.querySelector("[data-search-page-results]"));
+  const showDropdown = !onSearchPage || compact;
   const limit = compact ? 8 : 999;
 
   const input = root.querySelector("#site-search");
@@ -43,7 +45,7 @@ export function initSearchBox(root) {
 
   function renderResults() {
     const q = input.value.trim();
-    if (norm(q).length < 2) {
+    if (!showDropdown || norm(q).length < 2) {
       results.classList.remove("is-open");
       results.innerHTML = "";
       return [];
@@ -68,6 +70,10 @@ export function initSearchBox(root) {
   function goSearch() {
     const q = input.value.trim();
     if (norm(q).length < 2) return;
+    if (!onSearchPage) {
+      window.location.href = `${searchPage}?q=${encodeURIComponent(q)}`;
+      return;
+    }
     if (compact) {
       window.location.href = `${searchPage}?q=${encodeURIComponent(q)}`;
       return;
@@ -82,10 +88,10 @@ export function initSearchBox(root) {
 
   function onQueryInput() {
     const q = input.value.trim();
-    if (compact) {
+    if (showDropdown) {
       renderResults();
-      return;
     }
+    if (!onSearchPage) return;
     if (norm(q).length < 2) {
       document.dispatchEvent(new CustomEvent("search:query", { detail: { q: "" } }));
       return;
@@ -113,7 +119,11 @@ export function initSearchBox(root) {
     }
   });
 
-  if (!compact && input.value.trim().length >= 2) {
+  if (!onSearchPage && input.value.trim().length >= 2) {
+    renderResults();
+  }
+
+  if (onSearchPage && !compact && input.value.trim().length >= 2) {
     document.dispatchEvent(new CustomEvent("search:query", { detail: { q: input.value.trim() } }));
   }
 }

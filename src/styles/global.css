@@ -1460,6 +1460,21 @@ p { text-wrap: pretty; margin: 0 0 1em; }
   padding-top: var(--space-2);
   border-top: 1px solid var(--rule);
   font-size: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+.site-foot__credit a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-foot__credit a:hover {
+  color: var(--wine);
 }
 
 @media (max-width: 640px) {

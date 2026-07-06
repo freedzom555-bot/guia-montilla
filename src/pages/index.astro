@@ -59,7 +59,7 @@ const latestPosts = (await getCollection("blog"))
           Dónde comer, qué visitar, dónde dormir y qué abre hoy. Bodegas, monumentos, comercios y rutas — con teléfono, horario y cómo llegar.
         </p>
 
-        <SearchBox compact={false} />
+        <SearchBox />
 
         <nav class="hero__shortcuts" aria-label="Accesos rápidos">
           {quickCats.map((cat) => (

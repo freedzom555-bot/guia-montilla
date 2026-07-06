@@ -4,6 +4,7 @@ import SearchBox from "../components/SearchBox.astro";
 import searchIndex from "../../data/search-index.json";
 
 const base = import.meta.env.BASE_URL;
+const initialQ = Astro.url.searchParams.get("q") ?? "";
 ---
 
 <Layout
@@ -17,7 +18,7 @@ const base = import.meta.env.BASE_URL;
       <p class="page-head__sub">
         {searchIndex.total} negocios y lugares de Montilla (14550). Escribe lo que necesitas — flores, vino, dentista, comer…
       </p>
-      <SearchBox compact={false} initialQuery="" />
+      <SearchBox compact={false} initialQuery={initialQ} />
     </div>
   </section>
 
