@@ -26,8 +26,10 @@ const updated = "6 de julio de 2026";
       <p>
         En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio
         Electrónico (LSSI-CE), se informa que el titular de este sitio web es <strong>{LEGAL.owner}</strong>, con
-        domicilio a efectos de comunicaciones en Montilla (Córdoba), España, y correo electrónico de contacto:{" "}
-        <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a>.
+        domicilio a efectos de comunicaciones en Montilla (Córdoba), España, teléfono{" "}
+        <a href={`tel:+34${LEGAL.phone.replace(/\s/g, "")}`}>{LEGAL.phone}</a> y correo electrónico de contacto:{" "}
+        <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a>. El desarrollo técnico del sitio está a cargo de{" "}
+        <a href={LEGAL.developerUrl} rel="noopener noreferrer" target="_blank">kyveradigital.es</a>.
       </p>
 
       <h2>2. Objeto</h2>

@@ -1,5 +1,6 @@
 ---
 import categories from "../../data/categories.json";
+import { LEGAL, SITE } from "../data/site";
 
 const base = import.meta.env.BASE_URL;
 const year = new Date().getFullYear();
@@ -35,6 +36,14 @@ const year = new Date().getFullYear();
         <li><a href={`${base}aviso-legal/`}>Aviso legal</a></li>
         <li><a href={`${base}politica-privacidad/`}>Privacidad</a></li>
         <li><a href={`${base}politica-cookies/`}>Cookies</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href={`tel:+34${SITE.phone.replace(/\s/g, "")}`}>{SITE.phone}</a></li>
+        <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+        <li><a href={LEGAL.developerUrl} rel="noopener noreferrer" target="_blank">kyveradigital.es</a></li>
       </ul>
     </div>
     <div>

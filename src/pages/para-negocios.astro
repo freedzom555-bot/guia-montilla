@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { LEGAL, SITE } from "../data/site";
 ---
 
 <Layout title="Anuncia tu negocio en Montilla" description="Destaca tu bodega, restaurante o alojamiento en la guía local de Montilla.">
@@ -46,8 +47,12 @@ import Layout from "../layouts/Layout.astro";
       <div class="biz-form-block">
         <h2>¿Quieres aparecer?</h2>
         <p>
-          Escríbenos a <a href="mailto:info@guiamontilla.es">info@guiamontilla.es</a> con el nombre del negocio,
+          Escríbenos a <a href={`mailto:${SITE.email}`}>{SITE.email}</a> o llama al{" "}
+          <a href={`tel:+34${SITE.phone.replace(/\s/g, "")}`}>{SITE.phone}</a> con el nombre del negocio,
           dirección y enlace de Google Maps. Solo incluimos locales reales verificados.
+        </p>
+        <p class="biz-form-block__dev">
+          Desarrollo: <a href={LEGAL.developerUrl} rel="noopener noreferrer" target="_blank">kyveradigital.es</a>
         </p>
       </div>
     </div>

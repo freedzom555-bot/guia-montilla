@@ -1,4 +1,6 @@
 ---
+import { SITE } from "../data/site";
+
 interface Props {
   subject?: string;
   formName?: string;
@@ -41,7 +43,7 @@ const hasKey = accessKey.length > 10;
     <p class="form-fallback__note">
       Activa los formularios: crea clave gratis en <a href="https://web3forms.com" target="_blank" rel="noopener">web3forms.com</a> y ponla en <code>PUBLIC_WEB3FORMS_KEY</code> en el archivo <code>.env</code>
     </p>
-    <a class="btn" href={`mailto:hola@guiamontilla.es?subject=${encodeURIComponent(subject)}`}>Escribir por email</a>
+    <a class="btn" href={`mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`}>Escribir por email</a>
   </div>
 )}
 

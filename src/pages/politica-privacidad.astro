@@ -26,6 +26,7 @@ const updated = "6 de julio de 2026";
       <p>
         <strong>Responsable:</strong> {LEGAL.owner}<br />
         <strong>Correo:</strong> <a href={`mailto:${LEGAL.privacyEmail}`}>{LEGAL.privacyEmail}</a><br />
+        <strong>Teléfono:</strong> <a href={`tel:+34${LEGAL.phone.replace(/\s/g, "")}`}>{LEGAL.phone}</a><br />
         <strong>Sitio web:</strong> <a href={LEGAL.url}>{LEGAL.url}</a>
       </p>
 
