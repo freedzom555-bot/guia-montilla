@@ -1,10 +1,5 @@
-# IONOS / Apache — HTTPS y rutas estáticas de Astro
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfModule>
-
+# IONOS + Cloudflare Flexible: no forzar HTTPS en el origen
+# Cloudflare sirve HTTPS al visitante; IONOS recibe HTTP en puerto 80
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
 </IfModule>
