@@ -41,9 +41,9 @@ Require-Gh
 Ensure-Commit
 
 $owner = (gh api user -q .login)
-$remote = git remote get-url origin 2>$null
+$hasOrigin = @(git remote) -contains "origin"
 
-if (-not $remote) {
+if (-not $hasOrigin) {
   Write-Host "Creando repo $owner/$RepoName ..." -ForegroundColor Green
   gh repo create $RepoName --public --source=. --remote=origin --push
 } else {
