@@ -99,6 +99,27 @@ const programa = [
   },
 ];
 
+const feriaDia = [
+  "Feria de día: cinco casetas de Envidarte abren desde el mediodía.",
+  "Ambiente tranquilo, tapeo y buen vino en familia y con amigos.",
+  "Paseo extraordinario de caballos y enganches.",
+  "Ludoteca infantil (del 9 al 12 de julio).",
+  "Cenas-homenaje a las personas mayores.",
+  "Copa de vino de los Amigos de la Venencia junto a la portada.",
+  "Feria sin ruido e inclusiva: momentos y espacios accesibles.",
+  "Actos del Santo: besapiés, procesión y función religiosa.",
+];
+
+const feriaNoche = [
+  "Conciertos en Envidarte desde las 21:00 h (Raya Real, La Guardia y más).",
+  "Caseta Joven Ferión: DJ todas las noches hasta altas horas.",
+  "Nueva ubicación en la Avenida de las Camachas, acceso con pulsera.",
+  "Caseta Municipal: orquestas y grupos de versiones cada noche.",
+  "Tardeo que se alarga: las casetas concentran actividad de tarde y noche.",
+  "Autobús especial cada 30 min desde las 22:15 h para volver seguro.",
+  "Fuegos artificiales a las 00:00 del 15 de julio (Avenida de Málaga).",
+];
+
 const servicios = [
   {
     t: "Autobús especial",
@@ -177,6 +198,7 @@ const jsonLd = {
       <div class="feria-countdown" id="feria-countdown" aria-live="polite"></div>
       <div class="feria-hero__cta">
         <a href="#programa" class="btn btn--primary">Ver programa día a día</a>
+        <a href="#ambientes" class="btn btn--ghost">¿De día o de noche?</a>
         <a href="#conciertos" class="btn btn--ghost">Conciertos</a>
       </div>
     </div>
@@ -191,7 +213,44 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="block" id="conciertos">
+  <section class="block" id="ambientes">
+    <div class="wrap">
+      <h2 class="feria-h2">Dos ferias en una</h2>
+      <p class="feria-lead">
+        La Feria de El Santo se vive a dos ritmos: la <strong>feria de día</strong>, más tranquila y familiar,
+        con horarios tempranos; y la <strong>feria de noche</strong>, con conciertos, orquestas y DJ hasta altas horas.
+        Elige la tuya (o disfruta de las dos).
+      </p>
+      <div class="modes">
+        <div class="mode mode--day">
+          <div class="mode__head">
+            <span class="mode__icon" aria-hidden="true">☀</span>
+            <div>
+              <h3 class="mode__title">Feria de día</h3>
+              <p class="mode__for">Familias, mayores y ambiente tranquilo · desde el mediodía y por la tarde</p>
+            </div>
+          </div>
+          <ul class="mode__list">
+            {feriaDia.map((it) => <li>{it}</li>)}
+          </ul>
+        </div>
+        <div class="mode mode--night">
+          <div class="mode__head">
+            <span class="mode__icon" aria-hidden="true">☾</span>
+            <div>
+              <h3 class="mode__title">Feria de noche</h3>
+              <p class="mode__for">Jóvenes y marcha · conciertos desde las 21:00 y DJ hasta altas horas</p>
+            </div>
+          </div>
+          <ul class="mode__list">
+            {feriaNoche.map((it) => <li>{it}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block block--tint" id="conciertos">
     <div class="wrap">
       <h2 class="feria-h2">Conciertos de la feria</h2>
       <p class="feria-lead">
@@ -233,7 +292,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="block block--tint" id="programa">
+  <section class="block" id="programa">
     <div class="wrap">
       <h2 class="feria-h2">Programa día a día</h2>
       <p class="feria-lead">Del pregón a los fuegos artificiales. Estos son los actos principales de cada jornada.</p>
@@ -253,7 +312,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="block">
+  <section class="block block--tint">
     <div class="wrap">
       <h2 class="feria-h2">Servicios y novedades</h2>
       <div class="svc-grid">
@@ -267,7 +326,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="block block--tint">
+  <section class="block">
     <div class="wrap">
       <h2 class="feria-h2">Vive la feria con Guía Montilla</h2>
       <p class="feria-lead">Antes o después del recinto, aprovecha para descubrir el pueblo.</p>
@@ -456,6 +515,55 @@ const jsonLd = {
   .block--tint { background: var(--paper-tint); border-block: 1px solid var(--rule); }
   .feria-h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin: 0 0 0.6rem; color: var(--wine-deep); }
   .feria-lead { font-size: 1.08rem; color: var(--ink-soft); max-width: 44rem; margin: 0 0 2rem; }
+
+  .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  @media (max-width: 720px) { .modes { grid-template-columns: 1fr; } }
+  .mode {
+    padding: 1.6rem 1.5rem 1.8rem;
+    border: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  .mode--day {
+    background: linear-gradient(180deg, var(--wine-light), var(--paper));
+    border-top: 4px solid var(--gold);
+  }
+  .mode--night {
+    background: linear-gradient(165deg, var(--wine-deep), oklch(0.18 0.05 30));
+    border-top: 4px solid var(--gold);
+    color: oklch(0.96 0.01 55 / 0.92);
+  }
+  .mode__head { display: flex; align-items: center; gap: 0.9rem; }
+  .mode__icon {
+    flex: none;
+    width: 2.8rem;
+    height: 2.8rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .mode--day .mode__icon { background: var(--gold); color: oklch(0.28 0.05 40); }
+  .mode--night .mode__icon { background: oklch(1 0 0 / 0.12); color: var(--gold); }
+  .mode__title { margin: 0 0 0.15rem; font-size: 1.5rem; }
+  .mode--day .mode__title { color: var(--wine-deep); }
+  .mode--night .mode__title { color: var(--paper); }
+  .mode__for {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .mode--day .mode__for { color: var(--gold-muted); }
+  .mode--night .mode__for { color: var(--gold); }
+  .mode__list { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .mode__list li { font-size: 0.98rem; }
+  .mode--day .mode__list li { color: var(--ink-soft); }
+  .mode--day .mode__list li::marker { color: var(--gold-muted); }
+  .mode--night .mode__list li { color: oklch(0.96 0.01 55 / 0.88); }
+  .mode--night .mode__list li::marker { color: var(--gold); }
 
   .stages { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   @media (max-width: 720px) { .stages { grid-template-columns: 1fr; } }
