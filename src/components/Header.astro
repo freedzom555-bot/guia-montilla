@@ -42,6 +42,7 @@ const base = import.meta.env.BASE_URL;
       {categories.map((cat) => (
         <li><a href={`${base}${cat.slug}/`}>{cat.name}</a></li>
       ))}
+      <li><a href={`${base}feria/`} class="menu-feria">Feria</a></li>
       <li><a href={`${base}noticias/`}>Noticias</a></li>
       <li><a href={`${base}eventos/`}>Agenda</a></li>
       <li><a href={`${base}blog/`}>Blog</a></li>

@@ -1,0 +1,551 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SITE } from "../data/site";
+
+const base = import.meta.env.BASE_URL;
+
+const description =
+  "Feria de El Santo 2026 en Montilla, del 8 al 14 de julio: programa completo día a día, conciertos (Raya Real, La Guardia, Chásis), casetas, pregón, horarios, autobús, aparcamientos y todo lo que necesitas para vivirla.";
+
+const keywords =
+  "Feria de Montilla 2026, Feria del Santo Montilla, feria Montilla julio, casetas Montilla, conciertos feria Montilla, Raya Real Montilla, La Guardia Montilla, San Francisco Solano, programa feria Montilla";
+
+// Conciertos por escenario (según expediente municipal y programación oficial 2026)
+const envidarte = [
+  { date: "Vie 10 jul", artist: "Xperience Remember 90's", tag: "Versiones 90's" },
+  { date: "Sáb 11 jul", artist: "Chásis", tag: "Pop-rock" },
+  { date: "Dom 12 jul", artist: "Raya Real", tag: "Sevillanas · Flamenco", star: true },
+  { date: "Lun 13 jul", artist: "La Guardia", tag: "Rock en español", star: true },
+];
+
+const casetaMunicipal = [
+  { date: "Vie 10 jul", artist: "Xharma", tag: "Orquesta" },
+  { date: "Sáb 11 jul", artist: "Radio 90", tag: "Versiones" },
+  { date: "Dom 12 jul", artist: "Retromanía", tag: "Versiones retro" },
+  { date: "Lun 13 jul", artist: "The Freedom Band", tag: "Directo" },
+];
+
+const programa = [
+  {
+    day: "Mié 8 jul",
+    title: "Pregón y encendido del alumbrado",
+    items: [
+      "22:00 · Pregón de Feria a cargo de Ana Sánchez Herrador (Ana Ponf) en la Plaza del Ayuntamiento.",
+      "Actuación del Coro La Tradición y de la cantaora Marta Mesa, acompañada por David y Gabri.",
+      "Pasacalles de la Agrupación Musical La Unión hasta la Avenida de las Camachas.",
+      "Encendido del alumbrado extraordinario y copa de vino de los Amigos de la Venencia junto a la portada.",
+    ],
+  },
+  {
+    day: "Jue 9 jul",
+    title: "Arranca la feria de día y las casetas",
+    items: [
+      "Apertura de las 14 casetas y establecimientos (Envidarte y Avda. de las Camachas).",
+      "Ludoteca infantil (del 9 al 12 de julio).",
+      "Feria de día en varias casetas y sesiones DJ nocturnas en la Caseta Joven Ferión.",
+    ],
+  },
+  {
+    day: "Vie 10 jul",
+    title: "Primeros grandes conciertos",
+    items: [
+      "Envidarte · desde las 21:00 h: Xperience Remember 90's.",
+      "Caseta Municipal: Xharma.",
+      "Caseta Joven Ferión: DJ hasta el cierre.",
+    ],
+  },
+  {
+    day: "Sáb 11 jul",
+    title: "Noche de casetas",
+    items: [
+      "Envidarte: Chásis.",
+      "Caseta Municipal: Radio 90.",
+      "Paseo de caballos y enganches, y feria de día.",
+    ],
+  },
+  {
+    day: "Dom 12 jul",
+    title: "Raya Real, plato fuerte",
+    items: [
+      "Envidarte: Raya Real (sevillanas y flamenco).",
+      "Caseta Municipal: Retromanía.",
+      "Última jornada de ludoteca infantil.",
+    ],
+  },
+  {
+    day: "Lun 13 jul",
+    title: "La Guardia cierra los conciertos",
+    items: [
+      "Envidarte: La Guardia (rock en español).",
+      "Caseta Municipal: The Freedom Band.",
+      "Caseta Joven Ferión: DJ.",
+    ],
+  },
+  {
+    day: "Mar 14 jul",
+    title: "Día de San Francisco Solano",
+    items: [
+      "Función religiosa en la Parroquia de San Francisco Solano, presidida por el obispo de Córdoba.",
+      "Inicio del Semestre Jubilar por el 300.º aniversario de la canonización del patrón.",
+      "Devoto besapiés de El Santico y procesión de la imagen.",
+    ],
+  },
+  {
+    day: "Mié 15 jul · 00:00",
+    title: "Fuegos artificiales",
+    items: [
+      "Gran sesión de fuegos artificiales en la Avenida de Málaga que pone el broche a la feria.",
+    ],
+  },
+];
+
+const servicios = [
+  {
+    t: "Autobús especial",
+    d: "Salidas cada 30 minutos desde las 22:15 h para moverte al recinto sin coche.",
+  },
+  {
+    t: "Aparcamientos",
+    d: "Zonas de aparcamiento habilitadas en distintos puntos de la ciudad.",
+  },
+  {
+    t: "Ludoteca infantil",
+    d: "Del 9 al 12 de julio, actividades para los más pequeños.",
+  },
+  {
+    t: "Feria sin ruido e inclusiva",
+    d: "Momentos y espacios adaptados para una feria accesible para todos.",
+  },
+  {
+    t: "Punto Violeta",
+    d: "Prevención y atención frente a la violencia contra las mujeres.",
+  },
+  {
+    t: "Vales para atracciones",
+    d: "Descuentos para las atracciones repartidos a través del comercio local.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Festival",
+  name: "Feria de El Santo 2026 · Montilla",
+  description,
+  startDate: "2026-07-08",
+  endDate: "2026-07-14",
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  image: new URL(`${base}images/og-default.jpg`, SITE.url).href,
+  location: {
+    "@type": "Place",
+    name: "Recinto ferial de Montilla (Envidarte y Avenida de las Camachas)",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Montilla",
+      addressRegion: "Córdoba",
+      postalCode: "14550",
+      addressCountry: "ES",
+    },
+  },
+  organizer: {
+    "@type": "Organization",
+    name: "Ayuntamiento de Montilla",
+    url: "https://www.montilla.es",
+  },
+  subEvent: [...envidarte, ...casetaMunicipal].map((c) => ({
+    "@type": "MusicEvent",
+    name: `${c.artist} — Feria de El Santo`,
+    performer: { "@type": "MusicGroup", name: c.artist },
+    location: {
+      "@type": "Place",
+      name: "Recinto ferial de Montilla",
+      address: { "@type": "PostalAddress", addressLocality: "Montilla", addressCountry: "ES" },
+    },
+  })),
+};
+---
+
+<Layout title="Feria de El Santo 2026 en Montilla — Programa, conciertos y casetas" description={description} keywords={keywords} image="/images/og-default.jpg" jsonLd={jsonLd}>
+  <section class="feria-hero">
+    <div class="wrap feria-hero__inner">
+      <p class="feria-hero__eyebrow">8 – 14 de julio · Montilla (Córdoba)</p>
+      <h1 class="feria-hero__title">Feria de El Santo 2026</h1>
+      <p class="feria-hero__sub">
+        Siete días de música en directo, casetas, tradición y devoción a San Francisco Solano.
+        Aquí tienes el programa completo, los conciertos y todo lo práctico para vivirla.
+      </p>
+      <div class="feria-countdown" id="feria-countdown" aria-live="polite"></div>
+      <div class="feria-hero__cta">
+        <a href="#programa" class="btn btn--primary">Ver programa día a día</a>
+        <a href="#conciertos" class="btn btn--ghost">Conciertos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="feria-facts">
+    <div class="wrap feria-facts__grid">
+      <div class="fact"><span class="fact__k">Fechas</span><span class="fact__v">8 – 14 julio 2026</span></div>
+      <div class="fact"><span class="fact__k">Patrón</span><span class="fact__v">San Francisco Solano</span></div>
+      <div class="fact"><span class="fact__k">Casetas</span><span class="fact__v">14 espacios</span></div>
+      <div class="fact"><span class="fact__k">Zonas</span><span class="fact__v">Envidarte · Las Camachas</span></div>
+    </div>
+  </section>
+
+  <section class="block" id="conciertos">
+    <div class="wrap">
+      <h2 class="feria-h2">Conciertos de la feria</h2>
+      <p class="feria-lead">
+        Dos grandes escenarios: el recinto de <strong>Envidarte</strong> y la <strong>Caseta Municipal</strong>.
+        Además, la <strong>Caseta Joven Ferión</strong> (nueva ubicación en la Avenida de las Camachas, acceso con pulsera)
+        ofrece sesiones de DJ todas las noches.
+      </p>
+
+      <div class="stages">
+        <div class="stage">
+          <h3 class="stage__name">Recinto Envidarte</h3>
+          <ul class="stage__list">
+            {envidarte.map((c) => (
+              <li class={c.star ? "gig gig--star" : "gig"}>
+                <span class="gig__date">{c.date}</span>
+                <span class="gig__artist">{c.artist}</span>
+                <span class="gig__tag">{c.tag}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="stage">
+          <h3 class="stage__name">Caseta Municipal</h3>
+          <ul class="stage__list">
+            {casetaMunicipal.map((c) => (
+              <li class="gig">
+                <span class="gig__date">{c.date}</span>
+                <span class="gig__artist">{c.artist}</span>
+                <span class="gig__tag">{c.tag}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <p class="feria-note">
+        Antes de la feria, el <strong>Pórtico de Feria</strong> (3 y 4 de julio, Plaza Puerta de Montilla) contó con
+        Capachos, la Asociación Prudencio Molina, Seven Band y Jaime Urrutia.
+      </p>
+    </div>
+  </section>
+
+  <section class="block block--tint" id="programa">
+    <div class="wrap">
+      <h2 class="feria-h2">Programa día a día</h2>
+      <p class="feria-lead">Del pregón a los fuegos artificiales. Estos son los actos principales de cada jornada.</p>
+      <ol class="timeline">
+        {programa.map((p) => (
+          <li class="tl">
+            <div class="tl__day">{p.day}</div>
+            <div class="tl__body">
+              <h3 class="tl__title">{p.title}</h3>
+              <ul class="tl__items">
+                {p.items.map((it) => <li>{it}</li>)}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2 class="feria-h2">Servicios y novedades</h2>
+      <div class="svc-grid">
+        {servicios.map((s) => (
+          <div class="svc">
+            <h3 class="svc__t">{s.t}</h3>
+            <p class="svc__d">{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block block--tint">
+    <div class="wrap">
+      <h2 class="feria-h2">Vive la feria con Guía Montilla</h2>
+      <p class="feria-lead">Antes o después del recinto, aprovecha para descubrir el pueblo.</p>
+      <div class="links-grid">
+        <a href={`${base}restaurantes/`} class="lcard">
+          <span class="lcard__t">Dónde comer</span>
+          <span class="lcard__d">Restaurantes y tabernas de Montilla</span>
+        </a>
+        <a href={`${base}bares-cafes/`} class="lcard">
+          <span class="lcard__t">Tapear y terraza</span>
+          <span class="lcard__d">Bares y cafés para el tardeo</span>
+        </a>
+        <a href={`${base}bodegas/`} class="lcard">
+          <span class="lcard__t">Bodegas</span>
+          <span class="lcard__d">Vinos Montilla-Moriles y visitas</span>
+        </a>
+        <a href={`${base}alojamiento/`} class="lcard">
+          <span class="lcard__t">Dónde dormir</span>
+          <span class="lcard__d">Hoteles y alojamientos en Montilla</span>
+        </a>
+        <a href={`${base}monumentos/`} class="lcard">
+          <span class="lcard__t">Qué ver</span>
+          <span class="lcard__d">Monumentos y patrimonio</span>
+        </a>
+        <a href={`${base}blog/feria-montilla-septiembre/`} class="lcard">
+          <span class="lcard__t">Guía para vivir la feria</span>
+          <span class="lcard__d">Consejos para disfrutarla como local</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="feria-foot">
+    <div class="wrap feria-foot__inner">
+      <p>
+        Programación basada en la información oficial del Ayuntamiento de Montilla. Los horarios y el orden de
+        actuaciones pueden sufrir cambios de última hora; confirma siempre en los canales oficiales.
+      </p>
+      <p class="feria-foot__biz">
+        ¿Tienes un negocio y quieres destacar estos días? <a href={`${base}para-negocios/`}>Anúnciate en Guía Montilla</a>.
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (function () {
+    const el = document.getElementById("feria-countdown");
+    if (!el) return;
+    const start = new Date("2026-07-08T22:00:00+02:00").getTime();
+    const end = new Date("2026-07-15T00:30:00+02:00").getTime();
+    function render() {
+      const now = Date.now();
+      if (now >= start && now <= end) {
+        el.innerHTML = '<span class="feria-countdown__live">● La feria está en marcha</span>';
+        return;
+      }
+      if (now > end) {
+        el.textContent = "¡Hasta la próxima feria!";
+        return;
+      }
+      const diff = start - now;
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      el.innerHTML =
+        '<span class="cd"><b>' + d + "</b> días</span>" +
+        '<span class="cd"><b>' + h + "</b> h</span>" +
+        '<span class="cd"><b>' + m + "</b> min</span>" +
+        '<span class="cd cd--label">para el pregón</span>';
+    }
+    render();
+    setInterval(render, 30000);
+  })();
+</script>
+
+<style>
+  .feria-hero {
+    background:
+      linear-gradient(180deg, oklch(0.30 0.11 30 / 0.72), oklch(0.22 0.08 30 / 0.88)),
+      url("/images/og-default.jpg") center / cover no-repeat;
+    color: var(--paper);
+    padding: clamp(3.5rem, 9vw, 6.5rem) 0 clamp(2.75rem, 6vw, 4.5rem);
+    text-align: center;
+  }
+  .feria-hero__inner { max-width: 46rem; }
+  .feria-hero__eyebrow {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    color: var(--gold);
+    margin: 0 0 0.6rem;
+  }
+  .feria-hero__title {
+    color: var(--paper);
+    font-size: clamp(2.6rem, 8vw, 4.6rem);
+    margin: 0 0 0.5rem;
+  }
+  .feria-hero__sub {
+    font-size: 1.1rem;
+    color: oklch(0.96 0.01 55 / 0.92);
+    margin: 0 auto 1.6rem;
+    max-width: 38rem;
+  }
+  .feria-countdown {
+    display: flex;
+    gap: 1.1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.8rem;
+    min-height: 2.5rem;
+  }
+  .feria-countdown .cd {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: oklch(0.96 0.01 55 / 0.85);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+  }
+  .feria-countdown .cd b {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .feria-countdown .cd--label { align-self: center; }
+  .feria-countdown__live {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--gold);
+    background: oklch(1 0 0 / 0.08);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+  }
+  .feria-hero__cta { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.98rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: transform var(--t) var(--ease), background var(--t) var(--ease);
+  }
+  .btn--primary { background: var(--gold); color: oklch(0.24 0.04 40); }
+  .btn--primary:hover { background: oklch(0.74 0.13 78); color: oklch(0.2 0.04 40); }
+  .btn--ghost { background: oklch(1 0 0 / 0.1); color: var(--paper); border: 1px solid oklch(1 0 0 / 0.4); }
+  .btn--ghost:hover { background: oklch(1 0 0 / 0.2); color: var(--paper); }
+  @media (prefers-reduced-motion: no-preference) {
+    .btn:hover { transform: translateY(-2px); }
+  }
+
+  .feria-facts { background: var(--wine); color: var(--paper); }
+  .feria-facts__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: oklch(1 0 0 / 0.14);
+  }
+  .fact {
+    background: var(--wine);
+    padding: 1.1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-align: center;
+  }
+  .fact__k {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+  }
+  .fact__v { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 700; }
+  @media (max-width: 640px) {
+    .feria-facts__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .block { padding: clamp(2.75rem, 6vw, 4.5rem) 0; }
+  .block--tint { background: var(--paper-tint); border-block: 1px solid var(--rule); }
+  .feria-h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin: 0 0 0.6rem; color: var(--wine-deep); }
+  .feria-lead { font-size: 1.08rem; color: var(--ink-soft); max-width: 44rem; margin: 0 0 2rem; }
+
+  .stages { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  @media (max-width: 720px) { .stages { grid-template-columns: 1fr; } }
+  .stage {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--wine);
+    padding: 1.4rem 1.4rem 1.6rem;
+  }
+  .stage__name { font-size: 1.3rem; margin: 0 0 1rem; color: var(--wine-deep); }
+  .stage__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+  .gig {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr auto;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.7rem 0.8rem;
+    background: var(--paper-tint);
+    border: 1px solid var(--rule);
+  }
+  .gig--star { border-color: var(--gold); background: var(--wine-light); }
+  .gig__date { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; color: var(--wine); }
+  .gig__artist { font-family: var(--font-serif); font-weight: 700; font-size: 1.08rem; color: var(--ink); }
+  .gig__tag { font-family: var(--font-sans); font-size: 0.72rem; color: var(--ink-muted); text-align: right; }
+  @media (max-width: 420px) {
+    .gig { grid-template-columns: 1fr; gap: 0.15rem; }
+    .gig__tag { text-align: left; }
+  }
+  .feria-note {
+    margin-top: 1.6rem;
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    border-left: 3px solid var(--gold);
+    padding-left: 0.9rem;
+  }
+
+  .timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
+  .tl {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1.4rem;
+    padding: 1.3rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .tl:last-child { border-bottom: 0; }
+  .tl__day {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--wine);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .tl__title { font-size: 1.25rem; margin: 0 0 0.5rem; color: var(--wine-deep); }
+  .tl__items { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; color: var(--ink-soft); }
+  .tl__items li { font-size: 0.98rem; }
+  @media (max-width: 620px) {
+    .tl { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+  @media (max-width: 820px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .svc-grid { grid-template-columns: 1fr; } }
+  .svc { padding: 1.2rem 1.2rem 1.3rem; background: var(--paper); border: 1px solid var(--rule); }
+  .svc__t { font-size: 1.1rem; margin: 0 0 0.35rem; color: var(--wine-deep); }
+  .svc__d { margin: 0; font-size: 0.95rem; color: var(--ink-soft); }
+
+  .links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  @media (max-width: 820px) { .links-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .links-grid { grid-template-columns: 1fr; } }
+  .lcard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1.15rem 1.2rem;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--wine);
+    text-decoration: none;
+    transition: transform var(--t) var(--ease), border-color var(--t) var(--ease);
+  }
+  .lcard:hover { border-left-color: var(--gold); }
+  @media (prefers-reduced-motion: no-preference) {
+    .lcard:hover { transform: translateY(-2px); }
+  }
+  .lcard__t { font-family: var(--font-serif); font-weight: 700; font-size: 1.12rem; color: var(--wine-deep); }
+  .lcard__d { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-muted); }
+
+  .feria-foot { padding: clamp(2rem, 5vw, 3rem) 0; background: var(--wine-deep); color: oklch(0.96 0.01 55 / 0.82); }
+  .feria-foot__inner { max-width: 44rem; }
+  .feria-foot p { font-size: 0.9rem; margin: 0 0 0.6rem; }
+  .feria-foot__biz a { color: var(--gold); }
+</style>

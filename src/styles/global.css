@@ -200,6 +200,20 @@ p { text-wrap: pretty; margin: 0 0 1em; }
   padding-bottom: 1px;
 }
 
+.menu-feria {
+  font-weight: 700 !important;
+  color: var(--wine) !important;
+  position: relative;
+}
+
+.menu-feria::after {
+  content: "•";
+  color: var(--gold);
+  margin-left: 0.2rem;
+  font-size: 1.1em;
+  line-height: 0;
+}
+
 @media (max-width: 720px) {
   .menu-toggle { display: inline-flex; }
 
@@ -264,6 +278,69 @@ p { text-wrap: pretty; margin: 0 0 1em; }
     color: var(--wine) !important;
     font-weight: 700 !important;
   }
+}
+
+/* ── Feria banner (home) ── */
+.feria-banner {
+  background: linear-gradient(100deg, var(--wine-deep), var(--wine));
+  border-block: 1px solid var(--wine-deep);
+}
+
+.feria-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+
+.feria-banner__text {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.feria-banner__badge {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: oklch(0.24 0.04 40);
+  background: var(--gold);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+.feria-banner__title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--paper);
+}
+
+.feria-banner__sub {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: oklch(0.96 0.01 55 / 0.82);
+}
+
+.feria-banner__cta {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.feria-banner__inner:hover .feria-banner__cta { color: var(--paper); }
+
+@media (max-width: 520px) {
+  .feria-banner__title { font-size: 1.15rem; }
+  .feria-banner__sub { width: 100%; }
 }
 
 /* ── Home hero ── */
