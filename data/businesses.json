@@ -22338,8 +22338,8 @@
     "slug": "moncafe",
     "name": "Moncafé",
     "category": "restaurantes",
-    "tagline": "En Moncafé se come con el ritmo del pueblo: tapas, platos de temporada y ambiente de barrio.",
-    "description": "En Moncafé se come con el ritmo del pueblo: tapas, platos de temporada y ambiente de barrio.\n\nEstá en Pol. Ind. Llanos de Jarata, C. Madame Curie, 101, Montilla (14550).\n\nReserva mesa en viernes y sábado noche; muchos locales cierran domingo por la noche.\n\nEn Google Maps acumula 4.9/5 con más de 42 opiniones, una señal clara de confianza local.",
+    "tagline": "En Moncafé se come con el ritmo del pueblo: desayunos contundentes, menú del día, tapas y guisos caseros.",
+    "description": "En Moncafé se come con el ritmo del pueblo. Desayunos contundentes, menú del día, tapas, guisos caseros y un ambiente cercano donde apuestan por la calidad y el trato de bar de verdad.\n\nAbren de madrugada para el primer café y el bocadillo del trabajo. A mediodía sirven menú del día completo —primeros, segundos y postre de cocina casera— y mantienen carta de tapas con platos como salmorejo cordobés, rabo de toro, crispín de merluza, san jacobo de queso añejo o pescaíto frito.\n\nEn el Polígono Industrial Llanos de Jarata (C. Madame Curie, 101) tienen sala amplia, barra y terraza: un sitio cómodo para comer entre semana, reunirte o tomar algo sin prisas.\n\n4.9 sobre 5 en Google Maps con más de 42 opiniones. Aceptan tarjeta, débito y pago móvil. Reserva mesa los viernes y sábados por teléfono.",
     "address": "C. Madame Curie, 101, 14550 Montilla, Córdoba, España",
     "shortAddress": "Pol. Ind. Llanos de Jarata, C. Madame Curie, 101, Montilla",
     "phone": "+34 661 13 48 87",
@@ -22372,10 +22372,17 @@
     "reviewCount": 42,
     "priceRange": "€€",
     "social": [],
-    "featured": false,
+    "featured": true,
     "tags": [
       "restaurante",
-      "montilla"
+      "bar",
+      "desayunos",
+      "menú del día",
+      "tapas",
+      "guisos caseros",
+      "terraza",
+      "montilla",
+      "destacado"
     ],
     "placeTypes": [
       "Restaurante"
@@ -22389,28 +22396,52 @@
     "gallery": [
       {
         "src": "/images/negocios/moncafe/01.jpg",
-        "alt": "Moncafé — foto 1 (Google Maps)"
+        "alt": "Interior de Moncafé en Montilla — barra y comedor"
       },
       {
         "src": "/images/negocios/moncafe/02.jpg",
-        "alt": "Moncafé — foto 2 (Google Maps)"
+        "alt": "Desayuno contundente en Moncafé — tostadas, café y bocadillos"
       },
       {
         "src": "/images/negocios/moncafe/03.jpg",
-        "alt": "Moncafé — foto 3 (Google Maps)"
+        "alt": "Bocadillo caliente en Moncafé, Montilla"
       },
       {
         "src": "/images/negocios/moncafe/04.jpg",
-        "alt": "Moncafé — foto 4 (Google Maps)"
+        "alt": "Salmorejo cordobés en Moncafé"
+      },
+      {
+        "src": "/images/negocios/moncafe/05.jpg",
+        "alt": "Rabo de toro guisado — plato casero de Moncafé"
+      },
+      {
+        "src": "/images/negocios/moncafe/06.jpg",
+        "alt": "Crispín de merluza en Moncafé, Montilla"
+      },
+      {
+        "src": "/images/negocios/moncafe/07.jpg",
+        "alt": "San Jacobo de queso añejo en Moncafé"
+      },
+      {
+        "src": "/images/negocios/moncafe/08.jpg",
+        "alt": "Pescaíto frito en Moncafé"
+      },
+      {
+        "src": "/images/negocios/moncafe/09.jpg",
+        "alt": "Tarta de zanahoria casera en Moncafé"
       }
     ],
     "image": "/images/negocios/moncafe/01.jpg",
     "highlights": [
+      "Destacado en Guía Montilla",
+      "Menú del día con cocina casera",
+      "Desayunos y bocadillos contundentes",
+      "Tapas y guisos de la casa",
+      "Terraza, barra y comedor amplio",
       "4.9/5 en Google Maps (42 opiniones)",
-      "Pol. Ind. Llanos de Jarata, C. Madame Curie, 101, Montilla",
-      "Restauración local"
+      "Pol. Ind. Llanos de Jarata, C. Madame Curie, 101"
     ],
-    "tips": "Pide maridaje con vino Montilla-Moriles. El salmorejo y las alcachofas son imprescindibles en la zona."
+    "tips": "Prueba el menú del día entre semana, el salmorejo y los guisos caseros. Los desayunos son contundentes: pide bocadillo caliente o tostada con aceite de la zona. Reserva el fin de semana."
   },
   {
     "id": "monti-reclam",
