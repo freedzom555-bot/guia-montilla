@@ -10162,11 +10162,11 @@
     {
       "slug": "moncafe",
       "name": "Moncafé",
-      "tagline": "En Moncafé se come con el ritmo del pueblo: tapas, platos de temporada y ambiente de barrio.",
+      "tagline": "En Moncafé se come con el ritmo del pueblo: desayunos contundentes, menú del día, tapas y guisos caseros.",
       "category": "restaurantes",
       "categoryLabel": "Restaurantes",
       "categoryUrl": "/restaurantes/",
-      "featured": false,
+      "featured": true,
       "keywords": [
         "moncafe",
         "restaurantes",
@@ -10175,11 +10175,13 @@
         "ritmo",
         "del",
         "pueblo:",
+        "desayunos",
+        "contundentes",
+        "menu",
+        "dia",
         "tapas",
-        "platos",
-        "temporada",
-        "ambiente",
-        "barrio",
+        "guisos",
+        "caseros",
         "pol",
         "ind",
         "llanos",
@@ -10190,11 +10192,12 @@
         "montilla",
         "restaurante",
         "bar",
+        "terraza",
+        "destacado",
         "café",
-        "copas",
-        "terraza"
+        "copas"
       ],
-      "searchBlob": "moncafe restaurantes en moncafe se come con el ritmo del pueblo: tapas, platos de temporada y ambiente de barrio. restaurante moncafe restaurantes come con ritmo del pueblo: tapas platos temporada ambiente barrio pol ind llanos jarata madame curie 101 montilla restaurante bar cafe copas terraza"
+      "searchBlob": "moncafe restaurantes en moncafe se come con el ritmo del pueblo: desayunos contundentes, menu del dia, tapas y guisos caseros. restaurante moncafe restaurantes come con ritmo del pueblo: desayunos contundentes menu dia tapas guisos caseros pol ind llanos jarata madame curie 101 montilla restaurante bar terraza destacado cafe copas"
     },
     {
       "slug": "monti-reclam",
