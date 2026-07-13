@@ -16,7 +16,7 @@ export const NEWS_RSS_SOURCES = [
   {
     id: "ayto-montilla",
     name: "Ayuntamiento de Montilla",
-    url: "https://www.montilla.es/noticias/rss",
+    url: "https://www.montilla.es/feed/",
   },
 ];
 
