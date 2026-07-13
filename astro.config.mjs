@@ -23,7 +23,7 @@ export default defineConfig({
   output: "static",
   integrations: [
     sitemap({
-      filter: (page) => !page.includes("/404"),
+      filter: (page) => !page.includes("/404") && !page.includes("/interno/"),
       changefreq: "weekly",
       priority: 0.7,
       lastmod: new Date(),

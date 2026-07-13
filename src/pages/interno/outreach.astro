@@ -1,0 +1,485 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import businesses from "../../../data/businesses.json";
+import categories from "../../../data/categories.json";
+import { buildOutreachLeads, DAILY_VISITS, OUTREACH_PRICE } from "../../lib/outreach";
+
+const siteUrl = (Astro.site ?? new URL("https://guiamontilla.es")).href;
+const leads = buildOutreachLeads(businesses, categories, siteUrl);
+const mobileCount = leads.filter((l) => l.isMobile).length;
+---
+
+<Layout
+  title="Outreach WhatsApp — Destacado"
+  description="Herramienta interna de contacto comercial."
+  noindex={true}
+  includeSiteSchema={false}
+>
+  <div class="outreach" data-outreach>
+    <header class="outreach__head">
+      <div class="wrap outreach__head-inner">
+        <div>
+          <p class="outreach__kicker">Uso interno · Guía Montilla</p>
+          <h1>WhatsApp Destacado ({OUTREACH_PRICE} €/mes)</h1>
+          <p class="outreach__deck">
+            Pulsa el botón verde → se abre WhatsApp con el mensaje listo → solo das a <strong>Enviar</strong>.
+            El estado se guarda en este navegador.
+          </p>
+        </div>
+        <div class="outreach__stats" id="stats" aria-live="polite">
+          <div><strong>{leads.length}</strong><span>con WhatsApp</span></div>
+          <div><strong>{mobileCount}</strong><span>móvil</span></div>
+          <div><strong id="stat-pending">—</strong><span>pendientes</span></div>
+          <div><strong id="stat-sent">—</strong><span>enviados</span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap outreach__toolbar">
+      <label class="outreach__search">
+        <span class="sr-only">Buscar negocio</span>
+        <input type="search" id="search" placeholder="Buscar por nombre…" autocomplete="off" />
+      </label>
+      <label class="outreach__filter">
+        <span>Categoría</span>
+        <select id="filter-cat">
+          <option value="">Todas (prioridad comercial)</option>
+          {categories.map((c) => (
+            <option value={c.id}>{c.name}</option>
+          ))}
+        </select>
+      </label>
+      <label class="outreach__filter">
+        <span>Estado</span>
+        <select id="filter-status">
+          <option value="pending">Pendientes</option>
+          <option value="all">Todos</option>
+          <option value="sent">Enviados</option>
+          <option value="interested">Interesados</option>
+          <option value="no">No interesa</option>
+        </select>
+      </label>
+      <label class="outreach__check">
+        <input type="checkbox" id="filter-mobile" />
+        Solo móvil (6xx / 7xx)
+      </label>
+    </div>
+
+    <ul class="wrap outreach__list" id="lead-list">
+      {leads.map((lead) => (
+        <li
+          class="lead"
+          data-id={lead.id}
+          data-category={lead.category}
+          data-mobile={lead.isMobile ? "1" : "0"}
+          data-status="pending"
+        >
+          <div class="lead__top">
+            <div class="lead__meta">
+              <h2 class="lead__name">{lead.name}</h2>
+              <p class="lead__sub">
+                {lead.categoryLabel}
+                · {lead.phoneDisplay}
+                {lead.isMobile ? (
+                  <span class="lead__badge lead__badge--ok">Móvil</span>
+                ) : (
+                  <span class="lead__badge">Fijo</span>
+                )}
+              </p>
+            </div>
+            <div class="lead__actions">
+              <a
+                class="lead__wa"
+                href={lead.waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-wa-link
+              >
+                Abrir WhatsApp
+              </a>
+              <button type="button" class="lead__mark" data-mark="sent">✓ Enviado</button>
+              <button type="button" class="lead__mark lead__mark--soft" data-mark="interested">★ Interesa</button>
+              <button type="button" class="lead__mark lead__mark--mute" data-mark="no">✗ No</button>
+            </div>
+          </div>
+          <details class="lead__preview">
+            <summary>Ver mensaje</summary>
+            <pre class="lead__msg">{lead.message}</pre>
+          </details>
+        </li>
+      ))}
+    </ul>
+
+    {leads.length === 0 && (
+      <p class="wrap outreach__empty">No hay negocios pendientes con teléfono válido para WhatsApp.</p>
+    )}
+
+    <footer class="outreach__foot">
+      <div class="wrap">
+        <p>
+          Argumento de venta: ~{DAILY_VISITS.toLocaleString("es-ES")} visitas/día · Destacado {OUTREACH_PRICE} €/mes ·
+          <a href={`${import.meta.env.BASE_URL}para-negocios/`}>para-negocios</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</Layout>
+
+<script>
+  const STORAGE_KEY = "gm-outreach-v1";
+
+  type Status = "pending" | "sent" | "interested" | "no";
+
+  function loadStatus(): Record<string, Status> {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "{}");
+    } catch {
+      return {};
+    }
+  }
+
+  function saveStatus(map: Record<string, Status>) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+  }
+
+  const root = document.querySelector("[data-outreach]");
+  if (!root) throw new Error("outreach root missing");
+
+  const statusMap = loadStatus();
+  const items = [...root.querySelectorAll<HTMLElement>(".lead")];
+  const search = root.querySelector<HTMLInputElement>("#search")!;
+  const filterCat = root.querySelector<HTMLSelectElement>("#filter-cat")!;
+  const filterStatus = root.querySelector<HTMLSelectElement>("#filter-status")!;
+  const filterMobile = root.querySelector<HTMLInputElement>("#filter-mobile")!;
+  const statPending = root.querySelector("#stat-pending")!;
+  const statSent = root.querySelector("#stat-sent")!;
+
+  function applyStatusEl(el: HTMLElement, status: Status) {
+    el.dataset.status = status;
+    el.classList.toggle("lead--sent", status === "sent");
+    el.classList.toggle("lead--interested", status === "interested");
+    el.classList.toggle("lead--no", status === "no");
+  }
+
+  for (const el of items) {
+    const id = el.dataset.id!;
+    const saved = statusMap[id] ?? "pending";
+    applyStatusEl(el, saved);
+  }
+
+  function updateStats() {
+    let pending = 0;
+    let sent = 0;
+    for (const el of items) {
+      const s = (el.dataset.status ?? "pending") as Status;
+      if (s === "pending") pending++;
+      if (s === "sent" || s === "interested") sent++;
+    }
+    statPending.textContent = String(pending);
+    statSent.textContent = String(sent);
+  }
+
+  function matchesFilters(el: HTMLElement): boolean {
+    const q = search.value.trim().toLowerCase();
+    const cat = filterCat.value;
+    const statusFilter = filterStatus.value;
+    const mobileOnly = filterMobile.checked;
+    const status = (el.dataset.status ?? "pending") as Status;
+    const name = el.querySelector(".lead__name")?.textContent?.toLowerCase() ?? "";
+
+    if (q && !name.includes(q)) return false;
+    if (cat && el.dataset.category !== cat) return false;
+    if (mobileOnly && el.dataset.mobile !== "1") return false;
+    if (statusFilter === "pending" && status !== "pending") return false;
+    if (statusFilter === "sent" && status !== "sent") return false;
+    if (statusFilter === "interested" && status !== "interested") return false;
+    if (statusFilter === "no" && status !== "no") return false;
+    return true;
+  }
+
+  function refreshList() {
+    for (const el of items) {
+      el.hidden = !matchesFilters(el);
+    }
+    updateStats();
+  }
+
+  search.addEventListener("input", refreshList);
+  filterCat.addEventListener("change", refreshList);
+  filterStatus.addEventListener("change", refreshList);
+  filterMobile.addEventListener("change", refreshList);
+
+  root.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>("[data-mark]");
+    if (!btn) return;
+    const el = btn.closest<HTMLElement>(".lead");
+    if (!el?.dataset.id) return;
+    const mark = btn.dataset.mark as Status;
+    const id = el.dataset.id;
+    statusMap[id] = mark;
+    saveStatus(statusMap);
+    applyStatusEl(el, mark);
+    refreshList();
+  });
+
+  root.querySelectorAll<HTMLAnchorElement>("[data-wa-link]").forEach((a) => {
+    a.addEventListener("click", () => {
+      const el = a.closest<HTMLElement>(".lead");
+      if (!el?.dataset.id) return;
+      const id = el.dataset.id;
+      if (statusMap[id] === "pending") {
+        statusMap[id] = "sent";
+        saveStatus(statusMap);
+        applyStatusEl(el, "sent");
+        refreshList();
+      }
+    });
+  });
+
+  refreshList();
+</script>
+
+<style>
+  .outreach {
+    background: oklch(0.97 0.008 85);
+    min-height: 70vh;
+    padding-bottom: 3rem;
+  }
+  .outreach__head {
+    background: oklch(0.22 0.06 25);
+    color: oklch(0.98 0.01 90);
+    padding: 1.75rem 0 1.5rem;
+    border-bottom: 3px solid oklch(0.72 0.14 85);
+  }
+  .outreach__head-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .outreach__kicker {
+    margin: 0 0 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+  .outreach h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+    color: inherit;
+  }
+  .outreach__deck {
+    margin: 0;
+    max-width: 36rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+  .outreach__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .outreach__stats div {
+    text-align: center;
+    min-width: 4.5rem;
+  }
+  .outreach__stats strong {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+  .outreach__stats span {
+    font-size: 0.72rem;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .outreach__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    align-items: flex-end;
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: oklch(0.97 0.008 85 / 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid oklch(0.88 0.02 85);
+  }
+  .outreach__search {
+    flex: 1 1 12rem;
+  }
+  .outreach__search input {
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid oklch(0.85 0.02 85);
+    border-radius: 6px;
+    font: inherit;
+  }
+  .outreach__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: oklch(0.4 0.02 85);
+  }
+  .outreach__filter select {
+    padding: 0.5rem 0.65rem;
+    border: 1px solid oklch(0.85 0.02 85);
+    border-radius: 6px;
+    font: inherit;
+    min-width: 10rem;
+  }
+  .outreach__check {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    padding-bottom: 0.35rem;
+  }
+  .outreach__list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .lead {
+    background: #fff;
+    border: 1px solid oklch(0.9 0.015 85);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    transition: opacity 0.15s, border-color 0.15s;
+  }
+  .lead--sent {
+    border-color: oklch(0.75 0.12 145);
+    background: oklch(0.98 0.02 145);
+  }
+  .lead--interested {
+    border-color: oklch(0.72 0.14 85);
+    background: oklch(0.99 0.03 85);
+  }
+  .lead--no {
+    opacity: 0.55;
+  }
+  .lead__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .lead__name {
+    margin: 0 0 0.25rem;
+    font-size: 1.05rem;
+    color: oklch(0.22 0.04 25);
+  }
+  .lead__sub {
+    margin: 0;
+    font-size: 0.85rem;
+    color: oklch(0.45 0.02 85);
+  }
+  .lead__badge {
+    display: inline-block;
+    margin-left: 0.35rem;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background: oklch(0.92 0.02 85);
+    color: oklch(0.45 0.02 85);
+  }
+  .lead__badge--ok {
+    background: oklch(0.92 0.06 145);
+    color: oklch(0.35 0.08 145);
+  }
+  .lead__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+  .lead__wa {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1.1rem;
+    background: #25d366;
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 0.92rem;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .lead__wa:hover {
+    background: #1da851;
+  }
+  .lead__mark {
+    padding: 0.4rem 0.65rem;
+    border: 1px solid oklch(0.85 0.02 85);
+    border-radius: 6px;
+    background: #fff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: oklch(0.35 0.02 85);
+  }
+  .lead__mark:hover {
+    background: oklch(0.96 0.01 85);
+  }
+  .lead__mark--soft {
+    border-color: oklch(0.78 0.1 85);
+  }
+  .lead__mark--mute {
+    opacity: 0.7;
+  }
+  .lead__preview {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+  }
+  .lead__preview summary {
+    cursor: pointer;
+    color: oklch(0.45 0.04 25);
+    font-weight: 600;
+  }
+  .lead__msg {
+    margin: 0.5rem 0 0;
+    padding: 0.75rem;
+    background: oklch(0.97 0.008 85);
+    border-radius: 6px;
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: oklch(0.3 0.02 85);
+    overflow-x: auto;
+  }
+  .outreach__foot {
+    padding: 1rem 0;
+    font-size: 0.82rem;
+    color: oklch(0.5 0.02 85);
+    border-top: 1px solid oklch(0.9 0.015 85);
+  }
+  .outreach__empty {
+    padding: 2rem 0;
+    color: oklch(0.5 0.02 85);
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+</style>
