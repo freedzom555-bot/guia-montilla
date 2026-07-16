@@ -7521,7 +7521,7 @@
     {
       "slug": "gestion-de-recursos-a-empresas",
       "name": "Gestión de Recursos a Empresas",
-      "tagline": "Gestión de Recursos a Empresas presta servicios profesionales a vecinos y empresas de Montilla.",
+      "tagline": "Especialistas en ahorro energético en Montilla, sobre todo para empresas.",
       "category": "profesionales",
       "categoryLabel": "Profesionales",
       "categoryUrl": "/profesionales/",
@@ -7531,10 +7531,13 @@
         "recursos",
         "empresas",
         "profesionales",
-        "presta",
-        "servicios",
-        "vecinos",
+        "especialistas",
+        "ahorro",
+        "energetico",
         "montilla",
+        "sobre",
+        "todo",
+        "para",
         "pol",
         "ind",
         "llanos",
@@ -7544,15 +7547,12 @@
         "peral",
         "consultant",
         "supplier",
-        "asesoria",
+        "energy",
         "manufacturer",
-        "finance",
         "service",
-        "association",
-        "organization",
-        "comercios"
+        "energia"
       ],
-      "searchBlob": "gestion de recursos a empresas profesionales gestion de recursos a empresas presta servicios profesionales a vecinos y empresas de montilla. consultant supplier asesoria manufacturer finance service association or organization gestion recursos empresas profesionales presta servicios vecinos montilla pol ind llanos del jarata isaac peral consultant supplier asesoria manufacturer finance service association organization comercios"
+      "searchBlob": "gestion de recursos a empresas profesionales especialistas en ahorro energetico en montilla, sobre todo para empresas. consultant supplier energy manufacturer service gestion recursos empresas profesionales especialistas ahorro energetico montilla sobre todo para pol ind llanos del jarata isaac peral consultant supplier energy manufacturer service energia"
     },
     {
       "slug": "godevo-restaurante",

@@ -7,6 +7,8 @@
 const SLUG_EXTRA = {
   "kyvera-digital":
     "Agencia de marketing digital, diseño web, SEO e IA con sede en Montilla. Montan webs, posicionamiento local y automatización para pymes de la Campiña Sur y el resto de España. Son el equipo detrás de Guía Montilla.",
+  "gestion-de-recursos-a-empresas":
+    "Especialistas en ahorro energético en Montilla, sobre todo para empresas. Optimizan factura eléctrica, monitorización de consumo, autoconsumo fotovoltaico, CAEs y eficiencia energética — no son una gestoría administrativa.",
   "bodega-boutique-finca-buytron":
     "Casa rural de alojamiento en finca junto a la N-331, a las afueras de Montilla. Ideal como base para visitar bodegas, patrimonio y la Campiña Sur sin dormir en el casco.",
   "bodegas-alvear":
@@ -386,11 +388,22 @@ export function richDescription(b) {
     }
   }
 
-  const ctx = categoryContext(b);
-  if (ctx) paragraphs.push(ctx);
+  // Con texto propio del negocio, no añadir contexto genérico de categoría
+  // (p. ej. «asesorías/gestorías» en profesionales).
+  if (!SLUG_EXTRA[b.slug]) {
+    const ctx = categoryContext(b);
+    if (ctx) paragraphs.push(ctx);
+  }
 
   return paragraphs.filter(Boolean).join("\n\n");
 }
+
+const SLUG_TIPS = {
+  "gestion-de-recursos-a-empresas":
+    "Ahorro energético y eficiencia para empresas: consulta inicial por teléfono o web. No es gestoría.",
+  "kyvera-digital":
+    "Pide presupuesto de web, SEO o marketing digital; son el equipo de Guía Montilla.",
+};
 
 export function richTagline(b) {
   if (!b || typeof b !== "object" || !b.name) {
@@ -403,6 +416,7 @@ export function richTagline(b) {
 }
 
 export function richTips(b) {
+  if (SLUG_TIPS[b.slug]) return SLUG_TIPS[b.slug];
   const hints = VISIT_HINTS[b.category] ?? [];
   if (!hints.length) return "Confirma horario el mismo día de la visita.";
   return hints[variant(b.slug + "-tip", hints.length)];
