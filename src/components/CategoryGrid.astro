@@ -1,25 +1,54 @@
 ---
-interface Category {
+interface Section {
   id: string;
   slug: string;
   name: string;
   headline: string;
+  image: string;
+  /** Ruta completa si no es /{slug}/ */
+  href?: string;
 }
 
 interface Props {
-  categories: Category[];
+  sections: Section[];
 }
 
-const { categories } = Astro.props;
+const { sections } = Astro.props;
 const base = import.meta.env.BASE_URL;
+
+function src(path: string) {
+  return path.startsWith("http") ? path : `${base}${path.replace(/^\//, "")}`;
+}
+
+function hrefFor(sec: Section) {
+  if (sec.href) {
+    return sec.href.startsWith("http") ? sec.href : `${base}${sec.href.replace(/^\//, "")}`;
+  }
+  return `${base}${sec.slug}/`;
+}
 ---
 
-<nav class="cat-index fade-in" aria-label="Categorías">
-  {categories.map((cat, i) => (
-    <a href={`${base}${cat.slug}/`}>
-      <span class="cat-index__num">{String(i + 1).padStart(2, "0")}</span>
-      <span class="cat-index__name">{cat.name}</span>
-      <span class="cat-index__hint">{cat.headline}</span>
+<nav class="cat-index fade-in" aria-label="Secciones">
+  {sections.map((sec) => (
+    <a
+      href={hrefFor(sec)}
+      class:list={[`cat-index__item`, `cat-index__item--${sec.id}`]}
+      data-section={sec.id}
+    >
+      <img
+        class="cat-index__img"
+        src={src(sec.image)}
+        alt=""
+        width="640"
+        height="480"
+        loading="lazy"
+        decoding="async"
+      />
+      <span class="cat-index__shade" aria-hidden="true"></span>
+      <span class="cat-index__copy">
+        <span class="cat-index__name">{sec.name}</span>
+        <span class="cat-index__hint">{sec.headline}</span>
+      </span>
     </a>
   ))}
 </nav>

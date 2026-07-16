@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CategoryGrid from "../../components/CategoryGrid.astro";
+import categories from "../../../data/categories.json";
+import {
+  NEGOCIO_CATEGORY_IDS,
+  photoForCategory,
+} from "../../lib/categoryImages";
+
+const base = import.meta.env.BASE_URL;
+const sections = NEGOCIO_CATEGORY_IDS.map((id) => {
+  const cat = categories.find((c) => c.id === id)!;
+  return {
+    id: cat.id,
+    slug: cat.slug,
+    name: cat.name,
+    headline: cat.headline,
+    image: photoForCategory(cat.id),
+  };
+});
+---
+
+<Layout
+  title="Negocios en Montilla — Directorio local"
+  description="Comercios, bares, alojamiento, salud, belleza, profesionales, motor y alimentación en Montilla. Fichas con foto, teléfono y cómo llegar."
+  image={photoForCategory("negocios")}
+>
+  <section class="page-head">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Ruta">
+        <a href={base}>Inicio</a>
+        <span aria-hidden="true"> / </span>
+        <span aria-current="page">Negocios</span>
+      </nav>
+      <h1>Negocios de Montilla</h1>
+      <p class="page-head__sub">
+        Todo el tejido local en un solo sitio: tiendas, bares, dormir, salud, belleza, gestores y motor.
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <CategoryGrid sections={sections} />
+    </div>
+  </section>
+</Layout>

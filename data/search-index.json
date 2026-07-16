@@ -1,7 +1,7 @@
 {
   "version": 1,
   "locale": "es",
-  "total": 463,
+  "total": 460,
   "categoryKeywords": {
     "bodegas": [
       "bodega",
@@ -504,6 +504,35 @@
     ]
   },
   "items": [
+    {
+      "slug": "kyvera-digital",
+      "name": "Kyvera Digital | Marketing Digital",
+      "tagline": "Agencia de marketing digital, diseño web, SEO e IA con sede en Montilla.",
+      "category": "profesionales",
+      "categoryLabel": "Profesionales",
+      "categoryUrl": "/profesionales/",
+      "featured": true,
+      "keywords": [
+        "kyvera",
+        "digital",
+        "marketing",
+        "profesionales",
+        "agencia",
+        "diseno",
+        "web",
+        "seo",
+        "con",
+        "sede",
+        "montilla",
+        "bartolome",
+        "polo",
+        "raigon",
+        "agency",
+        "designer",
+        "service"
+      ],
+      "searchBlob": "kyvera digital | marketing digital profesionales agencia de marketing digital, diseno web, seo e ia con sede en montilla. marketing agency web designer service kyvera digital marketing profesionales agencia diseno web seo con sede montilla bartolome polo raigon agency designer service"
+    },
     {
       "slug": "a-vv-gran-capitan-de-montilla",
       "name": "A.VV. GRAN CAPITAN de Montilla",
@@ -1213,7 +1242,7 @@
     {
       "slug": "arco-de-san-lorenzo-antiguo-convento-de-san-lorenz",
       "name": "Arco de San Lorenzo - Antiguo convento de San Lorenzo",
-      "tagline": "Arco de San Lorenzo - Antiguo convento de San Lorenzo es pieza del patrimonio religioso del casco histórico, visible en cualquier ruta a…",
+      "tagline": "Arco de San Lorenzo - Antiguo convento de San Lorenzo es pieza del patrimonio religioso del casco histórico, visible en cualquier ruta a pie.",
       "category": "monumentos",
       "categoryLabel": "Monumentos",
       "categoryUrl": "/monumentos/",
@@ -1234,6 +1263,7 @@
         "visible",
         "cualquier",
         "ruta",
+        "pie",
         "batalla",
         "garellano",
         "montilla",
@@ -1243,7 +1273,7 @@
         "iglesia",
         "monumento"
       ],
-      "searchBlob": "arco de san lorenzo - antiguo convento de san lorenzo monumentos arco de san lorenzo - antiguo convento de san lorenzo es pieza del patrimonio religioso del casco historico, visible en cualquier ruta a… historical landmark historical place arco san lorenzo antiguo convento monumentos pieza del patrimonio religioso casco historico visible cualquier ruta batalla garellano montilla historical landmark place iglesia monumento"
+      "searchBlob": "arco de san lorenzo - antiguo convento de san lorenzo monumentos arco de san lorenzo - antiguo convento de san lorenzo es pieza del patrimonio religioso del casco historico, visible en cualquier ruta a pie. historical landmark historical place arco san lorenzo antiguo convento monumentos pieza del patrimonio religioso casco historico visible cualquier ruta pie batalla garellano montilla historical landmark place iglesia monumento"
     },
     {
       "slug": "arco-de-santa-clara",
@@ -2421,47 +2451,44 @@
     {
       "slug": "bodega-boutique-finca-buytron",
       "name": "Bodega Boutique Finca Buytron",
-      "tagline": "En Bodega Boutique Finca Buytron se entiende la tradición bodeguera montillana: crianza, cata y memoria en roble americano.",
-      "category": "bodegas",
-      "categoryLabel": "Bodegas",
-      "categoryUrl": "/bodegas/",
+      "tagline": "Casa rural de alojamiento en finca junto a la N-331, a las afueras de Montilla.",
+      "category": "alojamiento",
+      "categoryLabel": "Alojamiento",
+      "categoryUrl": "/alojamiento/",
       "featured": false,
       "keywords": [
         "bodega",
         "boutique",
         "finca",
         "buytron",
-        "bodegas",
-        "entiende",
-        "tradicion",
-        "bodeguera",
-        "montillana:",
-        "crianza",
-        "cata",
-        "memoria",
-        "roble",
-        "americano",
+        "alojamiento",
+        "casa",
+        "rural",
+        "junto",
+        "331",
+        "las",
+        "afueras",
+        "montilla",
         "carretera",
         "cordoba",
         "malaga",
-        "331",
-        "montilla",
         "bed",
         "and",
         "breakfast",
         "farm",
         "manufacturer",
-        "alojamiento",
         "service",
+        "bed_and_breakfast",
         "vino",
-        "enoturismo"
+        "enoturismo",
+        "cata"
       ],
-      "searchBlob": "bodega boutique finca buytron bodegas en bodega boutique finca buytron se entiende la tradicion bodeguera montillana: crianza, cata y memoria en roble americano. bed and breakfast bodega farm manufacturer alojamiento service bodega boutique finca buytron bodegas entiende tradicion bodeguera montillana: crianza cata memoria roble americano carretera cordoba malaga 331 montilla bed and breakfast farm manufacturer alojamiento service vino enoturismo"
+      "searchBlob": "bodega boutique finca buytron alojamiento casa rural de alojamiento en finca junto a la n-331, a las afueras de montilla. bed and breakfast bodega farm manufacturer alojamiento service bodega boutique finca buytron alojamiento casa rural junto 331 las afueras montilla carretera cordoba malaga bed and breakfast farm manufacturer service bed_and_breakfast vino enoturismo cata"
     },
     {
       "slug": "bodega-y-vinedos-lagar-de-la-salud",
       "name": "Bodega y viñedos Lagar de la Salud",
-      "tagline": "Bodega y viñedos Lagar de la Salud forma parte del paisaje vitivinícola de Montilla, donde Pedro Ximénez y las soleras definen el…",
+      "tagline": "Bodega y viñedos Lagar de la Salud forma parte del paisaje vitivinícola de Montilla, donde Pedro Ximénez y las soleras definen el carácter del pueblo.",
       "category": "bodegas",
       "categoryLabel": "Bodegas",
       "categoryUrl": "/bodegas/",
@@ -2484,7 +2511,8 @@
         "las",
         "soleras",
         "definen",
-        "el…",
+        "caracter",
+        "pueblo",
         "carr",
         "cordoba",
         "malaga",
@@ -2496,7 +2524,7 @@
         "enoturismo",
         "cata"
       ],
-      "searchBlob": "bodega y vinedos lagar de la salud bodegas bodega y vinedos lagar de la salud forma parte del paisaje vitivinicola de montilla, donde pedro ximenez y las soleras definen el… bodega farm manufacturer service bodega vinedos lagar salud bodegas forma parte del paisaje vitivinicola montilla donde pedro ximenez las soleras definen el… carr cordoba malaga farm manufacturer service moriles vino enoturismo cata"
+      "searchBlob": "bodega y vinedos lagar de la salud bodegas bodega y vinedos lagar de la salud forma parte del paisaje vitivinicola de montilla, donde pedro ximenez y las soleras definen el caracter del pueblo. bodega farm manufacturer service bodega vinedos lagar salud bodegas forma parte del paisaje vitivinicola montilla donde pedro ximenez las soleras definen caracter pueblo carr cordoba malaga farm manufacturer service moriles vino enoturismo cata"
     },
     {
       "slug": "bodegas-alvear",
@@ -2580,7 +2608,7 @@
     {
       "slug": "bodegas-cruz-conde",
       "name": "Bodegas Cruz Conde",
-      "tagline": "Saga vitivinícola montillana con soleras que conservan la memoria del vino generoso cordobés y visitas que acercan al proceso de crianza…",
+      "tagline": "Saga vitivinícola montillana con soleras que conservan la memoria del vino generoso cordobés y visitas que acercan al proceso de crianza bajo velo de flor.",
       "category": "bodegas",
       "categoryLabel": "Bodegas",
       "categoryUrl": "/bodegas/",
@@ -2604,7 +2632,10 @@
         "visitas",
         "acercan",
         "proceso",
-        "crianza…",
+        "crianza",
+        "bajo",
+        "velo",
+        "flor",
         "rda",
         "canillo",
         "montilla",
@@ -2620,7 +2651,7 @@
         "enoturismo",
         "cata"
       ],
-      "searchBlob": "bodegas cruz conde bodegas saga vitivinicola montillana con soleras que conservan la memoria del vino generoso cordobes y visitas que acercan al proceso de crianza… bodega atraccion turistica vinoteca farm manufacturer service tienda bodegas cruz conde saga vitivinicola montillana con soleras que conservan memoria del vino generoso cordobes visitas acercan proceso crianza… rda canillo montilla bodega atraccion turistica vinoteca farm manufacturer service tienda moriles enoturismo cata"
+      "searchBlob": "bodegas cruz conde bodegas saga vitivinicola montillana con soleras que conservan la memoria del vino generoso cordobes y visitas que acercan al proceso de crianza bajo velo de flor. bodega atraccion turistica vinoteca farm manufacturer service tienda bodegas cruz conde saga vitivinicola montillana con soleras que conservan memoria del vino generoso cordobes visitas acercan proceso crianza bajo velo flor rda canillo montilla bodega atraccion turistica vinoteca farm manufacturer service tienda moriles enoturismo cata"
     },
     {
       "slug": "bodegas-galan-portero",
@@ -2657,42 +2688,6 @@
         "enoturismo"
       ],
       "searchBlob": "bodegas galan portero bodegas en bodegas galan portero se entiende la tradicion bodeguera montillana: crianza, cata y memoria en roble americano. bodega farm manufacturer service bodegas galan portero entiende tradicion bodeguera montillana: crianza cata memoria roble americano del marques vega armijo montilla bodega farm manufacturer service moriles vino enoturismo"
-    },
-    {
-      "slug": "bodegas-galan-portero-lagar-el-puntal",
-      "name": "Bodegas Galán Portero - Lagar El Puntal",
-      "tagline": "En Bodegas Galán Portero - Lagar El Puntal se entiende la tradición bodeguera montillana: crianza, cata y memoria en roble americano.",
-      "category": "bodegas",
-      "categoryLabel": "Bodegas",
-      "categoryUrl": "/bodegas/",
-      "featured": false,
-      "keywords": [
-        "bodegas",
-        "galan",
-        "portero",
-        "lagar",
-        "puntal",
-        "entiende",
-        "tradicion",
-        "bodeguera",
-        "montillana:",
-        "crianza",
-        "cata",
-        "memoria",
-        "roble",
-        "americano",
-        "carretera",
-        "3130",
-        "montilla",
-        "bodega",
-        "farm",
-        "manufacturer",
-        "service",
-        "moriles",
-        "vino",
-        "enoturismo"
-      ],
-      "searchBlob": "bodegas galan portero - lagar el puntal bodegas en bodegas galan portero - lagar el puntal se entiende la tradicion bodeguera montillana: crianza, cata y memoria en roble americano. bodega farm manufacturer service bodegas galan portero lagar puntal entiende tradicion bodeguera montillana: crianza cata memoria roble americano carretera 3130 montilla bodega farm manufacturer service moriles vino enoturismo"
     },
     {
       "slug": "bodegas-la-aurora",
@@ -3552,7 +3547,7 @@
     {
       "slug": "casa-boutique-navarro-estudios-para-alquilar-carac",
       "name": "Casa Boutique Navarro - Estudios para alquilar. Características de un Hotel con las comodidades de una casa moderna privada.",
-      "tagline": "Casa Boutique Navarro - Estudios para alquilar. Características de un Hotel con las comodidades de una casa moderna privada. permite…",
+      "tagline": "Casa Boutique Navarro - Estudios para alquilar. Características de un Hotel con las comodidades de una casa moderna privada. permite usar Montilla como base…",
       "category": "alojamiento",
       "categoryLabel": "Alojamiento",
       "categoryUrl": "/alojamiento/",
@@ -3573,12 +3568,15 @@
         "moderna",
         "privada",
         "alojamiento",
-        "permite…",
-        "enfermeria",
+        "permite",
+        "usar",
         "montilla",
+        "como",
+        "base…",
+        "enfermeria",
         "dormir"
       ],
-      "searchBlob": "casa boutique navarro - estudios para alquilar. caracteristicas de un hotel con las comodidades de una casa moderna privada. alojamiento casa boutique navarro - estudios para alquilar. caracteristicas de un hotel con las comodidades de una casa moderna privada. permite… hotel alojamiento casa boutique navarro estudios para alquilar caracteristicas hotel con las comodidades una moderna privada alojamiento permite… enfermeria montilla dormir"
+      "searchBlob": "casa boutique navarro - estudios para alquilar. caracteristicas de un hotel con las comodidades de una casa moderna privada. alojamiento casa boutique navarro - estudios para alquilar. caracteristicas de un hotel con las comodidades de una casa moderna privada. permite usar montilla como base… hotel alojamiento casa boutique navarro estudios para alquilar caracteristicas hotel con las comodidades una moderna privada alojamiento permite usar montilla como base… enfermeria dormir"
     },
     {
       "slug": "casa-de-la-tercia",
@@ -3832,36 +3830,6 @@
         "historia"
       ],
       "searchBlob": "castillo de montilla monumentos fortaleza del siglo xiv vinculada al gran capitan. historical landmark historical place castillo montilla monumentos fortaleza del siglo xiv vinculada gran capitan calle iglesia historical landmark place patrimonio historia"
-    },
-    {
-      "slug": "catas-dirigidas",
-      "name": "CATAS DIRIGIDAS",
-      "tagline": "Catas dirigidas de vinos Montilla-Moriles para aprender a distinguir fino, amontillado y oloroso con explicación profesional.",
-      "category": "bodegas",
-      "categoryLabel": "Bodegas",
-      "categoryUrl": "/bodegas/",
-      "featured": false,
-      "keywords": [
-        "catas",
-        "dirigidas",
-        "bodegas",
-        "vinos",
-        "montilla",
-        "moriles",
-        "para",
-        "aprender",
-        "distinguir",
-        "fino",
-        "amontillado",
-        "oloroso",
-        "con",
-        "explicacion",
-        "profesional",
-        "cervantes",
-        "bar",
-        "restaurante"
-      ],
-      "searchBlob": "catas dirigidas bodegas catas dirigidas de vinos montilla-moriles para aprender a distinguir fino, amontillado y oloroso con explicacion profesional. bar de vinos bar catas dirigidas bodegas vinos montilla moriles para aprender distinguir fino amontillado oloroso con explicacion profesional cervantes bar restaurante"
     },
     {
       "slug": "caylo-tejidos",
@@ -5370,7 +5338,7 @@
     {
       "slug": "despacho-abogados-en-montilla-francisco-jose-garci",
       "name": "DESPACHO ABOGADOS en MONTILLA - Francisco José García Zamora & María José Jiménez Pulido",
-      "tagline": "DESPACHO ABOGADOS en MONTILLA - Francisco José García Zamora & María José Jiménez Pulido presta servicios profesionales a vecinos y…",
+      "tagline": "DESPACHO ABOGADOS en MONTILLA - Francisco José García Zamora & María José Jiménez Pulido presta servicios profesionales a vecinos y empresas de Montilla.",
       "category": "profesionales",
       "categoryLabel": "Profesionales",
       "categoryUrl": "/profesionales/",
@@ -5390,6 +5358,7 @@
         "presta",
         "servicios",
         "vecinos",
+        "empresas",
         "andalucia",
         "abogado",
         "consultant",
@@ -5398,7 +5367,7 @@
         "inmobiliaria",
         "seguros"
       ],
-      "searchBlob": "despacho abogados en montilla - francisco jose garcia zamora & maria jose jimenez pulido profesionales despacho abogados en montilla - francisco jose garcia zamora & maria jose jimenez pulido presta servicios profesionales a vecinos y… abogado consultant service despacho abogados montilla francisco jose garcia zamora maria jimenez pulido profesionales presta servicios vecinos andalucia abogado consultant service gestoria inmobiliaria seguros"
+      "searchBlob": "despacho abogados en montilla - francisco jose garcia zamora & maria jose jimenez pulido profesionales despacho abogados en montilla - francisco jose garcia zamora & maria jose jimenez pulido presta servicios profesionales a vecinos y empresas de montilla. abogado consultant service despacho abogados montilla francisco jose garcia zamora maria jimenez pulido profesionales presta servicios vecinos empresas andalucia abogado consultant service gestoria inmobiliaria seguros"
     },
     {
       "slug": "disco-pub-teberee",
@@ -7780,36 +7749,6 @@
       "searchBlob": "gueto agundo, s.l. motor gueto agundo, s.l. atiende motoristas y conductores en montilla y la comarca. tire shop auto parts store taller mecanico tienda service gueto agundo motor atiende motoristas conductores montilla comarca del marques vega armijo tire shop auto parts store taller mecanico tienda service comercios"
     },
     {
-      "slug": "hacienda-bolonia",
-      "name": "Hacienda Bolonia",
-      "tagline": "En Hacienda Bolonia se entiende la tradición bodeguera montillana: crianza, cata y memoria en roble americano.",
-      "category": "bodegas",
-      "categoryLabel": "Bodegas",
-      "categoryUrl": "/bodegas/",
-      "featured": false,
-      "keywords": [
-        "hacienda",
-        "bolonia",
-        "bodegas",
-        "entiende",
-        "tradicion",
-        "bodeguera",
-        "montillana:",
-        "crianza",
-        "cata",
-        "memoria",
-        "roble",
-        "americano",
-        "san",
-        "francisco",
-        "solano",
-        "montilla",
-        "vinoteca",
-        "tienda"
-      ],
-      "searchBlob": "hacienda bolonia bodegas en hacienda bolonia se entiende la tradicion bodeguera montillana: crianza, cata y memoria en roble americano. vinoteca tienda hacienda bolonia bodegas entiende tradicion bodeguera montillana: crianza cata memoria roble americano san francisco solano montilla vinoteca tienda"
-    },
-    {
       "slug": "helma",
       "name": "HELMA",
       "tagline": "HELMA mantiene el comercio de barrio en el casco o en el ensanche.",
@@ -8020,7 +7959,7 @@
     {
       "slug": "hotel-don-gonzalo",
       "name": "Hotel Restaurante Don Gonzalo",
-      "tagline": "Hotel Don Gonzalo, en la carretera de Madrid, combina habitaciones, piscina y restaurante de cocina montillana.",
+      "tagline": "Hotel Restaurante Don Gonzalo es parada de cocina montillana, donde mesa generosa y vino de la tierra van de la mano.",
       "category": "alojamiento",
       "categoryLabel": "Alojamiento",
       "categoryUrl": "/alojamiento/",
@@ -8031,14 +7970,18 @@
         "don",
         "gonzalo",
         "alojamiento",
-        "carretera",
-        "madrid",
-        "combina",
-        "habitaciones",
-        "piscina",
+        "parada",
         "cocina",
         "montillana",
+        "donde",
+        "mesa",
+        "generosa",
+        "vino",
+        "tierra",
+        "van",
+        "mano",
         "ctra",
+        "madrid",
         "447",
         "montilla",
         "banquet",
@@ -8059,7 +8002,7 @@
         "tapas",
         "dormir"
       ],
-      "searchBlob": "hotel restaurante don gonzalo alojamiento hotel don gonzalo, en la carretera de madrid, combina habitaciones, piscina y restaurante de cocina montillana. hotel banquet hall cafeteria swimming pool mediterranean restaurant wedding venue sports activity location bar hotel restaurante don gonzalo alojamiento carretera madrid combina habitaciones piscina cocina montillana ctra 447 montilla banquet hall cafeteria swimming pool mediterranean restaurant wedding venue sports activity location bar comer comida tapas dormir"
+      "searchBlob": "hotel restaurante don gonzalo alojamiento hotel restaurante don gonzalo es parada de cocina montillana, donde mesa generosa y vino de la tierra van de la mano. hotel banquet hall cafeteria swimming pool mediterranean restaurant wedding venue sports activity location bar hotel restaurante don gonzalo alojamiento parada cocina montillana donde mesa generosa vino tierra van mano ctra madrid 447 montilla banquet hall cafeteria swimming pool mediterranean restaurant wedding venue sports activity location bar comer comida tapas dormir"
     },
     {
       "slug": "i-e-s-emilio-canalejo-olmeda",
@@ -10162,7 +10105,7 @@
     {
       "slug": "moncafe",
       "name": "Moncafé",
-      "tagline": "En Moncafé se come con el ritmo del pueblo: desayunos contundentes, menú del día, tapas y guisos caseros.",
+      "tagline": "En Moncafé se come con el ritmo del pueblo: tapas, platos de temporada y ambiente de barrio.",
       "category": "restaurantes",
       "categoryLabel": "Restaurantes",
       "categoryUrl": "/restaurantes/",
@@ -10175,13 +10118,11 @@
         "ritmo",
         "del",
         "pueblo:",
-        "desayunos",
-        "contundentes",
-        "menu",
-        "dia",
         "tapas",
-        "guisos",
-        "caseros",
+        "platos",
+        "temporada",
+        "ambiente",
+        "barrio",
         "pol",
         "ind",
         "llanos",
@@ -10192,12 +10133,17 @@
         "montilla",
         "restaurante",
         "bar",
+        "desayunos",
+        "menu",
+        "dia",
+        "guisos",
+        "caseros",
         "terraza",
         "destacado",
         "café",
         "copas"
       ],
-      "searchBlob": "moncafe restaurantes en moncafe se come con el ritmo del pueblo: desayunos contundentes, menu del dia, tapas y guisos caseros. restaurante moncafe restaurantes come con ritmo del pueblo: desayunos contundentes menu dia tapas guisos caseros pol ind llanos jarata madame curie 101 montilla restaurante bar terraza destacado cafe copas"
+      "searchBlob": "moncafe restaurantes en moncafe se come con el ritmo del pueblo: tapas, platos de temporada y ambiente de barrio. restaurante moncafe restaurantes come con ritmo del pueblo: tapas platos temporada ambiente barrio pol ind llanos jarata madame curie 101 montilla restaurante bar desayunos menu dia guisos caseros terraza destacado cafe copas"
     },
     {
       "slug": "monti-reclam",
@@ -10331,7 +10277,7 @@
     {
       "slug": "monumento-a-inca-garcilaso-de-la-vega-fuente-dedic",
       "name": "Monumento a Inca Garcilaso de la Vega - Fuente dedicada al Mestizaje",
-      "tagline": "Monumento a Inca Garcilaso de la Vega - Fuente dedicada al Mestizaje es testimonio del legado histórico de la villa, entre iglesias,…",
+      "tagline": "Monumento a Inca Garcilaso de la Vega - Fuente dedicada al Mestizaje es testimonio del legado histórico de la villa, entre iglesias, arcos y palacios del…",
       "category": "monumentos",
       "categoryLabel": "Monumentos",
       "categoryUrl": "/monumentos/",
@@ -10352,6 +10298,9 @@
         "villa",
         "entre",
         "iglesias",
+        "arcos",
+        "palacios",
+        "del…",
         "paseo",
         "las",
         "mercedes",
@@ -10359,7 +10308,7 @@
         "sculpture",
         "patrimonio"
       ],
-      "searchBlob": "monumento a inca garcilaso de la vega - fuente dedicada al mestizaje monumentos monumento a inca garcilaso de la vega - fuente dedicada al mestizaje es testimonio del legado historico de la villa, entre iglesias,… sculpture monumento inca garcilaso vega fuente dedicada mestizaje monumentos testimonio del legado historico villa entre iglesias paseo las mercedes montilla sculpture patrimonio"
+      "searchBlob": "monumento a inca garcilaso de la vega - fuente dedicada al mestizaje monumentos monumento a inca garcilaso de la vega - fuente dedicada al mestizaje es testimonio del legado historico de la villa, entre iglesias, arcos y palacios del… sculpture monumento inca garcilaso vega fuente dedicada mestizaje monumentos testimonio del legado historico villa entre iglesias arcos palacios del… paseo las mercedes montilla sculpture patrimonio"
     },
     {
       "slug": "monumento-al-gran-capitan",
@@ -14703,45 +14652,6 @@
         "service"
       ],
       "searchBlob": "vidosa sonido e iluminacion s.l. comercios vidosa sonido e iluminacion s.l. mantiene el comercio de barrio en el casco o en el ensanche. electronica tienda service vidosa sonido iluminacion comercios mantiene comercio barrio casco ensanche 331 montilla electronica tienda service"
-    },
-    {
-      "slug": "vinos-de-anora",
-      "name": "Vinos de Anora",
-      "tagline": "Vinos de Anora es parte del tejido de bares y cafés del pueblo, donde la copa y la conversación marcan el día.",
-      "category": "bodegas",
-      "categoryLabel": "Bodegas",
-      "categoryUrl": "/bodegas/",
-      "featured": false,
-      "keywords": [
-        "vinos",
-        "anora",
-        "bodegas",
-        "parte",
-        "del",
-        "tejido",
-        "bares",
-        "cafes",
-        "pueblo",
-        "donde",
-        "copa",
-        "conversacion",
-        "marcan",
-        "dia",
-        "europa",
-        "montilla",
-        "bodega",
-        "bar",
-        "vinoteca",
-        "farm",
-        "tienda",
-        "pub",
-        "manufacturer",
-        "comercios",
-        "vino",
-        "enoturismo",
-        "cata"
-      ],
-      "searchBlob": "vinos de anora bodegas vinos de anora es parte del tejido de bares y cafes del pueblo, donde la copa y la conversacion marcan el dia. bodega bar de vinos vinoteca farm tienda pub bar manufacturer vinos anora bodegas parte del tejido bares cafes pueblo donde copa conversacion marcan dia europa montilla bodega bar vinoteca farm tienda pub manufacturer comercios vino enoturismo cata"
     },
     {
       "slug": "zeeman-montilla",

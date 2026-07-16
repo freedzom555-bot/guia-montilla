@@ -21,6 +21,10 @@ export default defineConfig({
   site,
   base: basePath === "/" ? undefined : basePath,
   output: "static",
+  redirects: {
+    "/feria": "/rutas/",
+    "/eventos": "/noticias/",
+  },
   integrations: [
     sitemap({
       filter: (page) => !page.includes("/404") && !page.includes("/interno/"),

@@ -7,22 +7,60 @@ import IndexRow from "../components/IndexRow.astro";
 import businesses from "../../data/businesses.json";
 import categories from "../../data/categories.json";
 import routes from "../../data/routes.json";
-import events from "../../data/events.json";
 import news from "../../data/news.json";
 import { getCollection } from "astro:content";
 import { SEO } from "../data/site";
+import {
+  HOME_SECTION_IDS,
+  photoForCategory,
+} from "../lib/categoryImages";
 
-const lead = businesses.find((b) => b.slug === "bodegas-alvear") ?? businesses[0];
-const shortlist = businesses.filter((b) => b.featured && b.slug !== lead.slug).slice(0, 8);
-const featuredRoute = routes[0];
-const recentEvents = events.slice(0, 5);
+const lead =
+  businesses.find((b) => b.slug === "kyvera-digital") ??
+  businesses.find((b) => b.featured) ??
+  businesses[0];
+const shortlist = businesses
+  .filter((b) => b.featured && b.slug !== lead.slug)
+  .slice(0, 8);
+const featuredRoute = routes.find((r) => r.slug === "ruta-fino-manana") ?? routes[0];
+const hikeRoutes = routes.filter((r) => r.type === "senderismo").slice(0, 3);
 const latestNews = [...news]
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   .slice(0, 4);
 const base = import.meta.env.BASE_URL;
-const quickCats = ["bodegas", "restaurantes", "monumentos", "rutas"]
-  .map((id) => categories.find((c) => c.id === id))
-  .filter(Boolean);
+
+const homeSections = HOME_SECTION_IDS.map((id) => {
+  if (id === "negocios") {
+    return {
+      id: "negocios",
+      slug: "negocios",
+      name: "Negocios",
+      headline: "Comercio, salud, dormir y más",
+      image: photoForCategory("negocios"),
+    };
+  }
+  const cat = categories.find((c) => c.id === id)!;
+  return {
+    id: cat.id,
+    slug: cat.slug,
+    name: cat.name,
+    headline: cat.headline,
+    image: photoForCategory(cat.id),
+  };
+});
+
+const quickCats = [
+  { slug: "bodegas", name: "Bodegas" },
+  { slug: "restaurantes", name: "Restaurantes" },
+  { slug: "rutas", name: "Rutas", className: "hero__shortcut--rutas" },
+  { slug: "negocios", name: "Negocios", className: "hero__shortcut--negocios" },
+  {
+    slug: "negocio/kyvera-digital",
+    name: "Marketing Digital",
+    className: "hero__shortcut--marketing",
+  },
+];
+
 const latestPosts = (await getCollection("blog"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
@@ -33,14 +71,15 @@ const latestPosts = (await getCollection("blog"))
   description={SEO.defaultDescription}
   image="/images/og-default.jpg"
 >
-  <section class="hero" aria-labelledby="hero-title">
+  <section class="hero" aria-labelledby="hero-brand">
     <div class="hero__scene" aria-hidden="true">
       <img
         class="hero__photo"
         src={`${base}images/hero/hero.jpg`}
         alt=""
-        width="1600"
-        height="1067"
+        width="2400"
+        height="1378"
+        sizes="100vw"
         loading="eager"
         fetchpriority="high"
         decoding="async"
@@ -48,96 +87,39 @@ const latestPosts = (await getCollection("blog"))
       <div class="hero__veil"></div>
     </div>
 
-    <div class="wrap hero__shell">
+    <div class="hero__shell">
       <div class="hero__panel">
-        <p class="hero__kicker">Guía Montilla · Córdoba</p>
-        <h1 class="hero__title" id="hero-title">
-          <span class="hero__title-line">Montilla,</span>
-          <span class="hero__title-line hero__title-line--accent">sin dar vueltas</span>
-        </h1>
+        <p class="hero__place">Montilla · Córdoba</p>
+        <h1 class="hero__brand" id="hero-brand">Guía Montilla</h1>
+        <p class="hero__title" id="hero-title">Todo el pueblo, en un solo click</p>
         <p class="hero__deck">
-          Dónde comer, qué visitar, dónde dormir y qué abre hoy. Bodegas, monumentos, comercios y rutas — con teléfono, horario y cómo llegar.
+          Bodegas, mesas, monumentos y negocios locales. Horario, teléfono y cómo llegar.
         </p>
 
-        <SearchBox />
+        <div class="hero__search">
+          <SearchBox />
+        </div>
 
         <nav class="hero__shortcuts" aria-label="Accesos rápidos">
           {quickCats.map((cat) => (
-            <a href={`${base}${cat.slug}/`}>{cat.name}</a>
+            <a href={`${base}${cat.slug}/`} class={cat.className}>{cat.name}</a>
           ))}
         </nav>
-
-        <dl class="hero__stats">
-          <div>
-            <dt>Fichas</dt>
-            <dd>{businesses.length}</dd>
-          </div>
-          <div>
-            <dt>Secciones</dt>
-            <dd>{categories.length}</dd>
-          </div>
-          <div>
-            <dt>Rutas</dt>
-            <dd>{routes.length}</dd>
-          </div>
-        </dl>
       </div>
-
-      <figure class="hero__aside">
-        <img
-          src={`${base}images/hero/hero.jpg`}
-          alt="Montilla: casco histórico, viñedos, fino y bodegas"
-          width="900"
-          height="1200"
-          loading="eager"
-          fetchpriority="high"
-        />
-        <figcaption>Casco, viñedos y bodegas de Montilla</figcaption>
-      </figure>
     </div>
   </section>
 
-  <section class="feria-banner">
-    <a href={`${base}feria/`} class="wrap feria-banner__inner">
-      <div class="feria-banner__text">
-        <span class="feria-banner__badge">8 – 14 julio</span>
-        <span class="feria-banner__title">Feria de El Santo 2026</span>
-        <span class="feria-banner__sub">Programa día a día, conciertos y casetas</span>
-      </div>
-      <span class="feria-banner__cta">Ver la feria →</span>
-    </a>
-  </section>
-
   <div class="wrap">
-    <CategoryGrid categories={categories} />
+    <CategoryGrid sections={homeSections} />
   </div>
-
-  {latestPosts.length > 0 && (
-    <section class="home-blog-teaser">
-      <div class="wrap">
-        <div class="home-blog-teaser__head fade-in">
-          <h2>Guías sobre Montilla</h2>
-          <a href={`${base}blog/`}>Ver las 50 →</a>
-        </div>
-        <ul class="home-blog-teaser__list fade-in">
-          {latestPosts.map((post) => (
-            <li>
-              <a href={`${base}blog/${post.id}/`}>{post.data.title}</a>
-              <p>{post.data.description}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  )}
 
   <section class="block">
     <div class="wrap">
       <div class="block-head fade-in">
-        <h2>Lo esencial</h2>
-        <a href={`${base}bodegas/`}>Todas las bodegas →</a>
+        <h2>{lead.slug === "kyvera-digital" ? "Patrocinio" : "Destacado"}</h2>
+        <a href={`${base}negocio/${lead.slug}/`}>Ver ficha →</a>
       </div>
-      <FeatureLead business={lead} />
+      <FeatureLead business={lead} kicker={lead.slug === "kyvera-digital" ? "Patrocinio" : "Destacado"} />
       <ul class="index-list">
         {shortlist.map((b) => <IndexRow business={b} />)}
       </ul>
@@ -149,7 +131,13 @@ const latestPosts = (await getCollection("blog"))
       <div class="wrap fade-in">
         <div class="route-strip">
           <div class="route-strip__img">
-            <img src={`${base}images/hero/ruta.jpg`} alt="Calle empedrada y Castillo de Montilla" width="1000" height="700" loading="lazy" />
+            <img
+              src={`${base}images/negocios/castillo-montilla/01.jpg`}
+              alt="Castillo de Montilla"
+              width="1000"
+              height="700"
+              loading="lazy"
+            />
           </div>
           <div class="route-strip__body">
             <h3>{featuredRoute.title}</h3>
@@ -169,6 +157,32 @@ const latestPosts = (await getCollection("blog"))
             <a href={`${base}ruta/${featuredRoute.slug}/`} class="route-strip__link">Ruta completa →</a>
           </div>
         </div>
+      </div>
+    </section>
+  )}
+
+  {hikeRoutes.length > 0 && (
+    <section class="block">
+      <div class="wrap">
+        <div class="block-head fade-in">
+          <h2>Senderismo en Montilla</h2>
+          <a href={`${base}rutas/`}>Todas las rutas →</a>
+        </div>
+        <ul class="hike-grid fade-in">
+          {hikeRoutes.map((r) => (
+            <li class="hike-card">
+              <a href={`${base}ruta/${r.slug}/`}>
+                <p class="hike-card__meta">
+                  {r.distanceKm ? `${r.distanceKm} km` : r.duration}
+                  {r.difficulty ? ` · ${r.difficulty}` : ""}
+                  {r.shape ? ` · ${r.shape}` : ""}
+                </p>
+                <h3>{r.title}</h3>
+                <p>{r.description.slice(0, 140)}…</p>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )}
@@ -202,34 +216,69 @@ const latestPosts = (await getCollection("blog"))
     </section>
   )}
 
-  <section class="block">
-    <div class="wrap">
-      <div class="block-head fade-in">
-        <h2>Agenda</h2>
-        <a href={`${base}eventos/`}>Ver todo →</a>
-      </div>
-      {recentEvents.length > 0 ? (
-        <ul class="agenda fade-in">
-          {recentEvents.map((ev) => {
-            const d = new Date(ev.date);
-            return (
-              <li class="agenda-item">
-                <time class="agenda-item__when" datetime={ev.date}>
-                  {d.toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" })}
-                </time>
-                <div>
-                  <h2 class="agenda-item__title">
-                    {ev.url ? <a href={ev.url} target="_blank" rel="noopener">{ev.title}</a> : ev.title}
-                  </h2>
-                  {ev.excerpt && <p class="agenda-item__excerpt">{ev.excerpt.slice(0, 120)}…</p>}
-                </div>
-              </li>
-            );
-          })}
+  {latestPosts.length > 0 && (
+    <section class="home-blog-teaser">
+      <div class="wrap">
+        <div class="home-blog-teaser__head fade-in">
+          <h2>Guías sobre Montilla</h2>
+          <a href={`${base}blog/`}>Ver el blog →</a>
+        </div>
+        <ul class="home-blog-teaser__list fade-in">
+          {latestPosts.map((post) => (
+            <li>
+              <a href={`${base}blog/${post.id}/`}>{post.data.title}</a>
+              <p>{post.data.description}</p>
+            </li>
+          ))}
         </ul>
-      ) : (
-        <p class="empty-note">Próxima actualización automática de eventos.</p>
-      )}
-    </div>
-  </section>
+      </div>
+    </section>
+  )}
 </Layout>
+
+<style>
+  .hike-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  @media (max-width: 800px) {
+    .hike-grid { grid-template-columns: 1fr; }
+  }
+  .hike-card a {
+    display: block;
+    height: 100%;
+    padding: 1.25rem 1.35rem;
+    text-decoration: none;
+    color: inherit;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    transition: border-color var(--t) var(--ease), background var(--t) var(--ease);
+  }
+  .hike-card a:hover {
+    border-color: var(--wine);
+    background: var(--wine-light);
+    text-decoration: none;
+    color: inherit;
+  }
+  .hike-card__meta {
+    margin: 0 0 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--wine);
+  }
+  .hike-card h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.2rem;
+  }
+  .hike-card p:last-child {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+</style>

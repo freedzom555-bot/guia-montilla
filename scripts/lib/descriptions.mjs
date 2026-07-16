@@ -5,6 +5,10 @@
  */
 
 const SLUG_EXTRA = {
+  "kyvera-digital":
+    "Agencia de marketing digital, diseño web, SEO e IA con sede en Montilla. Montan webs, posicionamiento local y automatización para pymes de la Campiña Sur y el resto de España. Son el equipo detrás de Guía Montilla.",
+  "bodega-boutique-finca-buytron":
+    "Casa rural de alojamiento en finca junto a la N-331, a las afueras de Montilla. Ideal como base para visitar bodegas, patrimonio y la Campiña Sur sin dormir en el casco.",
   "bodegas-alvear":
     "Fundada en 1729, es una de las bodegas más antiguas de España y referencia mundial en Pedro Ximénez, soleras y vinos generosos. Las visitas por bodegas subterráneas explican el sistema de criaderas que define al Montilla-Moriles.",
   "bodegas-perez-barquero":
@@ -179,6 +183,8 @@ function ratingPhrase(b) {
 }
 
 function inferKind(b) {
+  if (b.slug === "bodega-boutique-finca-buytron") return "lodging";
+  if (b.slug === "kyvera-digital") return "professional";
   const n = cleanName(b.name).toLowerCase();
   const types = (b.placeTypes ?? []).join(" ").toLowerCase();
   const cat = b.category;
@@ -282,24 +288,106 @@ function buildDetail(b) {
   return ratingPhrase(b);
 }
 
-export function richDescription(b) {
-  const paragraphs = [buildLead(b)];
-
-  paragraphs.push(locationPhrase(b));
-
-  const hints = VISIT_HINTS[b.category];
-  if (hints?.length) {
-    paragraphs.push(hints[variant(b.slug, hints.length)]);
+function hoursSnippet(b) {
+  if (Array.isArray(b.hoursList) && b.hoursList.length) {
+    const open = b.hoursList.filter((l) => !/cerrado/i.test(l)).slice(0, 2);
+    if (open.length) return `Horario habitual (Google): ${open.join("; ")}.`;
   }
+  if (typeof b.hours === "string" && b.hours.length > 12 && b.hours.length < 160) {
+    return `Horario de referencia: ${b.hours.replace(/\s+/g, " ").trim()}.`;
+  }
+  return null;
+}
+
+function typeSnippet(b) {
+  const label = b.primaryType?.replace(/_/g, " ");
+  if (label && label.length > 2 && label.length < 48) {
+    return `En fichas de Google aparece como «${label}».`;
+  }
+  return null;
+}
+
+function contactSnippet(b) {
+  const bits = [];
+  if (b.phone) bits.push(`puedes llamar al ${b.phone}`);
+  if (b.web) bits.push("consulta su web para horarios y reservas");
+  if (!bits.length && b.googleMapsUrl) bits.push("confirma datos actualizados en Google Maps antes de ir");
+  if (!bits.length) return null;
+  return `Para concretar visita o cita, ${bits.join(" o ")}.`;
+}
+
+function categoryContext(b) {
+  const contexts = {
+    bodegas: [
+      "Montilla-Moriles se reconoce por el fino bajo velo de flor, el amontillado y el Pedro Ximénez. Visitar una bodega aquí no es solo catar: es entender criaderas, soleras y el paisaje de albariza de la Campiña Sur.",
+      "El enoturismo montillano funciona mejor sin prisas: mañana de visita, paseo por el casco y mesa con vino de la tierra. Muchas bodegas combinan tienda, cata y explicación del proceso.",
+    ],
+    restaurantes: [
+      "La cocina de Montilla se apoya en producto de Campiña, guisos de tradición y maridaje natural con los generosos locales. El ritmo es de comida larga, no de menú exprés.",
+      "Entre tabernas y asadores, el visitante encuentra desde tapeo de barra hasta mesas de reserva. El fino de grifo sigue siendo el mejor termómetro del pueblo.",
+    ],
+    "bares-cafes": [
+      "Bares y cafés marcan el día a día montillano: café de mañana, montadito al mediodía y copa al atardecer. Son el mejor sitio para preguntar qué se cuece en el pueblo.",
+    ],
+    alimentacion: [
+      "Comprar en Montilla es entender la despensa de la comarca: pan, aceite, fruta de temporada y productos que no siempre salen del municipio.",
+    ],
+    alojamiento: [
+      "Dormir en Montilla permite recorrer bodegas, patrimonio y tabernas a pie o en trayectos cortos. En feria y Semana Santa la ocupación sube: conviene reservar con margen.",
+    ],
+    monumentos: [
+      "El casco histórico concentra castillo, iglesias, conventos y arcos en un perímetro caminable. Cada parada gana si la encajas en una ruta a pie, no en un salto aislado en coche.",
+    ],
+    museos: [
+      "Los espacios museísticos ordenan la historia local —del Inca Garcilaso al Gran Capitán— y dan contexto a lo que luego ves en calles y bodegas.",
+    ],
+    parques: [
+      "Parques y paseos son la pausa verde del municipio: sombra, juego infantil y contraste con naves de crianza y calles empedradas.",
+    ],
+    "cultura-ocio": [
+      "Teatro, plazas, deporte e instituciones culturales completan la agenda más allá del vino. Revisa programación según temporada.",
+    ],
+    comercios: [
+      "El comercio de proximidad mantiene vivo el centro: moda, librería, hogar y servicios de barrio con horario partido habitual.",
+    ],
+    salud: [
+      "Farmacias, clínicas y especialistas cubren la red local. Para urgencias y guardias, confirma siempre el turno del día.",
+    ],
+    belleza: [
+      "Peluquerías, barberías y estética trabajan sobre todo con cita. En vísperas de feria y fiestas la demanda se concentra.",
+    ],
+    profesionales: [
+      "Asesorías, abogados, inmobiliarias y seguros atienden a vecinos y empresas de la Campiña. El teléfono sigue siendo la vía más directa para cita.",
+    ],
+    motor: [
+      "Talleres, gasolineras y servicios de motor cubren tanto el tráfico local como el de la N-331. En talleres, la cita previa evita esperas.",
+    ],
+    educacion: [
+      "Colegios e institutos forman parte del tejido cotidiano del municipio, junto a comercio, hostelería y bodegas.",
+    ],
+  };
+  const list = contexts[b.category];
+  if (!list?.length) return null;
+  return list[variant(b.slug, list.length)];
+}
+
+export function richDescription(b) {
+  /** Solo texto editorial. Datos prácticos van en la ficha (horario, contacto, etc.). */
+  const paragraphs = [];
+
+  const lead = buildLead(b);
+  if (lead) paragraphs.push(lead);
 
   const detail = buildDetail(b);
-  if (detail && !paragraphs.some((p) => p.includes(detail.slice(0, 40)))) {
-    paragraphs.push(detail);
+  if (detail && !paragraphs.some((p) => p.includes(detail.slice(0, 36)))) {
+    // ratingPhrase is data — keep it out of the story
+    if (!/^En Google Maps acumula|^Valorado en /.test(detail)) {
+      paragraphs.push(detail);
+    }
   }
 
-  if (b.featured && variant(b.slug, 4) === 0) {
-    paragraphs.push("Destacado en Guía Montilla por su relevancia para quien visita el pueblo.");
-  }
+  const ctx = categoryContext(b);
+  if (ctx) paragraphs.push(ctx);
 
   return paragraphs.filter(Boolean).join("\n\n");
 }
@@ -309,39 +397,54 @@ export function richTagline(b) {
     return "";
   }
   const lead = buildLead(b);
-  if (lead.length <= 140) return lead;
-  const cut = lead.slice(0, 137).replace(/\s+\S*$/, "");
+  if (lead.length <= 160) return lead;
+  const cut = lead.slice(0, 157).replace(/\s+\S*$/, "");
   return `${cut}…`;
+}
+
+export function richTips(b) {
+  const hints = VISIT_HINTS[b.category] ?? [];
+  if (!hints.length) return "Confirma horario el mismo día de la visita.";
+  return hints[variant(b.slug + "-tip", hints.length)];
 }
 
 export function richHighlights(b) {
   if (SLUG_EXTRA[b.slug]) {
     const sentences = SLUG_EXTRA[b.slug].split(/(?<=[.!])\s+/).slice(0, 3);
-    return sentences.map((s) => s.replace(/\.$/, "").trim()).filter((s) => s.length > 8);
+    return sentences
+      .map((s) => s.replace(/\.$/, "").trim())
+      .filter((s) => s.length > 8)
+      .map((s) => (s.length > 100 ? `${s.slice(0, 97).replace(/\s+\S*$/, "")}…` : s))
+      .slice(0, 3);
   }
 
   const kind = inferKind(b);
   const items = [];
-
-  if (b.rating >= 4.3 && b.reviewCount >= 20) {
-    items.push(`${b.rating}/5 en Google Maps (${b.reviewCount} opiniones)`);
-  }
-  if (b.shortAddress) items.push(b.shortAddress);
-  if (b.featured) items.push("Destacado en Guía Montilla");
-
   const kindLabels = {
     winery: "Bodega Montilla-Moriles",
-    restaurant: "Restauración local",
+    restaurant: "Cocina y mesa local",
     bar: "Bar o cafetería",
     lodging: "Alojamiento",
     temple: "Patrimonio religioso",
-    outdoor: "Espacio al aire libre",
+    outdoor: "Aire libre",
     culture: "Cultura y ocio",
-    heritage: "Patrimonio histórico",
+    heritage: "Patrimonio",
+    pharmacy: "Farmacia",
+    dental: "Clínica dental",
+    beauty: "Belleza",
+    motor: "Motor",
+    foodshop: "Alimentación",
+    shop: "Comercio local",
+    professional: "Servicios profesionales",
+    health: "Salud",
+    school: "Educación",
   };
-  if (kindLabels[kind] && items.length < 3) items.push(kindLabels[kind]);
-
-  return items.slice(0, 4);
+  if (kindLabels[kind]) items.push(kindLabels[kind]);
+  if (b.rating >= 4.3 && b.reviewCount >= 20) {
+    items.push(`${b.rating}/5 · ${b.reviewCount} opiniones`);
+  }
+  if (b.featured) items.push("Destacado en la guía");
+  return items.slice(0, 3);
 }
 
 export function isGenericText(text) {

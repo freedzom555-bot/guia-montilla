@@ -6,10 +6,15 @@ interface Business {
   slug: string;
   name: string;
   tagline: string;
+  description?: string;
   featured?: boolean;
   category: string;
   image?: string;
   gallery?: { src: string; alt: string }[];
+  rating?: number;
+  reviewCount?: number;
+  shortAddress?: string;
+  phone?: string;
 }
 
 interface Props {
@@ -21,20 +26,42 @@ const base = import.meta.env.BASE_URL;
 const catLabels = Object.fromEntries(categories.map((c) => [c.id, c.name]));
 const thumbSrc = business.gallery?.[0]?.src ?? business.image;
 const img = thumbSrc ? `${base}${thumbSrc.replace(/^\//, "")}` : null;
+const tagline = displayTagline(business);
+const excerpt = (business.description ?? "")
+  .split(/\n\n+/)
+  .map((p) => p.trim())
+  .filter(Boolean)
+  .slice(0, 2)
+  .join(" ");
+const blurb =
+  excerpt.length > 220
+    ? `${excerpt.slice(0, 217).replace(/\s+\S*$/, "")}…`
+    : excerpt || tagline;
+const metaBits = [
+  business.shortAddress,
+  business.rating && business.reviewCount
+    ? `${business.rating.toFixed(1)} ★ (${business.reviewCount})`
+    : null,
+  business.phone,
+].filter(Boolean);
 ---
 
 <li class="index-row fade-in">
   {img && (
     <a href={`${base}negocio/${business.slug}/`} class="index-row__thumb" tabindex="-1" aria-hidden="true">
-      <img src={img} alt="" width="72" height="72" loading="lazy" />
+      <img src={img} alt="" width="160" height="120" loading="lazy" />
     </a>
   )}
   <div class="index-row__body">
     <h3 class="index-row__title">
-      {business.featured && <span class="pill">Destacado</span>}
+      {business.featured && (
+        <span class="pill">{business.slug === "kyvera-digital" ? "Patrocinio" : "Destacado"}</span>
+      )}
       <a href={`${base}negocio/${business.slug}/`}>{business.name}</a>
     </h3>
-    <p class="index-row__sub">{displayTagline(business)}</p>
+    <p class="index-row__sub">{tagline}</p>
+    {blurb && blurb !== tagline && <p class="index-row__desc">{blurb}</p>}
+    {metaBits.length > 0 && <p class="index-row__meta">{metaBits.join(" · ")}</p>}
   </div>
   <span class="index-row__cat">{catLabels[business.category] ?? business.category}</span>
 </li>

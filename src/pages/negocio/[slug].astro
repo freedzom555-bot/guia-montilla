@@ -13,6 +13,7 @@ import {
   seoGalleryImages,
 } from "../../lib/seo";
 import { displayTagline } from "../../lib/business";
+import { NEGOCIO_CATEGORY_IDS } from "../../lib/categoryImages";
 
 export function getStaticPaths() {
   return businesses.map((business) => ({
@@ -27,6 +28,7 @@ const categoryName = category?.name ?? "Montilla";
 const base = import.meta.env.BASE_URL;
 const siteUrl = (Astro.site ?? new URL("http://localhost:4321")).href.replace(/\/$/, "");
 const pageUrl = new URL(`${base}negocio/${business.slug}/`, siteUrl).href;
+const isNegocioCat = (NEGOCIO_CATEGORY_IDS as readonly string[]).includes(business.category);
 const categoryUrl = new URL(`${base}${business.category}/`, siteUrl).href;
 
 const rawGallery = business.gallery?.length
@@ -36,15 +38,24 @@ const rawGallery = business.gallery?.length
     : [];
 
 const gallery = seoGalleryImages(rawGallery, business, categoryName, base);
-
 const imagesForSchema = gallery.map((g) => new URL(g.href, siteUrl).href);
 
 const metaTitle = businessTitle(business.name, categoryName);
 const metaDescription = businessDescription(business, categoryName);
 const metaKeywords = businessKeywords(business, categoryName);
 const ogImage = gallery[0]?.src ?? "/images/og-default.jpg";
-
 const tagline = displayTagline(business);
+const paragraphs = (business.description ?? "")
+  .split(/\n\n+/)
+  .map((p) => p.trim())
+  .filter(Boolean);
+
+const hoursLines =
+  business.hoursList?.length > 0
+    ? business.hoursList
+    : business.hours
+      ? [business.hours]
+      : [];
 
 const schemas = buildBusinessSchemas({
   business,
@@ -78,13 +89,21 @@ const schemas = buildBusinessSchemas({
         <nav class="breadcrumb" aria-label="Ruta de navegación">
           <a href={base}>Inicio</a>
           <span aria-hidden="true"> / </span>
+          {isNegocioCat && (
+            <>
+              <a href={`${base}negocios/`}>Negocios</a>
+              <span aria-hidden="true"> / </span>
+            </>
+          )}
           <a href={`${base}${business.category}/`}>{categoryName}</a>
           <span aria-hidden="true"> / </span>
           <span aria-current="page">{business.name}</span>
         </nav>
         <div class="page-head__meta">
-          {business.featured && <span class="pill">Destacado</span>}
-          {business.priceRange && <span class="price-badge">{business.priceRange}</span>}
+          {business.featured && (
+            <span class="pill">{business.slug === "kyvera-digital" ? "Patrocinio" : "Destacado"}</span>
+          )}
+          <span class="pill pill--muted">{categoryName}</span>
           {business.rating && (
             <span class="pill pill--muted">
               {business.rating.toFixed(1)} ★
@@ -92,14 +111,8 @@ const schemas = buildBusinessSchemas({
             </span>
           )}
         </div>
-        <h1>
-          {business.name}
-          <span class="h1-location"> en Montilla, Córdoba</span>
-        </h1>
+        <h1>{business.name}</h1>
         <p class="page-head__sub">{tagline}</p>
-        <p class="page-head__local">
-          {categoryName} · Montilla (14550) · Campiña Sur
-        </p>
       </div>
     </section>
 
@@ -107,26 +120,24 @@ const schemas = buildBusinessSchemas({
       {gallery.length > 0 ? (
         <PhotoGallery images={gallery} name={business.name} />
       ) : (
-        <p class="no-photos">Sin fotos en Google Maps. Consulta la ficha en Google Maps para ver imágenes actualizadas.</p>
+        <p class="no-photos">Sin fotos en esta ficha.</p>
       )}
     </div>
 
     <div class="wrap page-body">
       <div class="page-body__prose">
         <section class="info-block info-block--about">
-          <h2>Sobre {business.name} en Montilla</h2>
-          {
-            business.description.split("\n\n").map((para, i) => (
-              <p class:list={[{ "description-lead": i === 0 }]} itemprop={i === 0 ? "description" : undefined}>
-                {para}
-              </p>
-            ))
-          }
+          <h2>Sobre este lugar</h2>
+          {paragraphs.map((para, i) => (
+            <p class:list={[{ "description-lead": i === 0 }]} itemprop={i === 0 ? "description" : undefined}>
+              {para}
+            </p>
+          ))}
         </section>
 
         {business.highlights?.length > 0 && (
           <section class="info-block info-block--highlights">
-            <h2>Qué destaca</h2>
+            <h2>En resumen</h2>
             <ul class="highlights-list">
               {business.highlights.map((h) => <li>{h}</li>)}
             </ul>
@@ -134,63 +145,22 @@ const schemas = buildBusinessSchemas({
         )}
 
         {business.tips && (
-          <section class="info-block">
-            <h2>Consejo práctico</h2>
+          <section class="info-block info-block--tip">
+            <h2>Consejo</h2>
             <p>{business.tips}</p>
           </section>
         )}
 
-        {business.hoursList?.length > 0 ? (
-          <section class="info-block">
-            <h2>Horario habitual</h2>
-            <ul class="hours-list">
-              {business.hoursList.map((line) => <li>{line}</li>)}
-            </ul>
-          </section>
-        ) : business.hours ? (
-          <section class="info-block">
-            <h2>Horario</h2>
-            <p>{business.hours}</p>
-          </section>
-        ) : null}
-
-        {business.currentHours?.length > 0 && (
-          <section class="info-block">
-            <h2>Horario actual</h2>
-            <ul class="hours-list">
-              {business.currentHours.map((line) => <li>{line}</li>)}
-            </ul>
-          </section>
-        )}
-
-        {business.accessibility && (
-          <section class="info-block">
-            <h2>Accesibilidad</h2>
-            <p>{business.accessibility}</p>
-          </section>
-        )}
-
-        {business.payment && (
-          <section class="info-block">
-            <h2>Formas de pago</h2>
-            <p>{business.payment}</p>
-          </section>
-        )}
-
         <RelatedPlaces current={business} all={businesses} />
-
-        {business.tags && (
-          <ul class="tag-row" aria-label="Etiquetas">
-            {business.tags.map((tag) => <li>{tag}</li>)}
-          </ul>
-        )}
       </div>
 
-      <aside class="sidebox" aria-label="Contacto y ubicación">
-        <h2 class="sidebox__title">Información de contacto</h2>
+      <aside class="sidebox" aria-label="Datos prácticos">
+        <h2 class="sidebox__title">Datos prácticos</h2>
+
         {business.businessStatusLabel && (
           <p class="status-badge">{business.businessStatusLabel}</p>
         )}
+
         <dl class="contact-dl">
           {business.address && (
             <>
@@ -238,21 +208,44 @@ const schemas = buildBusinessSchemas({
               <dd itemprop="priceRange">{business.priceRange}</dd>
             </>
           )}
+          {business.payment && (
+            <>
+              <dt>Pago</dt>
+              <dd>{business.payment}</dd>
+            </>
+          )}
+          {business.accessibility && (
+            <>
+              <dt>Accesibilidad</dt>
+              <dd>{business.accessibility}</dd>
+            </>
+          )}
         </dl>
 
-        {business.social?.length > 0 && (
-          <>
-            <h3>Redes sociales</h3>
-            <ul class="social-links">
-              {business.social.map((url) => (
-                <li>
-                  <a href={url} target="_blank" rel="noopener noreferrer">
-                    {url.includes("instagram") ? "Instagram" : url.includes("facebook") ? "Facebook" : "Red social"}
-                  </a>
-                </li>
-              ))}
+        {hoursLines.length > 0 && (
+          <div class="sidebox__hours">
+            <h3>Horario</h3>
+            <ul class="hours-list">
+              {hoursLines.map((line) => <li>{line}</li>)}
             </ul>
-          </>
+            <p class="info-note">Confirma el día de tu visita.</p>
+          </div>
+        )}
+
+        {business.social?.length > 0 && (
+          <ul class="social-links">
+            {business.social.map((url) => (
+              <li>
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  {url.includes("instagram")
+                    ? "Instagram"
+                    : url.includes("facebook")
+                      ? "Facebook"
+                      : "Red social"}
+                </a>
+              </li>
+            ))}
+          </ul>
         )}
 
         {business.googleMapsUrl && (
@@ -262,16 +255,8 @@ const schemas = buildBusinessSchemas({
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ver en Google Maps
+            Cómo llegar
           </a>
-        )}
-
-        {business.turismoUrl && (
-          <p class="sidebox__source">
-            <a href={business.turismoUrl} target="_blank" rel="noopener noreferrer">
-              Ficha en Turismo de Montilla
-            </a>
-          </p>
         )}
       </aside>
     </div>
@@ -279,19 +264,45 @@ const schemas = buildBusinessSchemas({
 </Layout>
 
 <style>
-  .h1-location {
-    font-weight: 400;
-    font-size: 0.72em;
-    opacity: 0.82;
+  .page-head__sub {
+    max-width: 40rem;
   }
-  .page-head__local {
-    margin: 0.35rem 0 0;
-    font-size: 0.88rem;
-    color: var(--ink-soft);
+  .description-lead {
+    font-size: 1.08rem;
+    line-height: 1.65;
+  }
+  .info-block--about p + p {
+    margin-top: 0.85rem;
+  }
+  .info-block--tip {
+    padding: 1rem 1.15rem;
+    background: var(--wine-light);
+    border-left: 3px solid var(--wine);
+  }
+  .info-block--tip h2 {
+    margin-top: 0;
+  }
+  .info-note {
+    margin: 0.5rem 0 0;
+    font-size: 0.8rem;
+    color: var(--ink-muted);
   }
   .sidebox__title {
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin: 0 0 var(--space-2);
+  }
+  .sidebox__hours {
+    margin: 1rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+  }
+  .sidebox__hours h3 {
+    margin: 0 0 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
   }
   .visually-hidden {
     position: absolute;
@@ -309,40 +320,29 @@ const schemas = buildBusinessSchemas({
   }
   .btn--maps {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.65rem 1.1rem;
-    background: var(--accent, #8b2942);
-    color: #fff;
-    border-radius: 6px;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.1rem;
+    background: var(--wine);
+    color: oklch(0.98 0.01 80);
+    border-radius: 2px;
     font-weight: 600;
     text-decoration: none;
     text-align: center;
     width: 100%;
   }
   .btn--maps:hover {
-    filter: brightness(1.08);
+    background: var(--wine-deep);
   }
   .social-links {
     list-style: none;
     padding: 0;
     margin: 0 0 1rem;
   }
-  .social-links a {
-    font-size: 0.95rem;
-  }
-  .sidebox__source {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    opacity: 0.75;
-  }
-  .pill--muted {
-    background: rgba(0, 0, 0, 0.06);
-    color: inherit;
-  }
   .hours-list {
     margin: 0;
-    padding-left: 1.25rem;
-    line-height: 1.7;
+    padding-left: 1.1rem;
+    line-height: 1.65;
+    font-size: 0.9rem;
   }
   .status-badge {
     display: inline-block;
@@ -353,5 +353,9 @@ const schemas = buildBusinessSchemas({
     border-radius: 4px;
     font-size: 0.85rem;
     font-weight: 600;
+  }
+  .pill--muted {
+    background: rgba(0, 0, 0, 0.06);
+    color: inherit;
   }
 </style>

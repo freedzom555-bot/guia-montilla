@@ -18,8 +18,9 @@ function readIndex() {
 }
 
 function renderRow(item, base) {
+  const featuredLabel = item.slug === "kyvera-digital" ? "Patrocinio" : "Destacado";
   const featured = item.featured
-    ? '<span class="pill">Destacado</span> '
+    ? `<span class="pill">${featuredLabel}</span> `
     : "";
   const url = `${base}negocio/${item.slug}/`;
   return `<li class="index-row fade-in">

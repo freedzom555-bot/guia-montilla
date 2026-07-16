@@ -22,8 +22,8 @@ export const LEGAL = {
 };
 
 export const SEO = {
-  defaultTitle: "Guía Montilla — Todo Montilla: bodegas, comercios, parques y monumentos",
+  defaultTitle: "Guía Montilla — Bodegas, mesas, rutas y todo el pueblo",
   defaultDescription:
-    "Directorio y blog de Montilla (Córdoba): qué hacer, qué ver, bodegas Montilla-Moriles, restaurantes, monumentos, rutas y planes. Fotos e información verificada.",
+    "La guía de Montilla (Córdoba): bodegas Montilla-Moriles, restaurantes, monumentos, comercios, senderismo y noticias. Fotos, horarios y cómo llegar.",
   ogImage: "/images/og-default.jpg",
 };

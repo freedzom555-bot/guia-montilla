@@ -11,10 +11,18 @@ export function getStaticPaths() {
 
 const { route } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const isHike = route.type === "senderismo";
+const metaBits = [
+  route.duration,
+  route.distanceKm != null ? `${route.distanceKm} km` : null,
+  route.difficulty,
+  route.shape,
+  route.idealFor,
+].filter(Boolean);
 ---
 
 <Layout title={route.title} description={route.description} image="/images/hero/ruta.jpg">
-  <section class="page-head">
+  <section class="page-head page-head--route">
     <div class="wrap">
       <nav class="breadcrumb" aria-label="Ruta">
         <a href={base}>Inicio</a>
@@ -23,15 +31,19 @@ const base = import.meta.env.BASE_URL;
         <span aria-hidden="true"> / </span>
         <span aria-current="page">{route.title}</span>
       </nav>
+      {isHike && <p class="route-badge">Senderismo</p>}
+      {!isHike && route.type === "tematica" && <p class="route-badge route-badge--soft">Ruta temática</p>}
       <h1>{route.title}</h1>
-      <p class="page-head__sub">{route.duration} · {route.idealFor}</p>
+      <p class="page-head__sub">{metaBits.join(" · ")}</p>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap prose-narrow">
       <p class="page-body__prose">{route.description}</p>
-      <h2 class="section-title">Paradas</h2>
+      {route.sourceNote && <p class="route-source">{route.sourceNote}</p>}
+
+      <h2 class="section-title">{isHike ? "Puntos del recorrido" : "Paradas"}</h2>
       <ol class="stops-list">
         {route.stops.map((s) => (
           <li>
@@ -43,9 +55,68 @@ const base = import.meta.env.BASE_URL;
           </li>
         ))}
       </ol>
+
+      {route.wikilocUrl && (
+        <p class="route-wikiloc">
+          <a href={route.wikilocUrl} rel="noopener noreferrer" target="_blank" class="btn-wikiloc">
+            Ver en Wikiloc →
+          </a>
+          <span>Track GPS y perfiles de otros senderistas.</span>
+        </p>
+      )}
+
       <p class="back-link">
         <a href={`${base}rutas/`}>← Todas las rutas</a>
       </p>
     </div>
   </section>
 </Layout>
+
+<style>
+  .route-badge {
+    display: inline-block;
+    margin: 0 0 0.65rem;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--wine);
+    color: var(--surface);
+    border-radius: 4px;
+  }
+  .route-badge--soft {
+    background: var(--wine-light);
+    color: var(--wine-deep);
+  }
+  .route-source {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    border-left: 1px solid var(--rule);
+    padding-left: 0.85rem;
+  }
+  .route-wikiloc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin: 1.75rem 0;
+  }
+  .route-wikiloc span {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .btn-wikiloc {
+    display: inline-flex;
+    padding: 0.65rem 1.1rem;
+    background: var(--wine);
+    color: var(--surface) !important;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  .btn-wikiloc:hover {
+    background: var(--wine-deep);
+    text-decoration: none;
+  }
+</style>

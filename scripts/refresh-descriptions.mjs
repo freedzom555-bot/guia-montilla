@@ -1,10 +1,15 @@
 /**
- * Regenera descripciones, taglines y highlights con el nuevo enfoque editorial.
+ * Regenera descripciones, taglines, highlights y tips con enfoque editorial ampliado.
  */
 import { readFile, writeFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { richDescription, richTagline, richHighlights } from "./lib/descriptions.mjs";
+import {
+  richDescription,
+  richTagline,
+  richHighlights,
+  richTips,
+} from "./lib/descriptions.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BIZ = join(ROOT, "data/businesses.json");
@@ -16,9 +21,20 @@ const next = businesses.map((b) => {
   const description = richDescription(b);
   const tagline = richTagline(b);
   const highlights = richHighlights(b);
+  const tips = richTips(b);
   updated++;
-  return { ...b, description, tagline, highlights: highlights.length ? highlights : b.highlights };
+  return {
+    ...b,
+    description,
+    tagline,
+    tips,
+    highlights: highlights.length ? highlights : b.highlights,
+  };
 });
 
 await writeFile(BIZ, JSON.stringify(next, null, 2), "utf-8");
-console.log(`✓ Descripciones regeneradas: ${updated} fichas`);
+
+const avg = Math.round(
+  next.reduce((s, b) => s + (b.description?.length ?? 0), 0) / next.length,
+);
+console.log(`✓ Descripciones regeneradas: ${updated} fichas (media ${avg} caracteres)`);

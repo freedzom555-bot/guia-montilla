@@ -3,6 +3,7 @@
     "id": "ruta-fino-manana",
     "slug": "ruta-fino-manana",
     "title": "Mañana de fino en el casco",
+    "type": "tematica",
     "duration": "3 horas",
     "stops": [
       { "name": "Bodegas Alvear", "slug": "bodegas-alvear" },
@@ -17,6 +18,7 @@
     "id": "ruta-ecologica",
     "slug": "ruta-ecologica",
     "title": "Montilla verde: bodega ecológica y olivares",
+    "type": "tematica",
     "duration": "Medio día",
     "stops": [
       { "name": "Bodegas Robles", "slug": "bodegas-robles" },
@@ -30,6 +32,7 @@
     "id": "ruta-patrimonio",
     "slug": "ruta-patrimonio",
     "title": "Patrimonio y cultura montillana",
+    "type": "tematica",
     "duration": "4 horas",
     "stops": [
       { "name": "Castillo de Montilla", "slug": "castillo-montilla" },
@@ -45,6 +48,7 @@
     "id": "ruta-tabernas",
     "slug": "ruta-tabernas",
     "title": "Ruta de tabernas y mesa montillana",
+    "type": "tematica",
     "duration": "1 día",
     "stops": [
       { "name": "Taberna Bolero", "slug": "taberna-bolero" },
@@ -60,6 +64,7 @@
     "id": "ruta-bodegas-completa",
     "slug": "ruta-bodegas-completa",
     "title": "Gran ruta de bodegas Montilla-Moriles",
+    "type": "tematica",
     "duration": "2 días",
     "stops": [
       { "name": "Bodegas Alvear", "slug": "bodegas-alvear" },
@@ -69,13 +74,14 @@
       { "name": "Bodegas Navarro", "slug": "bodegas-navarro" },
       { "name": "Bodegas Caballero", "slug": "bodegas-caballero" }
     ],
-    "description": "Las bodegas imprescindibles de la D.O. Montilla-Moriles en dos jornadas: soleras centenarias, vino ecológico, fino bajo velo de flor y crianza oxidadiva. Reserva visitas con antelación.",
+    "description": "Las bodegas imprescindibles de la D.O. Montilla-Moriles en dos jornadas: soleras centenarias, vino ecológico, fino bajo velo de flor y crianza oxidativa. Reserva visitas con antelación.",
     "idealFor": "Enoturistas y coleccionistas de vino"
   },
   {
     "id": "ruta-parques",
     "slug": "ruta-parques",
     "title": "Paseo verde por Montilla",
+    "type": "tematica",
     "duration": "2 horas",
     "stops": [
       { "name": "Parque La Serna", "slug": "parque-la-serna" },
@@ -91,6 +97,7 @@
     "id": "ruta-monumentos-iglesias",
     "slug": "ruta-monumentos-iglesias",
     "title": "Iglesias, conventos y patrimonio religioso",
+    "type": "tematica",
     "duration": "3 horas",
     "stops": [
       { "name": "Parroquia de Santiago", "slug": "parroquia-santiago" },
@@ -103,23 +110,24 @@
     "idealFor": "Amantes del arte y la historia"
   },
   {
-    "id": "ruta-feria-gastronomia",
-    "slug": "ruta-feria-gastronomia",
-    "title": "Feria, mercado y gastronomía local",
+    "id": "ruta-mercado-mesa",
+    "slug": "ruta-mercado-mesa",
+    "title": "Mercado y mesa montillana",
+    "type": "tematica",
     "duration": "Medio día",
     "stops": [
       { "name": "Asador La Plaza", "slug": "asador-la-plaza" },
       { "name": "La Bodeguita", "slug": "la-bodeguita" },
-      { "name": "Recinto Ferial Envidarte", "slug": "recinto-ferial-montilla" },
       { "name": "Hotel Restaurante Don Gonzalo", "slug": "hotel-don-gonzalo" }
     ],
-    "description": "Vive Montilla como un local: tapas en la plaza de abastos, ambiente de barrio en La Bodeguita, conoce el recinto ferial y cierra con comida en Don Gonzalo.",
+    "description": "Vive Montilla como un local: tapeo en el entorno de la plaza, ambiente de barrio en La Bodeguita y comida de mesa larga en Don Gonzalo. Autenticidad sin prisas.",
     "idealFor": "Viajeros que buscan autenticidad"
   },
   {
     "id": "ruta-alojamiento-fin-de-semana",
     "slug": "ruta-alojamiento-fin-de-semana",
     "title": "Fin de semana completo en Montilla",
+    "type": "tematica",
     "duration": "2 días",
     "stops": [
       { "name": "Hostal Bellido", "slug": "hostal-bellido" },
@@ -130,5 +138,80 @@
     ],
     "description": "Plan de fin de semana: alójate en el centro, recoge información en turismo, cultura en el teatro, ambiente taurino en la plaza de toros y cena en el entorno de Hotel Alfar.",
     "idealFor": "Escapada de fin de semana"
+  },
+  {
+    "id": "ruta-malena",
+    "slug": "ruta-malena",
+    "title": "Ruta de la Malena",
+    "type": "senderismo",
+    "duration": "2–2,5 horas",
+    "distanceKm": 6,
+    "difficulty": "fácil",
+    "shape": "circular",
+    "wikilocUrl": "https://es.wikiloc.com/wikiloc/map.do?q=Montilla+Malena+fuentes",
+    "sourceNote": "Señalizada en el Cuaderno de campo de las fuentes de Montilla (Ayuntamiento).",
+    "stops": [
+      { "name": "Fuente de la Malena" },
+      { "name": "Fuente del Piojo" },
+      { "name": "Fuente Nueva" }
+    ],
+    "description": "Circular de unos 6 km por fuentes históricas del término. Ideal para empezar a conocer los veneros montillanos sin grandes desniveles. Lleva agua y calzado cómodo; el trayecto combina caminos rurales y campiña.",
+    "idealFor": "Senderistas ocasionales y familias"
+  },
+  {
+    "id": "ruta-jarata",
+    "slug": "ruta-jarata",
+    "title": "Ruta de Jarata",
+    "type": "senderismo",
+    "duration": "3–3,5 horas",
+    "distanceKm": 10.2,
+    "difficulty": "moderada",
+    "shape": "circular",
+    "wikilocUrl": "https://es.wikiloc.com/wikiloc/map.do?q=Montilla+Jarata",
+    "sourceNote": "Señalizada en el Cuaderno de campo de las fuentes de Montilla (Ayuntamiento).",
+    "stops": [
+      { "name": "Laguna / entorno de Jarata" },
+      { "name": "Fuentes y pozas del trazado" },
+      { "name": "Caminos de campiña" }
+    ],
+    "description": "Circular de 10,2 km por el entorno de Jarata y la red de fuentes recuperadas. Más larga que la Malena: conviene media mañana o tarde fresca. Consulta el track en Wikiloc antes de salir.",
+    "idealFor": "Senderistas con ritmo cómodo"
+  },
+  {
+    "id": "ruta-martinduelamo",
+    "slug": "ruta-martinduelamo",
+    "title": "Ruta Martinduélamo",
+    "type": "senderismo",
+    "duration": "4–5 horas",
+    "distanceKm": 12.9,
+    "difficulty": "moderada",
+    "shape": "lineal",
+    "wikilocUrl": "https://es.wikiloc.com/wikiloc/map.do?q=Montilla+Martindu%C3%A9lamo",
+    "sourceNote": "Señalizada en el Cuaderno de campo de las fuentes de Montilla (Ayuntamiento).",
+    "stops": [
+      { "name": "Inicio del trazado lineal" },
+      { "name": "Fuentes del itinerario Martinduélamo" },
+      { "name": "Fin de etapa / regreso previsto" }
+    ],
+    "description": "La más larga de la guía oficial de fuentes: 12,9 km lineales. Planifica el regreso (coche de apoyo o ida y vuelta parcial). Lleva mapa o track GPS; el paisaje es campiña abierta y patrimonio hidráulico rural.",
+    "idealFor": "Senderistas experimentados"
+  },
+  {
+    "id": "ruta-paisajes-historia",
+    "slug": "ruta-paisajes-historia",
+    "title": "Ruta Paisajes con Historia",
+    "type": "senderismo",
+    "duration": "Medio día",
+    "difficulty": "moderada",
+    "shape": "señalizada",
+    "wikilocUrl": "https://es.wikiloc.com/wikiloc/map.do?q=Montilla+Paisajes+con+Historia",
+    "sourceNote": "Señalizada por la Diputación de Córdoba; complementa las rutas de fuentes del Ayuntamiento.",
+    "stops": [
+      { "name": "Puntos señalizados del itinerario" },
+      { "name": "Miradores y patrimonio rural" },
+      { "name": "Caminos históricos de la Campiña" }
+    ],
+    "description": "Itinerario de paisaje y patrimonio señalizado por la Diputación en el entorno de Montilla. Combina historia del territorio con paseo por la Campiña Sur. Descarga el track en Wikiloc o pregunta en la Oficina de Turismo.",
+    "idealFor": "Quienes quieren paisaje + contexto histórico"
   }
 ]

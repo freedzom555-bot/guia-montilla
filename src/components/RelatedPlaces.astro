@@ -21,7 +21,12 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.id, c.name]));
 
 const related = all
   .filter((b) => b.category === current.category && b.slug !== current.slug)
-  .sort((a, b) => a.name.localeCompare(b.name, "es"))
+  .sort(
+    (a, b) =>
+      Number(Boolean((b as { featured?: boolean }).featured)) -
+        Number(Boolean((a as { featured?: boolean }).featured)) ||
+      a.name.localeCompare(b.name, "es"),
+  )
   .slice(0, limit);
 
 if (related.length === 0) return null;

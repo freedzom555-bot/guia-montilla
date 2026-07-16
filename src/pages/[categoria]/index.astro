@@ -4,6 +4,10 @@ import IndexRow from "../../components/IndexRow.astro";
 import categories from "../../../data/categories.json";
 import businesses from "../../../data/businesses.json";
 import routes from "../../../data/routes.json";
+import {
+  NEGOCIO_CATEGORY_IDS,
+  photoForCategory,
+} from "../../lib/categoryImages";
 
 export function getStaticPaths() {
   return categories.map((cat) => ({
@@ -15,21 +19,33 @@ export function getStaticPaths() {
 const { category } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const isRutas = category.id === "rutas";
+const isNegocioCat = (NEGOCIO_CATEGORY_IDS as readonly string[]).includes(category.id);
 const items = isRutas
   ? []
   : businesses
       .filter((b) => b.category === category.id)
       .sort((a, b) => Number(b.featured) - Number(a.featured) || a.name.localeCompare(b.name, "es"));
-const banner = `${base}images/categories/${category.id}.jpg`;
-const fallbackBanner = `${base}images/hero/ruta.jpg`;
+
+const bannerRel = photoForCategory(category.id).replace(/^\//, "");
+const banner = `${base}${bannerRel}`;
+const hike = routes.filter((r) => r.type === "senderismo");
+const themed = routes.filter((r) => r.type !== "senderismo");
 ---
 
-<Layout title={category.seoTitle} description={category.seoDescription} image={isRutas ? "/images/hero/ruta.jpg" : `/images/categories/${category.id}.jpg`}>
+<Layout
+  title={category.seoTitle}
+  description={category.seoDescription}
+  image={`/${bannerRel}`}
+>
   <div class="cat-banner">
-    <img src={isRutas ? fallbackBanner : banner} alt={`${category.name} en Montilla`} width="1400" height="400" loading="eager" onerror={`this.src='${fallbackBanner}'`} />
+    <img src={banner} alt={`${category.name} en Montilla`} width="1400" height="400" loading="eager" />
     <div class="cat-banner__overlay">
       <div class="wrap">
-        <a href={base} class="back back--light">← Inicio</a>
+        {isNegocioCat ? (
+          <a href={`${base}negocios/`} class="back back--light">← Negocios</a>
+        ) : (
+          <a href={base} class="back back--light">← Inicio</a>
+        )}
         <h1>{category.headline}</h1>
         <p>{category.description}</p>
       </div>
@@ -40,15 +56,43 @@ const fallbackBanner = `${base}images/hero/ruta.jpg`;
     <div class="wrap">
       {isRutas ? (
         <>
-          <div class="block-head">
-            <h2>{routes.length} rutas recomendadas</h2>
+          {hike.length > 0 && (
+            <>
+              <div class="block-head">
+                <h2>Senderismo ({hike.length})</h2>
+              </div>
+              <ul class="routes-list">
+                {hike.map((r) => (
+                  <li class="route-card">
+                    <a href={`${base}ruta/${r.slug}/`}>
+                      <p class="route-card__meta">
+                        {[
+                          r.distanceKm != null ? `${r.distanceKm} km` : null,
+                          r.difficulty,
+                          r.shape,
+                          r.duration,
+                        ]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </p>
+                      <h3>{r.title}</h3>
+                      <p>{r.description}</p>
+                      {r.wikilocUrl && <span class="route-card__wikiloc">Wikiloc disponible</span>}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          <div class="block-head" style={hike.length ? "margin-top:2.5rem" : undefined}>
+            <h2>Rutas temáticas ({themed.length})</h2>
           </div>
           <ul class="routes-list">
-            {routes.map((r) => (
+            {themed.map((r) => (
               <li class="route-card">
                 <a href={`${base}ruta/${r.slug}/`}>
+                  <p class="route-card__meta">{r.duration} · {r.idealFor}</p>
                   <h3>{r.title}</h3>
-                  <p>{r.duration} · {r.idealFor}</p>
                   <p>{r.description}</p>
                 </a>
               </li>
@@ -74,12 +118,51 @@ const fallbackBanner = `${base}images/hero/ruta.jpg`;
 </Layout>
 
 <style>
-  .routes-list { list-style: none; padding: 0; display: grid; gap: 1rem; }
-  .route-card a {
-    display: block; padding: 1.25rem; border: 1px solid rgba(0,0,0,.08);
-    border-radius: 8px; text-decoration: none; color: inherit;
+  .routes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.85rem;
   }
-  .route-card a:hover { border-color: var(--accent, #8b2942); }
-  .route-card h3 { margin: 0 0 .35rem; }
-  .route-card p { margin: .25rem 0; opacity: .85; font-size: .95rem; }
+  .route-card a {
+    display: block;
+    padding: 1.25rem 1.35rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    background: var(--surface);
+    transition: border-color var(--t) var(--ease), background var(--t) var(--ease);
+  }
+  .route-card a:hover {
+    border-color: var(--wine);
+    background: var(--wine-light);
+    text-decoration: none;
+    color: inherit;
+  }
+  .route-card__meta {
+    margin: 0 0 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--wine);
+  }
+  .route-card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.25rem;
+  }
+  .route-card p:last-of-type {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+  .route-card__wikiloc {
+    display: inline-block;
+    margin-top: 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gold-deep);
+  }
 </style>

@@ -67,16 +67,25 @@ export type OutreachLead = {
 };
 
 export function normalizePhoneE164(phone: string): string | null {
-  const digits = phone.replace(/\D/g, "");
+  let digits = phone.replace(/\D/g, "");
+  if (!digits) return null;
+  // 00 international prefix
+  if (digits.startsWith("00")) digits = digits.slice(2);
   if (digits.length === 9 && /^[67]/.test(digits)) return `34${digits}`;
+  if (digits.length === 9 && /^[89]/.test(digits)) return `34${digits}`;
   if (digits.length === 11 && digits.startsWith("34")) return digits;
   if (digits.length === 12 && digits.startsWith("034")) return digits.slice(1);
-  return digits.length >= 9 ? digits : null;
+  if (digits.length >= 10 && digits.length <= 15) return digits;
+  return null;
 }
 
 export function isSpanishMobile(phone: string): boolean {
   const digits = phone.replace(/\D/g, "");
-  const local = digits.startsWith("34") ? digits.slice(2) : digits;
+  const local = digits.startsWith("34")
+    ? digits.slice(2)
+    : digits.startsWith("0034")
+      ? digits.slice(4)
+      : digits;
   return local.length === 9 && /^[67]/.test(local);
 }
 
@@ -92,27 +101,31 @@ export function buildOutreachMessage(opts: {
   contactName?: string;
 }): string {
   const { businessName, searchTerm, listingUrl, siteUrl, contactName = "Antonio" } = opts;
-  const base = siteUrl.replace(/\/$/, "");
+  const host = siteUrl.replace(/\/$/, "").replace(/^https?:\/\//, "");
 
   return `Hola, buenos días. Soy ${contactName} de Guía Montilla.
 
-Tenemos ya a *${businessName}* en ${base.replace("https://", "")} — el directorio local que mueve unas *${DAILY_VISITS.toLocaleString("es-ES")} visitas al día* entre vecinos, turistas y búsquedas en Google.
+Tenemos ya a *${businessName}* en ${host} — el directorio local con unas *${DAILY_VISITS.toLocaleString("es-ES")} visitas al día*.
 
-Podéis pasar a *Destacado* por *${OUTREACH_PRICE} €/mes* (sin permanencia, menos de 1 € al día):
-• Salís *primero* cuando buscan «${searchTerm}»
-• Etiqueta destacado y ficha más visible
+Podéis pasar a *Destacado* por *${OUTREACH_PRICE} €/mes* (sin permanencia):
+• Salís primero al buscar «${searchTerm}»
+• Etiqueta Destacado y ficha más visible
 • Más fotos en vuestra página
 
-Vuestra ficha: ${listingUrl}
-Info del plan: ${base}/para-negocios/
+Vuestra ficha:
+${listingUrl}
 
-Si os encaja, lo activamos en 24 h. ¿Os interesa?
+Plan Destacado:
+${siteUrl.replace(/\/$/, "")}/para-negocios/
 
-Gracias.`;
+Si os encaja, lo activamos en 24 h. ¿Os interesa?`;
 }
 
+/** Enlace WhatsApp fiable (api.whatsapp.com + phone sin +) */
 export function buildWaUrl(phoneE164: string, message: string): string {
-  return `https://wa.me/${phoneE164}?text=${encodeURIComponent(message)}`;
+  const phone = phoneE164.replace(/\D/g, "");
+  const text = encodeURIComponent(message);
+  return `https://api.whatsapp.com/send?phone=${phone}&text=${text}`;
 }
 
 export function buildOutreachLeads(
@@ -130,7 +143,8 @@ export function buildOutreachLeads(
       const e164 = normalizePhoneE164(b.phone);
       const categoryLabel = catMap[b.category] ?? b.category;
       const searchTerm = buildSearchTerm(b.category, categoryLabel);
-      const listingUrl = `${base}/${b.category}/${b.slug}/`;
+      // Fichas viven en /negocio/{slug}/ — no en /{categoria}/{slug}/
+      const listingUrl = `${base}/negocio/${b.slug}/`;
       const message = buildOutreachMessage({
         businessName: b.name,
         searchTerm,
@@ -153,6 +167,6 @@ export function buildOutreachLeads(
         priority: priorityIndex[b.category] ?? 99,
       };
     })
-    .filter((l) => l.waUrl)
+    .filter((l) => l.waUrl && l.isMobile)
     .sort((a, b) => a.priority - b.priority || a.name.localeCompare(b.name, "es"));
 }
