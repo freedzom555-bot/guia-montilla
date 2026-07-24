@@ -59,14 +59,34 @@ jobs:
           SFTP_PASS: ${{ secrets.IONOS_FTP_PASSWORD }}
           SFTP_DIR: ${{ secrets.IONOS_FTP_SERVER_DIR || '/Guiamontilla/' }}
         run: |
+          set -euo pipefail
           sudo apt-get update -qq && sudo apt-get install -y -qq lftp
           REMOTE_DIR="${SFTP_DIR%/}/"
-          lftp -u "$SFTP_USER,$SFTP_PASS" "sftp://$SFTP_HOST:22" <<EOF
+          attempt=1
+          max_attempts=3
+          while [ "$attempt" -le "$max_attempts" ]; do
+            echo "SFTP attempt ${attempt}/${max_attempts}"
+            if lftp -u "$SFTP_USER,$SFTP_PASS" "sftp://$SFTP_HOST:22" <<EOF
           set sftp:auto-confirm yes
-          set net:max-retries 3
-          set net:reconnect-interval-base 5
+          set net:max-retries 5
+          set net:reconnect-interval-base 10
+          set net:reconnect-interval-multiplier 2
+          set net:timeout 60
+          set cmd:fail-exit yes
           lcd dist
           cd ${REMOTE_DIR}
-          mirror --reverse --only-newer --parallel=4 --verbose
+          mirror --reverse --only-newer --continue --parallel=2 --verbose
           bye
           EOF
+            then
+              echo "SFTP upload OK"
+              exit 0
+            fi
+            echo "SFTP failed on attempt ${attempt}"
+            if [ "$attempt" -eq "$max_attempts" ]; then
+              echo "SFTP failed after ${max_attempts} attempts"
+              exit 1
+            fi
+            sleep $((attempt * 20))
+            attempt=$((attempt + 1))
+          done
